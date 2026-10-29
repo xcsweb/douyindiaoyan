@@ -1,0 +1,105 @@
+{
+  "file": "video_20261028_155938.wav",
+  "duration": 3.584,
+  "language": "zh",
+  "language_probability": 1.0,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.74,
+      "text": "600个社区成员我给他们做了一个全家福",
+      "words": [
+        {
+          "word": "600",
+          "start": 0.0,
+          "end": 0.48,
+          "probability": 0.5421
+        },
+        {
+          "word": "个",
+          "start": 0.48,
+          "end": 0.8,
+          "probability": 0.6009
+        },
+        {
+          "word": "社",
+          "start": 0.8,
+          "end": 0.94,
+          "probability": 0.9713
+        },
+        {
+          "word": "区",
+          "start": 0.94,
+          "end": 1.04,
+          "probability": 0.9298
+        },
+        {
+          "word": "成",
+          "start": 1.04,
+          "end": 1.18,
+          "probability": 0.4954
+        },
+        {
+          "word": "员",
+          "start": 1.18,
+          "end": 1.36,
+          "probability": 0.9976
+        },
+        {
+          "word": "我",
+          "start": 1.36,
+          "end": 1.54,
+          "probability": 0.6921
+        },
+        {
+          "word": "给",
+          "start": 1.54,
+          "end": 1.66,
+          "probability": 0.9873
+        },
+        {
+          "word": "他们",
+          "start": 1.66,
+          "end": 1.86,
+          "probability": 0.9303
+        },
+        {
+          "word": "做",
+          "start": 1.86,
+          "end": 2.04,
+          "probability": 0.963
+        },
+        {
+          "word": "了",
+          "start": 2.04,
+          "end": 2.14,
+          "probability": 0.97
+        },
+        {
+          "word": "一个",
+          "start": 2.14,
+          "end": 2.24,
+          "probability": 0.9457
+        },
+        {
+          "word": "全",
+          "start": 2.24,
+          "end": 2.44,
+          "probability": 0.9814
+        },
+        {
+          "word": "家",
+          "start": 2.44,
+          "end": 2.58,
+          "probability": 0.9927
+        },
+        {
+          "word": "福",
+          "start": 2.58,
+          "end": 2.74,
+          "probability": 0.512
+        }
+      ]
+    }
+  ]
+}

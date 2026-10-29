@@ -1,0 +1,35 @@
+{
+  "schema": "motiongit-font-profile/1",
+  "id": "bundled-gb2312-woff2-1",
+  "systemFontsRequired": false,
+  "faces": [
+    {
+      "family": "Noto Sans SC",
+      "path": "runtime/adu-motion-video/assets/fonts/NotoSansSC.woff2",
+      "sha256": "d99ca2b52af1e6cc3f880216751cb6365fa405bc311225b8322ff16100849d13"
+    },
+    {
+      "family": "Noto Sans Mono",
+      "path": "runtime/adu-motion-video/assets/fonts/NotoSansMono.woff2",
+      "sha256": "30b52e0316e140a19f61431ef2b03133a17c72684ea31d1c8a10eac3f4b938ad"
+    },
+    {
+      "family": "Geist",
+      "path": "assets/fonts/Geist.woff2",
+      "sha256": "0c855f7567881c1f3c41738616d4274cea4afbd2bf6aa198be467aefc157ee6d"
+    },
+    {
+      "family": "Geist Mono",
+      "path": "assets/fonts/GeistMono.woff2",
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
+    }
+  ],
+  "glyphCoverage": "adapter/glyph-coverage.json",
+  "systemFallbackForMissing": true,
+  "systemFallbackFamilies": [
+    "PingFang SC",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    "system-ui"
+  ]
+}

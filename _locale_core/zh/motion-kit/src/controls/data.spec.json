@@ -1,0 +1,109 @@
+{
+  "controls": {
+    "donut": {
+      "label": "环形占比",
+      "use": "几个部分占整体多少：构成、份额、预算分配、用户来源（2–5 项）。数值按占比换算成百分比",
+      "props": {
+        "title": { "type": "string", "max": 18, "label": "标题" },
+        "center": { "type": "string", "max": 8, "label": "ring 变体：中心合计上方小字（如「总计」）" },
+        "unit": { "type": "string", "max": 4, "label": "数值单位" },
+        "items": { "type": "array", "of": "object", "minItems": 2, "maxItems": 5, "required": true, "label": "各部分",
+          "props": { "label": { "type": "string", "max": 8, "required": true }, "value": { "type": "number", "min": 0, "required": true } } }
+      },
+      "cues": { "count": "1 + items.length", "meaning": ["图表入场", "每块扇区出现"] },
+      "minDur": 4, "tail": 1.6, "idle": true,
+      "variants": ["ring", "pie", "split"],
+      "variantsNote": "ring 环形 + 引线标注、中心合计滚动 / pie 实心扇区逐块弹出 / split 环形 + 侧边图例逐条点亮"
+    },
+    "linechart": {
+      "label": "折线趋势",
+      "use": "随时间的变化：增长、下降、波动、两条对比（4–12 个点）。终点标注最后一个值",
+      "props": {
+        "title": { "type": "string", "max": 18, "label": "标题" },
+        "unit": { "type": "string", "max": 4, "label": "数值单位" },
+        "series": { "type": "array", "of": "string", "max": 8, "maxItems": 2, "label": "系列名（第二个对应 value2）" },
+        "note": { "type": "string", "max": 12, "label": "终点标注补充（如「创新高」）" },
+        "points": { "type": "array", "of": "object", "minItems": 4, "maxItems": 12, "required": true, "label": "数据点",
+          "props": { "label": { "type": "string", "max": 6, "required": true, "label": "横轴标签" }, "value": { "type": "number", "required": true }, "value2": { "type": "number", "label": "第二条线（每个点都填才画）" } } }
+      },
+      "cues": { "count": 3, "meaning": ["坐标入场", "开始描线", "终点标注"] },
+      "minDur": 4, "tail": 1.6, "idle": true,
+      "variants": ["line", "area", "spark"],
+      "variantsNote": "line 描线生长 + 拖尾光点 + 数据点弹出 / area 面积弹起 + 扫描线读数 / spark 大数字跟随走势 + 涨跌幅（只画第一条）"
+    },
+    "counter": {
+      "label": "KPI 数字卡",
+      "use": "2–4 个关键数字并排：用户数、营收、增长率、时长；可带涨跌",
+      "props": {
+        "title": { "type": "string", "max": 18, "label": "标题" },
+        "items": { "type": "array", "of": "object", "minItems": 2, "maxItems": 4, "required": true, "label": "数字卡",
+          "props": {
+            "label": { "type": "string", "max": 8, "required": true },
+            "value": { "type": "number", "min": 0, "max": 99999999, "required": true },
+            "prefix": { "type": "string", "max": 2, "label": "前缀（¥ $）" },
+            "unit": { "type": "string", "max": 3, "label": "单位（万 % 人）" },
+            "delta": { "type": "number", "min": -999, "max": 999, "label": "涨跌（百分点，正涨负跌）" } } }
+      },
+      "cues": { "count": "items.length", "meaning": ["每张卡出现"] },
+      "minDur": 3.5, "tail": 1.8, "idle": true,
+      "variants": ["cards", "odometer", "ticker"],
+      "variantsNote": "cards 三维翻牌 + 滚动计数 / odometer 里程表滚轮逐位停 / ticker 行情板逐行扫入、乱码锁定"
+    },
+    "progress": {
+      "label": "进度 / 完成度",
+      "use": "完成了多少：项目进度、目标达成、技能熟练度、电量式的程度（1–4 条，百分比）",
+      "props": {
+        "title": { "type": "string", "max": 18, "label": "标题" },
+        "items": { "type": "array", "of": "object", "minItems": 1, "maxItems": 4, "required": true, "label": "进度条",
+          "props": { "label": { "type": "string", "max": 10, "required": true }, "percent": { "type": "number", "min": 0, "max": 100, "required": true } } }
+      },
+      "cues": { "count": "items.length", "meaning": ["每条开始填充"] },
+      "minDur": 3, "tail": 1.6, "idle": true,
+      "variants": ["bars", "rings", "battery"],
+      "variantsNote": "bars 斜纹横条（100% 打勾）/ rings 同心环 + 中心轮显 / battery 分段电量格（颜色随电量）"
+    },
+    "timeline": {
+      "label": "时间线 / 里程碑",
+      "use": "按时间顺序的 3–6 个节点：发展历程、计划路线图、事件经过；current 标出「现在」",
+      "props": {
+        "title": { "type": "string", "max": 18, "label": "标题" },
+        "current": { "type": "integer", "min": 1, "max": 6, "label": "当前节点序号（1 起，默认最后一个；之后的节点显示为计划中）" },
+        "items": { "type": "array", "of": "object", "minItems": 3, "maxItems": 6, "required": true, "label": "节点",
+          "props": { "date": { "type": "string", "max": 8, "required": true, "label": "时间" }, "text": { "type": "string", "max": 14, "required": true, "label": "事件" } } }
+      },
+      "cues": { "count": "items.length", "meaning": ["每个节点点亮"] },
+      "minDur": 3.5, "tail": 1.6, "idle": true,
+      "variants": ["horizontal", "vertical", "zigzag"],
+      "variantsNote": "horizontal 横向沿线点亮（竖屏自动纵向）/ vertical 竖线 + 卡片滑入 / zigzag 折线上下交替"
+    },
+    "table": {
+      "label": "对比表 / 功能矩阵",
+      "use": "2–3 个方案在 2–5 项上逐项比较；单元格写 ✓ / ✗ 或短文字；赢家列高亮",
+      "props": {
+        "title": { "type": "string", "max": 18, "label": "标题" },
+        "cols": { "type": "array", "of": "string", "max": 6, "minItems": 2, "maxItems": 3, "required": true, "label": "方案名" },
+        "rows": { "type": "array", "of": "object", "minItems": 2, "maxItems": 5, "required": true, "label": "比较项",
+          "props": { "label": { "type": "string", "max": 8, "required": true }, "cells": { "type": "array", "of": "string", "max": 5, "minItems": 2, "maxItems": 3, "required": true, "label": "各方案的值（与 cols 同序；✓ ✗ 画成图标）" } } },
+        "win": { "type": "integer", "min": 1, "max": 3, "label": "赢家列序号（1 起；不写时取 ✓ 最多的唯一一列）" }
+      },
+      "cues": { "count": "1 + rows.length", "meaning": ["表头入场", "每行揭晓"] },
+      "minDur": 4, "tail": 1.8, "idle": true,
+      "variants": ["grid", "scorecard", "checklist"],
+      "variantsNote": "grid 表格逐行扫入 + 赢家列光框 / scorecard 每方案一张卡、赢家抬起戴冠 / checklist 盖章清单 + 底部计票"
+    },
+    "ranking": {
+      "label": "排行榜",
+      "use": "3–6 项按数值排名：榜单、名次、Top N；自动按 value 从大到小排序",
+      "props": {
+        "title": { "type": "string", "max": 18, "label": "标题" },
+        "unit": { "type": "string", "max": 4, "label": "数值单位" },
+        "items": { "type": "array", "of": "object", "minItems": 3, "maxItems": 6, "required": true, "label": "参与项（顺序任意）",
+          "props": { "label": { "type": "string", "max": 8, "required": true }, "value": { "type": "number", "min": 0, "max": 99999999, "required": true } } }
+      },
+      "cues": { "count": "items.length", "meaning": ["每项出现（race 按输入顺序；podium / list 从末名到第一）"] },
+      "minDur": 4, "tail": 2.2, "idle": true,
+      "variants": ["race", "podium", "list"],
+      "variantsNote": "race 条形赛跑后重新排序换位 / podium 领奖台升起 + 鼓点揭晓第一 / list 名次牌自下而上翻入"
+    }
+  }
+}

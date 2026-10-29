@@ -1,0 +1,47 @@
+{
+  "schema": "motiongit-public-assets/1",
+  "created": "2026-10-05",
+  "license": "CC0-1.0",
+  "noRealPerson": true,
+  "noNarration": true,
+  "subtitleKind": "visual-demonstration-not-ASR",
+  "score": {
+    "peakDbfs": -4.0001,
+    "rmsDbfs": -18.8363,
+    "compositionId": "motiongit-template04-score-20261005-v1"
+  },
+  "durationFrames": 2334,
+  "fps": 60,
+  "files": [
+    {
+      "path": "talk-demo.mp4",
+      "bytes": 576475,
+      "sha256": "5767828fd85d726a3faa7179fa747ddcecd3252f97943a8e0c3da7983aa2183e"
+    },
+    {
+      "path": "music-demo.wav",
+      "bytes": 7680044,
+      "sha256": "865a64bcdc35909d9b734169a9b99d230b388961f918c108f027f947cb54a15d"
+    },
+    {
+      "path": "input-thumbnail.png",
+      "bytes": 97732,
+      "sha256": "b6bb5c3fe096448203805ffcfea45806111fb29090bd5b8627dcb880cc137faf"
+    },
+    {
+      "path": "output-thumbnail.png",
+      "bytes": 97745,
+      "sha256": "26300c7b44dbd666e4e73b72b13f3a0e7207465fb784f0d31c3c7c969f2c35aa"
+    },
+    {
+      "path": "noise.png",
+      "bytes": 65916,
+      "sha256": "388a51d3b3d1d6835c9dd9621276f886c6eb243dd43395d83894adb8868b97f9"
+    },
+    {
+      "path": "demo-subs.json",
+      "bytes": 629,
+      "sha256": "c3f90f844c8a86c5266c74fa08ccc620ed284db921d4c94a1ad303892eb5cf30"
+    }
+  ]
+}

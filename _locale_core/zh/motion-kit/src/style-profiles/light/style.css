@@ -1,0 +1,88 @@
+@font-face{font-family:'Review Sans';font-style:normal;font-weight:100 900;src:url(fonts/NotoSansSC.woff2)}
+@font-face{font-family:'Review Mono';font-style:normal;font-weight:100 900;src:url(fonts/NotoSansMono.woff2)}
+:root{--fz:'Review Sans',sans-serif;--fm:'Review Mono','Review Sans',monospace}
+html,body,#stage{background:#F7F7F5!important}
+#world,#front{transform:none!important;filter:none!important}
+#hud,#fx,#ov{display:none}
+.mk-slot{color:var(--tx)}
+.mk-slot .mk-cpt-t,.mk-slot .mk-title,.mk-slot .mk-num,.mk-slot .mk-quote .q,.mk-slot .mk-kin .ln,.mk-slot .mk-kin .ln b{color:var(--tx)!important;text-shadow:none!important;filter:none!important}
+.mk-slot em{color:var(--a)!important;text-shadow:none!important}
+.mk-glass,.mk-icc .cd,.mk-qa .cv,.mk-qa .bub,.mk-tip .st,.mk-tip .bb,.mk-def .sb,.mk-chk .pn,.mk-flow .nd,.mk-timeline .cd{background:#fff!important;border-color:#E7E7E4!important;box-shadow:0 18px 36px #0A0A0A0C!important;border-radius:22px!important}
+.mk-icc .tt,.mk-qa .qt,.mk-qa .at,.mk-qa .tx,.mk-def .term,.mk-def .q,.mk-def .tt,.mk-chk .tt,.mk-tip .tx,.mk-flow .tx,.mk-timeline .tx{color:var(--tx)!important;text-shadow:none!important}
+.mk-icc .ds,.mk-icc .nb,.mk-def .pos,.mk-def .ex,.mk-timeline .dt{color:var(--dim)!important}
+.mk-icc .cd.on,.mk-qa .pn.lit,.mk-qa .fa.bk,.mk-chk .pn{border-color:#2462EA80!important;box-shadow:0 18px 36px #0A0A0A0D!important}
+.mk-icc .ic{background:#EEF3FF!important;box-shadow:none!important}
+.mk-icc .cd.on .ic{background:#2462EA!important;color:white!important;box-shadow:none!important}
+.mk-qa .qm,.mk-qa .bd,.mk-tip .bdg,.mk-tip .ms{box-shadow:none!important}
+.mk-tip .blk,.mk-tip .bdg{color:white!important}
+.mk-tip .bb .tl{background:white!important}
+.mk-def .hr,.mk-chk .track{background:#DDE3EE!important}
+.mk-def .num,.mk-chk .dot{color:white!important}
+.mk-def .nt{background:#FFF2C9!important;box-shadow:0 18px 36px #0A0A0A12!important}
+.mk-def.sticky .term,.mk-def.sticky .df,.mk-def.sticky .ex{color:#302F28!important}
+.mk-chk .tx,.mk-flow .lb,.mk-timeline .lb{color:var(--tx)!important}
+.mk-chk .done,.mk-chk .stamp{box-shadow:none!important;text-shadow:none!important}
+.mk-vs .big{color:var(--tx)!important;text-shadow:none!important}
+.mk-steps .card{box-shadow:none!important}
+.mk-tk{background:#fff!important;box-shadow:0 30px 70px #0A0A0A47!important;border-radius:28px!important}
+.mk-tk .cor{display:none}
+.mk-tk .lab{font:400 19px 'Review Sans';background:#0A0A0A80;letter-spacing:0;border:0}
+.mk-tk .lab i{display:none}
+.mk-slot .mk-quote .mark{opacity:.6}
+.mk-slot .mk-kin .ln.alt{color:var(--a)!important;-webkit-text-stroke:0!important}
+.mk-word-sub{color:var(--dim)!important}
+.mk-chip{background:#fff!important;border-color:#E7E7E4!important;box-shadow:none!important}
+.mk-dg-n{background:#fff!important;border-color:#E7E7E4!important;box-shadow:0 18px 36px #0A0A0A0C!important;color:var(--tx)!important}
+.mk-dg-n.on,.mk-dg-n.core{border-color:#2462EA80!important}
+.mk-dg-n .tx,.mk-dg-n.sm .tx,.mk-dg-n.sm.on .tx{color:var(--tx)!important;text-shadow:none!important}
+.mk-dg-n.on .ic,.mk-dg-n.core .ic{color:var(--a)!important;filter:none!important}
+.mk-dg svg *{filter:none!important}
+.mk-dg .mk-dg-svg .ln.trk{stroke:#DDE3EE!important}
+.mk-tl .tl-l.cur .x{color:var(--a)!important;text-shadow:none!important}
+.mk-chk .cnt{font-family:'Geist Mono',monospace!important}
+.mk-chk .stp{background:#fff!important;box-shadow:none!important;text-shadow:none!important}
+.mk-chk .pp{background-color:#fff!important}
+.mk-chk .ctr .pc{color:var(--tx)!important}
+.mk-chk svg.ring .trk{stroke:#DDE3EE!important}
+
+/* The selected template palette owns keyword ink, including light surfaces. */
+.mk-slot .mk-word {color:var(--tx)!important}
+
+/* Plain titles sit on the light stage. Photo captions and colored buttons
+   retain their own surface ink; native motion, geometry and audio stay intact. */
+.mk-slot .mk-intro .ttl,
+.mk-slot .mk-outro .thx,
+.mk-slot .mk-cta .txt {color:var(--tx)!important}
+.mk-slot .mk-intro .sub,
+.mk-slot .mk-outro .sub,
+.mk-slot .mk-cta .sub {color:var(--dim)!important}
+/* These chips keep their deliberately dark surface in light profiles. */
+.mk-slot .mk-outro .chip {color:#fff!important}
+
+/* motiongit.family-light-surface-ink/1
+   Only audited light/paper stages. Inherit this family's own ink; do not
+   recolor the intentional dark plate, gradients, icons or emphasis accents. */
+.mk-slot .mk-hl .q,
+.mk-slot .mk-scr .w,
+.mk-slot .mk-big .w.top,
+.mk-slot .mk-mq-big:not(.plate) {color:var(--tx)!important}
+/* Terminal is a glass/card surface owned by this selected profile. */
+.mk-slot .mk-term .ln:not(.o) {color:var(--tx)!important}
+/* The ticker owns a deliberately dark strip even on a light stage. */
+.mk-slot .mk-mq.tick {color:#fff!important}
+
+/* motiongit.family-marker-surface-ink/1
+   Restore the existing filled-marker ink state over the actual warm fill.
+   Keep unpainted/circle/underline accent colors and all action clocks. */
+.mk-slot .mk-hl .q em.inked {color:#14110A!important}
+
+/* motiongit.family-belt-surface-ink/1
+   The belt center word crosses a bright band, the fixed dark band, and stage.
+   Keep its original white fill and add a thin dark outer edge. The center word
+   belongs to this mixed material, not simply to the surrounding stage palette.
+   Only the actual belt DOM matches; ticker and wall's dark plate stay intact. */
+.mk-slot[data-control="marquee"][data-variant="belt"] > .mk-mq-big {
+  color:#FFFFFF!important;
+  -webkit-text-stroke:3px #111111;
+  paint-order:stroke fill;
+}

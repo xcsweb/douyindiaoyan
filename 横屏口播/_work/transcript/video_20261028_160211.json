@@ -1,0 +1,240 @@
+{
+  "file": "video_20261028_160211.wav",
+  "duration": 11.84,
+  "language": "zh",
+  "language_probability": 1.0,
+  "segments": [
+    {
+      "start": 0.56,
+      "end": 3.16,
+      "text": "它還可以連成夜空",
+      "words": [
+        {
+          "word": "它",
+          "start": 0.56,
+          "end": 1.08,
+          "probability": 0.6072
+        },
+        {
+          "word": "還",
+          "start": 1.08,
+          "end": 1.38,
+          "probability": 0.8185
+        },
+        {
+          "word": "可以",
+          "start": 1.38,
+          "end": 2.24,
+          "probability": 0.9797
+        },
+        {
+          "word": "連",
+          "start": 2.24,
+          "end": 2.48,
+          "probability": 0.564
+        },
+        {
+          "word": "成",
+          "start": 2.48,
+          "end": 2.64,
+          "probability": 0.4875
+        },
+        {
+          "word": "夜",
+          "start": 2.64,
+          "end": 2.84,
+          "probability": 0.9673
+        },
+        {
+          "word": "空",
+          "start": 2.84,
+          "end": 3.16,
+          "probability": 0.9963
+        }
+      ]
+    },
+    {
+      "start": 4.52,
+      "end": 6.5,
+      "text": "所有的成員都可以連成夜空",
+      "words": [
+        {
+          "word": "所有",
+          "start": 4.52,
+          "end": 4.9,
+          "probability": 0.5214
+        },
+        {
+          "word": "的",
+          "start": 4.9,
+          "end": 5.06,
+          "probability": 0.8963
+        },
+        {
+          "word": "成",
+          "start": 5.06,
+          "end": 5.2,
+          "probability": 0.9616
+        },
+        {
+          "word": "員",
+          "start": 5.2,
+          "end": 5.34,
+          "probability": 0.9984
+        },
+        {
+          "word": "都",
+          "start": 5.34,
+          "end": 5.48,
+          "probability": 0.9747
+        },
+        {
+          "word": "可以",
+          "start": 5.48,
+          "end": 5.62,
+          "probability": 0.974
+        },
+        {
+          "word": "連",
+          "start": 5.62,
+          "end": 5.76,
+          "probability": 0.9801
+        },
+        {
+          "word": "成",
+          "start": 5.76,
+          "end": 5.88,
+          "probability": 0.8313
+        },
+        {
+          "word": "夜",
+          "start": 5.88,
+          "end": 6.08,
+          "probability": 0.9983
+        },
+        {
+          "word": "空",
+          "start": 6.08,
+          "end": 6.5,
+          "probability": 0.9993
+        }
+      ]
+    },
+    {
+      "start": 6.5,
+      "end": 8.78,
+      "text": "然後也可以變成地球",
+      "words": [
+        {
+          "word": "然後",
+          "start": 6.5,
+          "end": 6.78,
+          "probability": 0.5778
+        },
+        {
+          "word": "也可以",
+          "start": 6.78,
+          "end": 7.46,
+          "probability": 0.8989
+        },
+        {
+          "word": "變",
+          "start": 7.46,
+          "end": 7.88,
+          "probability": 0.7594
+        },
+        {
+          "word": "成",
+          "start": 7.88,
+          "end": 8.14,
+          "probability": 0.9973
+        },
+        {
+          "word": "地",
+          "start": 8.14,
+          "end": 8.58,
+          "probability": 0.9981
+        },
+        {
+          "word": "球",
+          "start": 8.58,
+          "end": 8.78,
+          "probability": 0.9979
+        }
+      ]
+    },
+    {
+      "start": 8.78,
+      "end": 10.7,
+      "text": "所有的成員都可以在地球上看到",
+      "words": [
+        {
+          "word": "所有",
+          "start": 8.78,
+          "end": 9.18,
+          "probability": 0.8611
+        },
+        {
+          "word": "的",
+          "start": 9.18,
+          "end": 9.3,
+          "probability": 0.9044
+        },
+        {
+          "word": "成",
+          "start": 9.3,
+          "end": 9.44,
+          "probability": 0.9978
+        },
+        {
+          "word": "員",
+          "start": 9.44,
+          "end": 9.56,
+          "probability": 0.9999
+        },
+        {
+          "word": "都",
+          "start": 9.56,
+          "end": 9.7,
+          "probability": 0.9922
+        },
+        {
+          "word": "可以",
+          "start": 9.7,
+          "end": 9.84,
+          "probability": 0.9951
+        },
+        {
+          "word": "在",
+          "start": 9.84,
+          "end": 9.98,
+          "probability": 0.9805
+        },
+        {
+          "word": "地",
+          "start": 9.98,
+          "end": 10.1,
+          "probability": 0.8862
+        },
+        {
+          "word": "球",
+          "start": 10.1,
+          "end": 10.28,
+          "probability": 0.8445
+        },
+        {
+          "word": "上",
+          "start": 10.28,
+          "end": 10.44,
+          "probability": 0.9838
+        },
+        {
+          "word": "看到",
+          "start": 10.44,
+          "end": 10.7,
+          "probability": 0.9052
+        }
+      ]
+    }
+  ]
+}

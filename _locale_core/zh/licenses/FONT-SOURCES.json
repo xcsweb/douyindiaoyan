@@ -1,0 +1,14 @@
+[
+  {
+    "family": "Geist",
+    "license": "OFL-1.1",
+    "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/geist/OFL.txt",
+    "licenseSha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+  },
+  {
+    "family": "Geist Mono",
+    "license": "OFL-1.1",
+    "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/geistmono/OFL.txt",
+    "licenseSha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+  }
+]

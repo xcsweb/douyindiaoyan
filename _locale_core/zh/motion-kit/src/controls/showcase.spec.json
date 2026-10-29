@@ -1,0 +1,119 @@
+{
+  "controls": {
+    "gallery": {
+      "label": "图集",
+      "use": "3–8 张图片/视频一起亮相：作品集、案例合集、活动照片、产品多角度；每个 cue 出一张（carousel/stack 是每个 cue 转到下一张）",
+      "props": {
+        "title": { "type": "string", "max": 20, "label": "标题（可省略）" },
+        "items": { "type": "array", "of": "object", "minItems": 3, "maxItems": 8, "required": true, "label": "图片",
+          "props": {
+            "src": { "type": "media", "label": "图片或视频（省略时为中性占位）" },
+            "caption": { "type": "string", "max": 12, "label": "说明" },
+            "sourceStart": { "type": "number", "min": 0 }
+          } }
+      },
+      "cues": { "count": "items.length", "meaning": ["grid：每张翻入；carousel / stack：第一张出现，之后每个 cue 换到下一张"] },
+      "minDur": 4, "tail": 1.6, "idle": true,
+      "variants": ["grid", "carousel", "stack"],
+      "variantsNote": "grid 网格错峰三维翻入后轮流放大 / carousel 3D 旋转木马逐张转到正前 / stack 照片堆一张张甩向两侧"
+    },
+    "beforeafter": {
+      "label": "前后对比",
+      "use": "同一对象改造前后、修图前后、旧版新版：两张素材对照，第二个 cue 揭示 after",
+      "props": {
+        "title": { "type": "string", "max": 20 },
+        "before": { "type": "media", "label": "之前（图片或视频）" },
+        "after": { "type": "media", "label": "之后（图片或视频）" },
+        "beforeLabel": { "type": "string", "max": 8, "label": "之前标签（默认「之前」）" },
+        "afterLabel": { "type": "string", "max": 8, "label": "之后标签（默认「之后」）" },
+        "sourceStart": { "type": "number", "min": 0 }
+      },
+      "cues": { "count": 2, "meaning": ["画面出现", "揭示 after"] },
+      "minDur": 4, "tail": 2.4, "idle": true,
+      "variants": ["slider", "flip", "split"],
+      "variantsNote": "slider 分割线扫过揭示并来回轻扫 / flip 卡片三维翻面 / split 并排后 before 压暗退后、after 推近"
+    },
+    "kenburns": {
+      "label": "纪录片推拉",
+      "use": "讲故事、回顾、旅程、案例背景：1–4 张图片纪录片式慢推慢移、交叉溶解，底部逐字打出说明；每个 cue 换一张",
+      "props": {
+        "kicker": { "type": "string", "max": 16, "label": "左上角小标签" },
+        "items": { "type": "array", "of": "object", "minItems": 1, "maxItems": 4, "required": true,
+          "props": {
+            "src": { "type": "media", "label": "图片或视频" },
+            "caption": { "type": "string", "max": 20, "label": "底部说明（逐字打出）" },
+            "sourceStart": { "type": "number", "min": 0 }
+          } }
+      },
+      "cues": { "count": "items.length", "meaning": ["每张出现"] },
+      "minDur": 3.5, "tail": 2.2, "idle": true,
+      "variants": ["pan", "zoom", "parallax"],
+      "variantsNote": "pan 横向慢移 / zoom 交替推近拉远 / parallax 虚化背景 + 前景小窗反向视差"
+    },
+    "polaroid": {
+      "label": "拍立得",
+      "use": "生活感、回忆、幕后花絮、团队/人物照片：1–4 张照片卡 + 手写说明；每个 cue 出一张",
+      "props": {
+        "items": { "type": "array", "of": "object", "minItems": 1, "maxItems": 4, "required": true,
+          "props": {
+            "src": { "type": "media", "label": "照片或视频" },
+            "caption": { "type": "string", "max": 10, "label": "手写说明" },
+            "sourceStart": { "type": "number", "min": 0 }
+          } }
+      },
+      "cues": { "count": "items.length", "meaning": ["每张出现（film：每格前进）"] },
+      "minDur": 3.5, "tail": 2, "idle": true,
+      "variants": ["drop", "pin", "film"],
+      "variantsNote": "drop 掉落弹跳后显影 / pin 拍在软木板上钉住、红线相连 / film 胶片条滚过、当前格放大"
+    },
+    "device": {
+      "label": "设备样机",
+      "use": "展示 App、网页、录屏、作品画面：素材放进手机 / 平板 / 显示器屏幕里，视频按成片时钟播放；可配标题",
+      "props": {
+        "src": { "type": "media", "label": "屏幕内容（图片或视频，省略时为占位）" },
+        "title": { "type": "string", "max": 16, "label": "标题（横屏在右、竖屏在上）" },
+        "sub": { "type": "string", "max": 20, "label": "副标题" },
+        "sourceStart": { "type": "number", "min": 0 }
+      },
+      "cues": { "count": 2, "meaning": ["设备入场", "屏幕点亮 + 标题"] },
+      "minDur": 3, "tail": 1.6, "idle": true,
+      "variants": ["phone", "tablet", "monitor"],
+      "variantsNote": "phone 手机三维旋入 / tablet 平板从平放立起 / monitor 显示器落位后开机亮线展开"
+    },
+    "collage": {
+      "label": "拼贴墙",
+      "use": "大量作品/截图/用户照片的气势感：作品墙、社区、合集封面。masonry / wall 用 4–9 张（不够会循环）；mosaic 只用第一张，碎片拼成整图",
+      "props": {
+        "title": { "type": "string", "max": 16, "label": "标题" },
+        "items": { "type": "array", "of": "object", "minItems": 1, "maxItems": 9, "required": true,
+          "props": {
+            "src": { "type": "media", "label": "图片或视频" },
+            "sourceStart": { "type": "number", "min": 0 }
+          } }
+      },
+      "cues": { "count": 2, "meaning": ["拼贴入场", "标题出现"] },
+      "minDur": 3, "tail": 1.4, "idle": true,
+      "variants": ["masonry", "mosaic", "wall"],
+      "variantsNote": "masonry 瀑布流逐块落下后分列滚动 / mosaic 碎片飞入拼合成整图 / wall 多行无限滚动 + 中心高亮"
+    },
+    "spotlight": {
+      "label": "聚光放大",
+      "use": "在一张截图/照片/视频画面里依次指出 1–3 个关注点（x、y 为 0–1 的相对位置），每个点带一个短标签",
+      "props": {
+        "title": { "type": "string", "max": 20 },
+        "src": { "type": "media", "label": "图片或视频" },
+        "sourceStart": { "type": "number", "min": 0 },
+        "points": { "type": "array", "of": "object", "minItems": 1, "maxItems": 3, "required": true,
+          "props": {
+            "x": { "type": "number", "min": 0, "max": 1, "required": true, "label": "横向位置 0–1" },
+            "y": { "type": "number", "min": 0, "max": 1, "required": true, "label": "纵向位置 0–1" },
+            "label": { "type": "string", "max": 10, "label": "标签" }
+          } }
+      },
+      "cues": { "count": "1 + points.length", "meaning": ["画面出现", "每个关注点"] },
+      "minDur": 3, "tail": 1.6, "idle": true,
+      "variants": ["spotlight", "magnifier", "blur"],
+      "variantsNote": "spotlight 暗场聚光圈移动 / magnifier 放大镜跟随 / blur 其余区域虚化"
+    }
+  }
+}

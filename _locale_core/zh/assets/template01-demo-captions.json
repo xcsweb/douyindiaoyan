@@ -1,0 +1,169 @@
+[
+  {
+    "id": "p1-c1",
+    "t0": 0.0,
+    "t1": 0.74,
+    "zh": "模板零一",
+    "en": "Template 01",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "模",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "text": "板",
+          "start": 0.26,
+          "end": 0.44
+        },
+        {
+          "text": "零一",
+          "start": 0.44,
+          "end": 0.74
+        }
+      ]
+    }
+  },
+  {
+    "id": "p1-c2",
+    "t0": 1.98,
+    "t1": 3.32,
+    "zh": "现代图文口播",
+    "en": "Modern illustrated narration",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "现",
+          "start": 1.98,
+          "end": 2.38
+        },
+        {
+          "text": "代",
+          "start": 2.38,
+          "end": 2.58
+        },
+        {
+          "text": "图",
+          "start": 2.58,
+          "end": 2.74
+        },
+        {
+          "text": "文",
+          "start": 2.74,
+          "end": 2.88
+        },
+        {
+          "text": "口",
+          "start": 2.88,
+          "end": 3.12
+        },
+        {
+          "text": "播",
+          "start": 3.12,
+          "end": 3.32
+        }
+      ]
+    }
+  },
+  {
+    "id": "p1-c3",
+    "t0": 4.0,
+    "t1": 5.22,
+    "zh": "先看原片节奏",
+    "en": "First, the original rhythm",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "先",
+          "start": 4.0,
+          "end": 4.24
+        },
+        {
+          "text": "看",
+          "start": 4.24,
+          "end": 4.44
+        },
+        {
+          "text": "原",
+          "start": 4.44,
+          "end": 4.62
+        },
+        {
+          "text": "片",
+          "start": 4.62,
+          "end": 4.82
+        },
+        {
+          "text": "节",
+          "start": 4.82,
+          "end": 5.02
+        },
+        {
+          "text": "奏",
+          "start": 5.02,
+          "end": 5.22
+        }
+      ]
+    }
+  },
+  {
+    "id": "p1-c4",
+    "t0": 5.92,
+    "t1": 7.44,
+    "zh": "标题进入方法容器",
+    "en": "Titles enter a method container",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "标",
+          "start": 5.92,
+          "end": 6.12
+        },
+        {
+          "text": "题",
+          "start": 6.12,
+          "end": 6.32
+        },
+        {
+          "text": "进",
+          "start": 6.32,
+          "end": 6.52
+        },
+        {
+          "text": "入",
+          "start": 6.52,
+          "end": 6.66
+        },
+        {
+          "text": "方",
+          "start": 6.66,
+          "end": 6.82
+        },
+        {
+          "text": "法",
+          "start": 6.82,
+          "end": 7.0
+        },
+        {
+          "text": "容",
+          "start": 7.0,
+          "end": 7.2
+        },
+        {
+          "text": "器",
+          "start": 7.2,
+          "end": 7.44
+        }
+      ]
+    }
+  }
+]

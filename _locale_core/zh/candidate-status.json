@@ -1,0 +1,24 @@
+{
+  "profile": "motiongit.candidate-status/1",
+  "revision": "method-upgrade-2026-10-13",
+  "templateId": 605,
+  "language": "zh",
+  "status": "candidate-in-progress",
+  "coverageComplete": false,
+  "ownerAccepted": false,
+  "packaged": false,
+  "published": false,
+  "sourceVersion": "2.4.2",
+  "sourceArchiveSha256": "f18d456e6c5da02a5ef36b66947025c5b6aabd410055c638f6c58b635ebc566e",
+  "validationScope": "Individual static/plan/render evidence is recorded externally; previous publication and acceptance do not approve these modifications.",
+  "pending": [
+    "完整源动效与声音闭包对照",
+    "两份不同主题的新内容全流程",
+    "最大合法容量及编码后声画检查",
+    "所有者完整前后视频审核",
+    "正式封装与个人调用标识/免登录更新回归",
+    "旧示例参数/说明迁移",
+    "kit/example 与隐含媒体调用链逐项核对",
+    "正常入口新内容与全组演出"
+  ]
+}

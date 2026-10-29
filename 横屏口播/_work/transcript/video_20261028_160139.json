@@ -1,0 +1,136 @@
+{
+  "file": "video_20261028_160139.wav",
+  "duration": 10.091,
+  "language": "zh",
+  "language_probability": 1.0,
+  "segments": [
+    {
+      "start": 0.66,
+      "end": 3.18,
+      "text": "这不是截图打开网页",
+      "words": [
+        {
+          "word": "这",
+          "start": 0.66,
+          "end": 1.22,
+          "probability": 0.3649
+        },
+        {
+          "word": "不是",
+          "start": 1.22,
+          "end": 1.46,
+          "probability": 0.8921
+        },
+        {
+          "word": "截",
+          "start": 1.46,
+          "end": 1.7,
+          "probability": 0.9722
+        },
+        {
+          "word": "图",
+          "start": 1.7,
+          "end": 2.02,
+          "probability": 0.9526
+        },
+        {
+          "word": "打",
+          "start": 2.02,
+          "end": 2.44,
+          "probability": 0.4279
+        },
+        {
+          "word": "开",
+          "start": 2.44,
+          "end": 2.56,
+          "probability": 0.9798
+        },
+        {
+          "word": "网",
+          "start": 2.56,
+          "end": 2.76,
+          "probability": 0.9968
+        },
+        {
+          "word": "页",
+          "start": 2.76,
+          "end": 3.18,
+          "probability": 0.9529
+        }
+      ]
+    },
+    {
+      "start": 4.4,
+      "end": 8.46,
+      "text": "距离1024还有多久没秒跳一次",
+      "words": [
+        {
+          "word": "距",
+          "start": 4.4,
+          "end": 5.0,
+          "probability": 0.8851
+        },
+        {
+          "word": "离",
+          "start": 5.0,
+          "end": 5.18,
+          "probability": 0.9788
+        },
+        {
+          "word": "10",
+          "start": 5.18,
+          "end": 5.42,
+          "probability": 0.9469
+        },
+        {
+          "word": "24",
+          "start": 5.42,
+          "end": 5.78,
+          "probability": 0.9848
+        },
+        {
+          "word": "还有",
+          "start": 5.78,
+          "end": 6.58,
+          "probability": 0.8042
+        },
+        {
+          "word": "多",
+          "start": 6.58,
+          "end": 6.8,
+          "probability": 0.9961
+        },
+        {
+          "word": "久",
+          "start": 6.8,
+          "end": 7.1,
+          "probability": 0.9988
+        },
+        {
+          "word": "没",
+          "start": 7.1,
+          "end": 7.72,
+          "probability": 0.3697
+        },
+        {
+          "word": "秒",
+          "start": 7.72,
+          "end": 7.92,
+          "probability": 0.9618
+        },
+        {
+          "word": "跳",
+          "start": 7.92,
+          "end": 8.14,
+          "probability": 0.8553
+        },
+        {
+          "word": "一次",
+          "start": 8.14,
+          "end": 8.46,
+          "probability": 0.9711
+        }
+      ]
+    }
+  ]
+}

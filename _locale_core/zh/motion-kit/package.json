@@ -1,0 +1,10 @@
+{
+  "name": "@motiongit/motion-kit",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "MotionGit 标准控件库：一种风格 = 一套标准控件 + 主题；按时间轴渲染任意内容。",
+  "scripts": {
+    "plan": "node tools/render.mjs --timeline examples/showcase.json --plan"
+  }
+}

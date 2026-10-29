@@ -1,0 +1,3682 @@
+{
+  "$comment": "motion-kit 标准控件清单：给渲染器校验输入、给助手选控件、给文档生成目录用。控件实现见 src/controls/*.js。时间（cues）一律是成片绝对秒数，可省略，省略时控件按自身节奏排布。 变体：每段可写 variant 指定；不写时同一控件在片中第 1、2、3 次出现依次用 variants 的第 1、2、3 个，循环。",
+  "version": "0.3.0",
+  "transitions": [
+    "cut",
+    "flash",
+    "wipe",
+    "blur",
+    "zoom",
+    "whip",
+    "glitch",
+    "iris",
+    "shutter",
+    "pixel",
+    "dip"
+  ],
+  "controls": {
+    "title": {
+      "label": "两行标题",
+      "use": "开场、段落开头：一行陈述 + 一行重点（重点行砸入）",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 32,
+          "label": "标题上方小字"
+        },
+        "line1": {
+          "type": "string",
+          "max": 16,
+          "required": true,
+          "label": "第一行"
+        },
+        "line2": {
+          "type": "string",
+          "max": 16,
+          "label": "第二行（渐变色，砸入）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "第一行入场",
+          "第二行砸入"
+        ]
+      },
+      "minDur": 2.5,
+      "variants": [
+        "slam",
+        "split",
+        "type"
+      ],
+      "variantsNote": "slam 砸入 / split 左右滑入 + 光线 / type 逐字打出 + 遮罩"
+    },
+    "keyword": {
+      "label": "关键词砸入",
+      "use": "一个词或短语是这段话的重点；后面可以补 1–3 句解释，逐句出现",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 32
+        },
+        "word": {
+          "type": "string",
+          "max": 10,
+          "required": true,
+          "label": "关键词"
+        },
+        "sub": {
+          "type": "array",
+          "of": "string",
+          "max": 28,
+          "minItems": 0,
+          "maxItems": 3,
+          "label": "补充说明（逐句出现）"
+        }
+      },
+      "cues": {
+        "count": "1 + sub.length",
+        "meaning": [
+          "关键词砸入",
+          "每句补充"
+        ]
+      },
+      "minDur": 2,
+      "variants": [
+        "slam",
+        "glitch",
+        "focus"
+      ],
+      "variantsNote": "slam 砸入 + 火花 / glitch 干扰闪烁 / focus 模糊聚焦 + 取景框"
+    },
+    "number": {
+      "label": "数字滚动",
+      "use": "一个关键数字：时长、数量、百分比、价格。可带 1–3 句注释",
+      "props": {
+        "label": {
+          "type": "string",
+          "max": 20,
+          "required": true
+        },
+        "value": {
+          "type": "number",
+          "required": true
+        },
+        "from": {
+          "type": "number"
+        },
+        "decimals": {
+          "type": "integer",
+          "min": 0,
+          "max": 2
+        },
+        "prefix": {
+          "type": "string",
+          "max": 3
+        },
+        "unit": {
+          "type": "string",
+          "max": 6
+        },
+        "note": {
+          "type": "array",
+          "of": "string",
+          "max": 24,
+          "minItems": 0,
+          "maxItems": 3
+        }
+      },
+      "cues": {
+        "count": "1 + note.length",
+        "meaning": [
+          "开始滚动（1.4 秒到达）",
+          "每句注释"
+        ]
+      },
+      "minDur": 3,
+      "variants": [
+        "ring",
+        "gauge",
+        "flip"
+      ],
+      "variantsNote": "ring 环形进度 / gauge 半圆仪表 / flip 逐位翻入 + 刻度"
+    },
+    "list": {
+      "label": "要点列表",
+      "use": "1–6 个并列要点，逐条出现；全部出现后高亮依次轮转",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "required": true
+        },
+        "items": {
+          "type": "array",
+          "of": "string",
+          "max": 24,
+          "minItems": 1,
+          "maxItems": 6,
+          "required": true
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每条要点"
+        ]
+      },
+      "minDur": 3,
+      "variants": [
+        "rail",
+        "cards",
+        "check"
+      ],
+      "variantsNote": "rail 竖轨编号 / cards 玻璃卡翻起 / check 方框打勾"
+    },
+    "compare": {
+      "label": "左右对比",
+      "use": "两种做法、前后变化、A 和 B 的差别；可给结论并标出胜者",
+      "props": {
+        "left": {
+          "type": "object",
+          "required": true,
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 12
+            },
+            "big": {
+              "type": "string",
+              "max": 10,
+              "required": true
+            },
+            "lines": {
+              "type": "array",
+              "of": "string",
+              "max": 18,
+              "maxItems": 3
+            }
+          }
+        },
+        "right": {
+          "type": "object",
+          "required": true,
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 12
+            },
+            "big": {
+              "type": "string",
+              "max": 10,
+              "required": true
+            },
+            "lines": {
+              "type": "array",
+              "of": "string",
+              "max": 18,
+              "maxItems": 3
+            }
+          }
+        },
+        "verdict": {
+          "type": "string",
+          "max": 16
+        },
+        "winner": {
+          "type": "enum",
+          "values": [
+            "left",
+            "right",
+            "none"
+          ]
+        }
+      },
+      "cues": {
+        "count": 3,
+        "meaning": [
+          "左边出现",
+          "右边出现",
+          "结论"
+        ]
+      },
+      "minDur": 4,
+      "variants": [
+        "split",
+        "panels",
+        "flip"
+      ],
+      "variantsNote": "split 两侧滑入 / panels 玻璃面板 / flip 先单侧再翻出另一侧"
+    },
+    "steps": {
+      "label": "步骤流程",
+      "use": "2–5 个先后步骤；光点沿轨道依次点亮",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18
+        },
+        "steps": {
+          "type": "array",
+          "of": "string",
+          "max": 10,
+          "minItems": 2,
+          "maxItems": 5,
+          "required": true
+        }
+      },
+      "cues": {
+        "count": "steps.length",
+        "meaning": [
+          "每一步点亮"
+        ]
+      },
+      "minDur": 3.5,
+      "variants": [
+        "track",
+        "ladder",
+        "cards"
+      ],
+      "variantsNote": "track 轨道光点 / ladder 阶梯上升 / cards 卡片接力"
+    },
+    "quote": {
+      "label": "金句 / 引用",
+      "use": "一句原话、观点或引用，逐字打出；*星号* 包住的词高亮",
+      "props": {
+        "text": {
+          "type": "string",
+          "max": 60,
+          "required": true
+        },
+        "who": {
+          "type": "string",
+          "max": 24
+        }
+      },
+      "cues": {
+        "count": 1,
+        "meaning": [
+          "开始打字"
+        ]
+      },
+      "minDur": 3,
+      "variants": [
+        "type",
+        "reveal",
+        "card"
+      ],
+      "variantsNote": "type 逐字打出 / reveal 短语浮现 + 下划线 / card 玻璃卡翻入"
+    },
+    "bars": {
+      "label": "数据条",
+      "use": "2–5 项数值比较；数值必须来自真实数据",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "required": true
+        },
+        "unit": {
+          "type": "string",
+          "max": 6
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "required": true,
+          "of": "object",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 12,
+              "required": true
+            },
+            "value": {
+              "type": "number",
+              "required": true
+            }
+          }
+        },
+        "max": {
+          "type": "number"
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每条数据增长"
+        ]
+      },
+      "minDur": 3,
+      "variants": [
+        "rows",
+        "columns",
+        "rank"
+      ],
+      "variantsNote": "rows 横条 / columns 竖柱 / rank 排序 + 第一名高亮"
+    },
+    "media": {
+      "label": "录屏 / 图片窗",
+      "use": "展示用户的录屏、截图、产品图；可在画面上标出 1–3 处重点",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 24,
+          "label": "窗口标题"
+        },
+        "src": {
+          "type": "media",
+          "label": "视频、图片或 %05d 图片序列（相对时间轴文件）"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0,
+          "label": "视频从第几秒开始"
+        },
+        "callouts": {
+          "type": "array",
+          "of": "object",
+          "maxItems": 3,
+          "props": {
+            "text": {
+              "type": "string",
+              "max": 16,
+              "required": true
+            },
+            "x": {
+              "type": "number",
+              "min": 0,
+              "max": 1,
+              "required": true
+            },
+            "y": {
+              "type": "number",
+              "min": 0,
+              "max": 1,
+              "required": true
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "1 + callouts.length",
+        "meaning": [
+          "窗口入场",
+          "每个标注"
+        ]
+      },
+      "minDur": 3,
+      "variants": [
+        "tilt",
+        "zoom",
+        "scan"
+      ],
+      "variantsNote": "tilt 透视转入 / zoom 推近标注处 / scan 扫描刷出"
+    },
+    "stamp": {
+      "label": "印章强调",
+      "use": "下结论、表态：免费、已上线、不推荐",
+      "props": {
+        "text": {
+          "type": "string",
+          "max": 8,
+          "required": true
+        },
+        "sub": {
+          "type": "string",
+          "max": 30
+        },
+        "tone": {
+          "type": "enum",
+          "values": [
+            "warm",
+            "ok",
+            "bad"
+          ]
+        }
+      },
+      "cues": {
+        "count": 1,
+        "meaning": [
+          "盖章"
+        ]
+      },
+      "minDur": 1.8,
+      "variants": [
+        "stamp",
+        "badge",
+        "neon"
+      ],
+      "variantsNote": "stamp 盖章 / badge 圆徽章旋入 / neon 霓虹点亮"
+    },
+    "chapter": {
+      "label": "章节卡",
+      "use": "长视频分段：编号 + 段名",
+      "props": {
+        "no": {
+          "type": "string",
+          "max": 4,
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "max": 14,
+          "required": true
+        },
+        "sub": {
+          "type": "string",
+          "max": 30
+        }
+      },
+      "cues": {
+        "count": 1,
+        "meaning": [
+          "段名入场"
+        ]
+      },
+      "minDur": 1.8,
+      "variants": [
+        "outline",
+        "center",
+        "wipe"
+      ],
+      "variantsNote": "outline 描边编号 / center 居中 + 两侧光线 / wipe 色带扫过"
+    },
+    "fusion": {
+      "label": "光球合成",
+      "use": "A × B 合在一起得到结果 C",
+      "props": {
+        "line": {
+          "type": "string",
+          "max": 16
+        },
+        "a": {
+          "type": "string",
+          "max": 12,
+          "required": true
+        },
+        "b": {
+          "type": "string",
+          "max": 12,
+          "required": true
+        },
+        "result": {
+          "type": "string",
+          "max": 18,
+          "required": true
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "两颗球出现",
+          "合成爆闪"
+        ]
+      },
+      "minDur": 3.5,
+      "variants": [
+        "orbs",
+        "orbit",
+        "collide"
+      ],
+      "variantsNote": "orbs 牵引合成 / orbit 绕转收拢 / collide 高速相撞"
+    },
+    "logo": {
+      "label": "Logo 揭示",
+      "use": "片头或片尾亮出品牌/频道标志：有 logo 图片就用图片，没有就用名字首字或图标生成字标；下方可带一句标语",
+      "props": {
+        "name": {
+          "type": "string",
+          "max": 16,
+          "required": true,
+          "label": "品牌/频道名（字标）"
+        },
+        "tagline": {
+          "type": "string",
+          "max": 24,
+          "label": "标语"
+        },
+        "src": {
+          "type": "media",
+          "label": "logo 图片（方形最佳，可省略）"
+        },
+        "icon": {
+          "type": "icon",
+          "label": "无图片时的标志图标（省略则用名字首字）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "标志揭示（爆闪 / 描线 / 定格）",
+          "标语出现"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "burst",
+        "draw",
+        "glitch"
+      ],
+      "variantsNote": "burst 粒子旋入汇聚后爆闪弹出 / draw 外框描线后填色、字标擦出 / glitch 错位色散干扰后定格",
+      "group": "brand"
+    },
+    "intro": {
+      "label": "片头",
+      "use": "视频开头的节目标题卡：标题 + 副标题 + 可选期数/日期。电影感开场、系列节目、栏目包装",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 14,
+          "required": true,
+          "label": "标题"
+        },
+        "subtitle": {
+          "type": "string",
+          "max": 28,
+          "label": "副标题"
+        },
+        "episode": {
+          "type": "string",
+          "max": 12,
+          "label": "期数/日期（如 EP.07、第 3 期）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "标题出现",
+          "副标题出现"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "cinema",
+        "bold",
+        "minimal"
+      ],
+      "variantsNote": "cinema 遮幅黑边打开 + 光带扫过 + 字距收拢 / bold 色块弹出 + 巨大期数 + 标题升起 / minimal 中线画出、标题上升副标题下落、四角括号",
+      "group": "brand"
+    },
+    "outro": {
+      "label": "片尾",
+      "use": "视频结尾：感谢语 + 1–3 个下一步（推荐视频、下期预告、关注/链接文字），可带头像",
+      "props": {
+        "thanks": {
+          "type": "string",
+          "max": 10,
+          "required": true,
+          "label": "感谢语"
+        },
+        "sub": {
+          "type": "string",
+          "max": 24,
+          "label": "感谢语下方小字"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 3,
+          "required": true,
+          "label": "下一步（endcard 前两项做推荐位，next 第一项做预告卡）",
+          "props": {
+            "text": {
+              "type": "string",
+              "max": 14,
+              "required": true
+            },
+            "src": {
+              "type": "media",
+              "label": "推荐位/预告卡画面（可省略）"
+            }
+          }
+        },
+        "avatar": {
+          "type": "media",
+          "label": "头像（可省略）"
+        },
+        "name": {
+          "type": "string",
+          "max": 12,
+          "label": "频道名"
+        },
+        "follow": {
+          "type": "string",
+          "max": 6,
+          "label": "endcard 关注按钮文字（默认 关注）"
+        }
+      },
+      "cues": {
+        "count": "1 + items.length",
+        "meaning": [
+          "感谢语出现",
+          "每个下一步出现"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "endcard",
+        "thanks",
+        "next"
+      ],
+      "variantsNote": "endcard 推荐位方框描边 + 头像 + 关注按钮呼吸 / thanks 巨大感谢语弹落 + 彩纸炮 + 胶囊 / next 下期预告卡三维摆入 + 自动播放进度环",
+      "group": "brand"
+    },
+    "cta": {
+      "label": "行动号召",
+      "use": "引导观众做一个动作：点链接、领取、评论、往下看、上滑。一个按钮文字 + 一句补充",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 20
+        },
+        "text": {
+          "type": "string",
+          "max": 10,
+          "required": true,
+          "label": "按钮/号召文字"
+        },
+        "sub": {
+          "type": "string",
+          "max": 24,
+          "label": "补充一句"
+        },
+        "icon": {
+          "type": "icon",
+          "label": "按钮图标（button / swipe）"
+        },
+        "dir": {
+          "type": "enum",
+          "values": [
+            "down",
+            "up",
+            "left",
+            "right"
+          ],
+          "label": "arrow 变体箭头方向（默认 down）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "按钮/文字入场",
+          "点击 / 箭头猛推 / 上滑"
+        ]
+      },
+      "minDur": 2.5,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "button",
+        "arrow",
+        "swipe"
+      ],
+      "variantsNote": "button 胶囊按钮弹入 + 光标点击 + 波纹，之后呼吸 / arrow 文字弹起 + 大箭头描出反复顶出 / swipe 滑轨触点反复上滑",
+      "group": "brand"
+    },
+    "subscribe": {
+      "label": "关注 / 三连",
+      "use": "求关注、求三连、开铃铛：按钮依次被光标点亮，图标弹跳、数字 +1。items 可自定义 2–3 个按钮",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 20
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 3,
+          "label": "按钮（省略用默认：三连 / 关注 / 订阅 + 铃铛）",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 6,
+              "required": true
+            },
+            "icon": {
+              "type": "icon",
+              "required": true
+            },
+            "count": {
+              "type": "integer",
+              "min": 0,
+              "max": 9999998,
+              "label": "当前计数（点亮后 +1，示意）"
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "max": 12,
+          "label": "频道名"
+        },
+        "avatar": {
+          "type": "media",
+          "label": "头像（可省略）"
+        },
+        "done": {
+          "type": "string",
+          "max": 6,
+          "label": "点击后文字（默认 已关注 / 已订阅）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "按钮入场",
+          "开始点击（依次点亮）"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "triple",
+        "follow",
+        "bell"
+      ],
+      "variantsNote": "triple 圆按钮依次点亮 + +1 + 彩纸 / follow 头像名片、关注按钮变已关注、粉丝数 +1 / bell 订阅变已订阅 + 铃铛阻尼摇摆、声波、角标",
+      "group": "brand"
+    },
+    "countdown": {
+      "label": "倒计时",
+      "use": "3–10 秒倒数：开奖、开播、限时、揭晓前的紧张感；归零时爆开出现结束语",
+      "props": {
+        "from": {
+          "type": "integer",
+          "min": 3,
+          "max": 10,
+          "required": true,
+          "label": "从几开始"
+        },
+        "label": {
+          "type": "string",
+          "max": 18,
+          "label": "上方说明"
+        },
+        "end": {
+          "type": "string",
+          "max": 8,
+          "label": "归零后的文字（默认 GO）"
+        }
+      },
+      "cues": {
+        "count": 1,
+        "meaning": [
+          "开始倒数（每秒一拍；段落不够长时自动压缩）"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "ring",
+        "flip",
+        "slam"
+      ],
+      "variantsNote": "ring 圆环每秒倒走、最后三下变暖色 / flip 翻页牌 / slam 巨大数字砸入、上一个冲散",
+      "group": "brand"
+    },
+    "price": {
+      "label": "价格 / 优惠",
+      "use": "亮出价格与优惠：原价划掉、新价砸入、标签盖章；可带 1–3 个卖点",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 20
+        },
+        "name": {
+          "type": "string",
+          "max": 14,
+          "label": "商品/套餐名"
+        },
+        "price": {
+          "type": "string",
+          "max": 8,
+          "required": true,
+          "label": "新价（如 ¥99、$19.9）"
+        },
+        "was": {
+          "type": "string",
+          "max": 10,
+          "label": "原价（会被划掉）"
+        },
+        "unit": {
+          "type": "string",
+          "max": 4,
+          "label": "单位（/月、起）"
+        },
+        "tag": {
+          "type": "string",
+          "max": 4,
+          "label": "标签（限时、立减）"
+        },
+        "feats": {
+          "type": "array",
+          "of": "string",
+          "max": 14,
+          "maxItems": 3,
+          "label": "卖点"
+        }
+      },
+      "cues": {
+        "count": 3,
+        "meaning": [
+          "吊牌/卡片/爆炸贴入场",
+          "原价划掉 + 新价砸入",
+          "标签盖章（之后卖点依次出现）"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "tag",
+        "card",
+        "sale"
+      ],
+      "variantsNote": "tag 吊牌钟摆摆入 + 扫光 / card 套餐卡、数字逐位滚动、卖点打勾、流光边框 / sale 旋转爆炸贴 + 速度线 + 彩纸",
+      "group": "brand"
+    },
+    "reveal": {
+      "label": "揭晓 / 抽奖",
+      "use": "悬念揭晓：抽奖结果、答案、排名第一、新品名。鼓点悬念 → 打开 → 彩纸",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 20
+        },
+        "text": {
+          "type": "string",
+          "max": 10,
+          "required": true,
+          "label": "揭晓的结果"
+        },
+        "sub": {
+          "type": "string",
+          "max": 24,
+          "label": "补充一句"
+        },
+        "icon": {
+          "type": "icon",
+          "label": "结果上方图标"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "鼓点悬念开始",
+          "揭晓"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.8,
+      "idle": true,
+      "variants": [
+        "curtain",
+        "card",
+        "box"
+      ],
+      "variantsNote": "curtain 帘幕颤动后拉开 + 聚光灯 / card 背面卡片越抖越快后三维翻开 + 光芒 / box 礼物盒抖动、盒盖飞起、结果升起",
+      "group": "brand"
+    },
+    "iconcards": {
+      "label": "图标要点卡",
+      "use": "2–4 个并列要点，每个配一个图标：功能亮点、方法要素、几个理由。比 list 更有画面感；要点有顺序/因果时改用 steps",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "title": {
+          "type": "string",
+          "max": 20,
+          "label": "标题（可省略）"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 2,
+          "maxItems": 4,
+          "required": true,
+          "props": {
+            "icon": {
+              "type": "icon",
+              "required": true
+            },
+            "title": {
+              "type": "string",
+              "max": 8,
+              "required": true,
+              "label": "卡片标题"
+            },
+            "text": {
+              "type": "string",
+              "max": 24,
+              "label": "一句说明（可省略）"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每张卡翻起"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "row",
+        "grid",
+        "stack"
+      ],
+      "variantsNote": "row 并排竖卡以底边翻起 / grid 2×2 横卡左右翻开 / stack 卡组发牌、飞行中翻面；停留时轮流浮起高亮",
+      "group": "concept"
+    },
+    "qa": {
+      "label": "问答",
+      "use": "先抛出一个问题，停顿后揭晓答案：设问、观众常问、知识小测。cue 对准口播说出答案的那一刻",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "question": {
+          "type": "string",
+          "max": 30,
+          "required": true,
+          "label": "问题"
+        },
+        "answer": {
+          "type": "string",
+          "max": 40,
+          "required": true,
+          "label": "答案，*重点* 用星号"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "问题出现",
+          "答案揭晓"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "reveal",
+        "flip",
+        "chat"
+      ],
+      "variantsNote": "reveal 条纹挡板 + 倒计时条后对开 / flip 大卡翻面 / chat 提问气泡、思考中、问号翻成灯泡",
+      "group": "concept"
+    },
+    "myth": {
+      "label": "误区与真相",
+      "use": "纠正一个常见错误说法：先摆出误区、否定它、再给出正确说法。辟谣、避坑、常见误解",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "myth": {
+          "type": "string",
+          "max": 30,
+          "required": true,
+          "label": "错误说法"
+        },
+        "fact": {
+          "type": "string",
+          "max": 36,
+          "required": true,
+          "label": "正确说法，*重点* 用星号"
+        },
+        "mythLabel": {
+          "type": "string",
+          "max": 6,
+          "label": "误区标签（默认 误区）"
+        },
+        "factLabel": {
+          "type": "string",
+          "max": 6,
+          "label": "真相标签（默认 真相）"
+        }
+      },
+      "cues": {
+        "count": 3,
+        "meaning": [
+          "误区出现",
+          "被否定",
+          "真相出现"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "cross",
+        "shatter",
+        "swap"
+      ],
+      "variantsNote": "cross 红叉打掉 + 逐行划线，真相砸入 / shatter 裂纹后碎成玻璃片 / swap 开关拨到绿色，文字逐字翻牌换成真相",
+      "group": "concept"
+    },
+    "prosCons": {
+      "label": "优缺点",
+      "use": "权衡一件事的好处与代价，最后给结论（偏向哪边）。选购、方案评估、利弊分析",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "title": {
+          "type": "string",
+          "max": 20
+        },
+        "pros": {
+          "type": "array",
+          "of": "string",
+          "max": 12,
+          "minItems": 1,
+          "maxItems": 4,
+          "required": true,
+          "label": "优点"
+        },
+        "cons": {
+          "type": "array",
+          "of": "string",
+          "max": 12,
+          "minItems": 1,
+          "maxItems": 4,
+          "required": true,
+          "label": "缺点"
+        },
+        "proLabel": {
+          "type": "string",
+          "max": 6,
+          "label": "默认 优点"
+        },
+        "conLabel": {
+          "type": "string",
+          "max": 6,
+          "label": "默认 缺点"
+        },
+        "verdict": {
+          "type": "string",
+          "max": 16,
+          "label": "结论一句（可省略）"
+        },
+        "lean": {
+          "type": "enum",
+          "values": [
+            "pros",
+            "cons",
+            "even"
+          ],
+          "label": "结论偏向（缺省按条数）"
+        }
+      },
+      "cues": {
+        "count": "pros.length + cons.length + 1",
+        "meaning": [
+          "每条优点",
+          "每条缺点",
+          "结论"
+        ]
+      },
+      "minDur": 4.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "columns",
+        "scale",
+        "cards"
+      ],
+      "variantsNote": "columns 中线两栏 + 拔河条拉向占优一方 / scale 砝码落入托盘、天平倾斜 / cards 两张卡翻入，胜方前推发光、败方后退",
+      "group": "concept"
+    },
+    "definition": {
+      "label": "名词解释",
+      "use": "解释一个术语/概念：词条 + 注音/英文 + 类别 + 一句定义 + 可选例句。知识科普、行业黑话、新概念",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "term": {
+          "type": "string",
+          "max": 10,
+          "required": true,
+          "label": "词条"
+        },
+        "phonetic": {
+          "type": "string",
+          "max": 24,
+          "label": "拼音或英文"
+        },
+        "pos": {
+          "type": "string",
+          "max": 8,
+          "label": "词性/类别，如 名词、术语"
+        },
+        "definition": {
+          "type": "string",
+          "max": 48,
+          "required": true,
+          "label": "一句定义，*重点* 用星号"
+        },
+        "example": {
+          "type": "string",
+          "max": 30,
+          "label": "例句（可省略）"
+        }
+      },
+      "cues": {
+        "count": 3,
+        "meaning": [
+          "词条出现",
+          "定义出现",
+          "例句 / 强调"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "dictionary",
+        "wiki",
+        "sticky"
+      ],
+      "variantsNote": "dictionary 词典条目，词头逐字落下、注音打出 / wiki 搜索框打字回车后展开百科卡 / sticky 便签贴上、记号笔写出并圈词",
+      "group": "concept"
+    },
+    "tip": {
+      "label": "小贴士 / 警告",
+      "use": "插一句提醒：小技巧（tip）、注意事项（warn）、补充信息（info）、确认无误（ok）。类型决定图标与颜色",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "kind": {
+          "type": "enum",
+          "values": [
+            "tip",
+            "warn",
+            "info",
+            "ok"
+          ],
+          "label": "tip 灯泡暖色 / warn 警示红 / info 信息主色 / ok 对勾绿"
+        },
+        "title": {
+          "type": "string",
+          "max": 12,
+          "label": "标题（默认按类型：小贴士/注意/提示/没问题）"
+        },
+        "text": {
+          "type": "string",
+          "max": 44,
+          "required": true,
+          "label": "正文，*重点* 用星号"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "出现",
+          "正文"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "banner",
+        "card",
+        "bubble"
+      ],
+      "variantsNote": "banner 横幅展开、色块砸入（warn 带滚动警示条）/ card 图标徽章弹跳落下、卡片展开 / bubble 圆形角色 + 气泡逐字打出",
+      "group": "concept"
+    },
+    "checklist": {
+      "label": "待办清单",
+      "use": "逐项完成的清单：准备步骤、检查项、已做到的事。和 list 的区别是有打勾过程、进度计数和最后的完成章",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "title": {
+          "type": "string",
+          "max": 16
+        },
+        "items": {
+          "type": "array",
+          "of": "string",
+          "max": 14,
+          "minItems": 2,
+          "maxItems": 6,
+          "required": true
+        },
+        "done": {
+          "type": "string",
+          "max": 4,
+          "label": "完成章文字（默认 完成）"
+        }
+      },
+      "cues": {
+        "count": "items.length + 1",
+        "meaning": [
+          "每项打勾",
+          "完成章"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "todo",
+        "clipboard",
+        "progress"
+      ],
+      "variantsNote": "todo 玻璃面板 + 计数 + 进度条，完成章砸下 / clipboard 写字板手绘勾与划线、圆章盖下 / progress 分段进度环与清单同步、光点飞入",
+      "group": "concept"
+    },
+    "vs": {
+      "label": "两方对决",
+      "use": "两个对象正面比拼 1–3 项数值并分出胜负：产品 A/B、方案、两个人或团队。只比观点不比数值时用 compare",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "a": {
+          "type": "object",
+          "required": true,
+          "props": {
+            "name": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "tag": {
+              "type": "string",
+              "max": 14,
+              "label": "小字身份"
+            },
+            "src": {
+              "type": "media",
+              "label": "头像/图片（可省略，省略时显示首字）"
+            }
+          }
+        },
+        "b": {
+          "type": "object",
+          "required": true,
+          "props": {
+            "name": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "tag": {
+              "type": "string",
+              "max": 14
+            },
+            "src": {
+              "type": "media"
+            }
+          }
+        },
+        "stats": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 3,
+          "required": true,
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 6,
+              "required": true
+            },
+            "a": {
+              "type": "number",
+              "min": 0,
+              "required": true
+            },
+            "b": {
+              "type": "number",
+              "min": 0,
+              "required": true
+            },
+            "unit": {
+              "type": "string",
+              "max": 3
+            },
+            "low": {
+              "type": "boolean",
+              "label": "true 表示越小越好（价格、耗时）"
+            }
+          }
+        },
+        "winner": {
+          "type": "enum",
+          "values": [
+            "a",
+            "b",
+            "none"
+          ],
+          "label": "缺省按胜项数"
+        }
+      },
+      "cues": {
+        "count": "2 + stats.length + 1",
+        "meaning": [
+          "双方冲入",
+          "VS",
+          "每项属性",
+          "胜方"
+        ]
+      },
+      "minDur": 4.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "fight",
+        "scale",
+        "cards"
+      ],
+      "variantsNote": "fight 格斗游戏式冲入相撞、VS 闪电、属性条对冲、胜方光环王冠 / scale 头像滚入、双色比例条拔河 / cards 对战卡牌飞入翻开、逐项比数值、胜方浮起 WIN",
+      "group": "concept"
+    },
+    "donut": {
+      "label": "环形占比",
+      "use": "几个部分占整体多少：构成、份额、预算分配、用户来源（2–5 项）。数值按占比换算成百分比",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "label": "标题"
+        },
+        "center": {
+          "type": "string",
+          "max": 8,
+          "label": "ring 变体：中心合计上方小字（如「总计」）"
+        },
+        "unit": {
+          "type": "string",
+          "max": 4,
+          "label": "数值单位"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 2,
+          "maxItems": 5,
+          "required": true,
+          "label": "各部分",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "value": {
+              "type": "number",
+              "min": 0,
+              "required": true
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "1 + items.length",
+        "meaning": [
+          "图表入场",
+          "每块扇区出现"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "ring",
+        "pie",
+        "split"
+      ],
+      "variantsNote": "ring 环形 + 引线标注、中心合计滚动 / pie 实心扇区逐块弹出 / split 环形 + 侧边图例逐条点亮",
+      "group": "data"
+    },
+    "linechart": {
+      "label": "折线趋势",
+      "use": "随时间的变化：增长、下降、波动、两条对比（4–12 个点）。终点标注最后一个值",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "label": "标题"
+        },
+        "unit": {
+          "type": "string",
+          "max": 4,
+          "label": "数值单位"
+        },
+        "series": {
+          "type": "array",
+          "of": "string",
+          "max": 8,
+          "maxItems": 2,
+          "label": "系列名（第二个对应 value2）"
+        },
+        "note": {
+          "type": "string",
+          "max": 12,
+          "label": "终点标注补充（如「创新高」）"
+        },
+        "points": {
+          "type": "array",
+          "of": "object",
+          "minItems": 4,
+          "maxItems": 12,
+          "required": true,
+          "label": "数据点",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 6,
+              "required": true,
+              "label": "横轴标签"
+            },
+            "value": {
+              "type": "number",
+              "required": true
+            },
+            "value2": {
+              "type": "number",
+              "label": "第二条线（每个点都填才画）"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": 3,
+        "meaning": [
+          "坐标入场",
+          "开始描线",
+          "终点标注"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "line",
+        "area",
+        "spark"
+      ],
+      "variantsNote": "line 描线生长 + 拖尾光点 + 数据点弹出 / area 面积弹起 + 扫描线读数 / spark 大数字跟随走势 + 涨跌幅（只画第一条）",
+      "group": "data"
+    },
+    "counter": {
+      "label": "KPI 数字卡",
+      "use": "2–4 个关键数字并排：用户数、营收、增长率、时长；可带涨跌",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "label": "标题"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 2,
+          "maxItems": 4,
+          "required": true,
+          "label": "数字卡",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "value": {
+              "type": "number",
+              "min": 0,
+              "max": 99999999,
+              "required": true
+            },
+            "prefix": {
+              "type": "string",
+              "max": 2,
+              "label": "前缀（¥ $）"
+            },
+            "unit": {
+              "type": "string",
+              "max": 3,
+              "label": "单位（万 % 人）"
+            },
+            "delta": {
+              "type": "number",
+              "min": -999,
+              "max": 999,
+              "label": "涨跌（百分点，正涨负跌）"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每张卡出现"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.8,
+      "idle": true,
+      "variants": [
+        "cards",
+        "odometer",
+        "ticker"
+      ],
+      "variantsNote": "cards 三维翻牌 + 滚动计数 / odometer 里程表滚轮逐位停 / ticker 行情板逐行扫入、乱码锁定",
+      "group": "data"
+    },
+    "progress": {
+      "label": "进度 / 完成度",
+      "use": "完成了多少：项目进度、目标达成、技能熟练度、电量式的程度（1–4 条，百分比）",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "label": "标题"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 4,
+          "required": true,
+          "label": "进度条",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 10,
+              "required": true
+            },
+            "percent": {
+              "type": "number",
+              "min": 0,
+              "max": 100,
+              "required": true
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每条开始填充"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "bars",
+        "rings",
+        "battery"
+      ],
+      "variantsNote": "bars 斜纹横条（100% 打勾）/ rings 同心环 + 中心轮显 / battery 分段电量格（颜色随电量）",
+      "group": "data"
+    },
+    "timeline": {
+      "label": "时间线 / 里程碑",
+      "use": "按时间顺序的 3–6 个节点：发展历程、计划路线图、事件经过；current 标出「现在」",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "label": "标题"
+        },
+        "current": {
+          "type": "integer",
+          "min": 1,
+          "max": 6,
+          "label": "当前节点序号（1 起，默认最后一个；之后的节点显示为计划中）"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 3,
+          "maxItems": 6,
+          "required": true,
+          "label": "节点",
+          "props": {
+            "date": {
+              "type": "string",
+              "max": 8,
+              "required": true,
+              "label": "时间"
+            },
+            "text": {
+              "type": "string",
+              "max": 14,
+              "required": true,
+              "label": "事件"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每个节点点亮"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "horizontal",
+        "vertical",
+        "zigzag"
+      ],
+      "variantsNote": "horizontal 横向沿线点亮（竖屏自动纵向）/ vertical 竖线 + 卡片滑入 / zigzag 折线上下交替",
+      "group": "data"
+    },
+    "table": {
+      "label": "对比表 / 功能矩阵",
+      "use": "2–3 个方案在 2–5 项上逐项比较；单元格写 ✓ / ✗ 或短文字；赢家列高亮",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "label": "标题"
+        },
+        "cols": {
+          "type": "array",
+          "of": "string",
+          "max": 6,
+          "minItems": 2,
+          "maxItems": 3,
+          "required": true,
+          "label": "方案名"
+        },
+        "rows": {
+          "type": "array",
+          "of": "object",
+          "minItems": 2,
+          "maxItems": 5,
+          "required": true,
+          "label": "比较项",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "cells": {
+              "type": "array",
+              "of": "string",
+              "max": 5,
+              "minItems": 2,
+              "maxItems": 3,
+              "required": true,
+              "label": "各方案的值（与 cols 同序；✓ ✗ 画成图标）"
+            }
+          }
+        },
+        "win": {
+          "type": "integer",
+          "min": 1,
+          "max": 3,
+          "label": "赢家列序号（1 起；不写时取 ✓ 最多的唯一一列）"
+        }
+      },
+      "cues": {
+        "count": "1 + rows.length",
+        "meaning": [
+          "表头入场",
+          "每行揭晓"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.8,
+      "idle": true,
+      "variants": [
+        "grid",
+        "scorecard",
+        "checklist"
+      ],
+      "variantsNote": "grid 表格逐行扫入 + 赢家列光框 / scorecard 每方案一张卡、赢家抬起戴冠 / checklist 盖章清单 + 底部计票",
+      "group": "data"
+    },
+    "ranking": {
+      "label": "排行榜",
+      "use": "3–6 项按数值排名：榜单、名次、Top N；自动按 value 从大到小排序",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "label": "标题"
+        },
+        "unit": {
+          "type": "string",
+          "max": 4,
+          "label": "数值单位"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 3,
+          "maxItems": 6,
+          "required": true,
+          "label": "参与项（顺序任意）",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "value": {
+              "type": "number",
+              "min": 0,
+              "max": 99999999,
+              "required": true
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每项出现（race 按输入顺序；podium / list 从末名到第一）"
+        ]
+      },
+      "minDur": 4,
+      "tail": 2.2,
+      "idle": true,
+      "variants": [
+        "race",
+        "podium",
+        "list"
+      ],
+      "variantsNote": "race 条形赛跑后重新排序换位 / podium 领奖台升起 + 鼓点揭晓第一 / list 名次牌自下而上翻入",
+      "group": "data"
+    },
+    "flow": {
+      "label": "流程图",
+      "use": "3–6 个有先后顺序的环节（步骤、流水线、因果链），或一个起点分出多个去向（branch）；节点可带图标",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18,
+          "label": "上方标题"
+        },
+        "nodes": {
+          "type": "array",
+          "of": "object",
+          "minItems": 3,
+          "maxItems": 6,
+          "required": true,
+          "label": "节点（branch 变体：第一个是起点，其余是分支）",
+          "props": {
+            "text": {
+              "type": "string",
+              "max": 10,
+              "required": true
+            },
+            "icon": {
+              "type": "icon"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "nodes.length",
+        "meaning": [
+          "每个节点出现（连线在它之前描出）"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.5,
+      "idle": true,
+      "variants": [
+        "chain",
+        "snake",
+        "branch"
+      ],
+      "variantsNote": "chain 单行（竖屏单列）箭头链 / snake 两行折返 / branch 一个起点分出多个分支",
+      "group": "diagram"
+    },
+    "cycle": {
+      "label": "循环图",
+      "use": "首尾相接、周而复始的 3–6 个环节：飞轮、迭代闭环、生命周期；中心可写主题",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 8,
+          "label": "中心文字"
+        },
+        "nodes": {
+          "type": "array",
+          "of": "object",
+          "minItems": 3,
+          "maxItems": 6,
+          "required": true,
+          "props": {
+            "text": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "icon": {
+              "type": "icon"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "nodes.length",
+        "meaning": [
+          "每个环节出现"
+        ]
+      },
+      "minDur": 4.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "ring",
+        "orbit",
+        "wheel"
+      ],
+      "variantsNote": "ring 圆环 + 弧形箭头逐段描出 / orbit 节点在椭圆轨道上绕转 / wheel 扇区转盘轮流弹出",
+      "group": "diagram"
+    },
+    "funnel": {
+      "label": "漏斗 / 层级",
+      "use": "逐层收窄的转化、筛选（funnel），或自下而上的层级、金字塔、技术栈（pyramid / layers）；每层可带一个数值",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18
+        },
+        "layers": {
+          "type": "array",
+          "of": "object",
+          "minItems": 3,
+          "maxItems": 5,
+          "required": true,
+          "label": "从上到下（金字塔从塔尖到塔底）",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "value": {
+              "type": "string",
+              "max": 8,
+              "label": "数值，如 100% / 3.2万（示意）"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "layers.length",
+        "meaning": [
+          "每层出现（funnel 自上而下，pyramid / layers 自下而上）"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.5,
+      "idle": true,
+      "variants": [
+        "funnel",
+        "pyramid",
+        "layers"
+      ],
+      "variantsNote": "funnel 漏斗逐层落下、粒子流过 / pyramid 金字塔自下而上 / layers 等轴测叠层板",
+      "group": "diagram"
+    },
+    "venn": {
+      "label": "交集图",
+      "use": "两三个概念的交集或合成：A + B 的重叠点、三者兼得；merge 变体表示合而为一",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18
+        },
+        "sets": {
+          "type": "array",
+          "of": "string",
+          "max": 6,
+          "minItems": 2,
+          "maxItems": 3,
+          "required": true,
+          "label": "每个圆的名字"
+        },
+        "center": {
+          "type": "string",
+          "max": 6,
+          "label": "交集 / 合成后的文字"
+        }
+      },
+      "cues": {
+        "count": "1 + sets.length",
+        "meaning": [
+          "每个圆出现",
+          "交集 / 合成"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.5,
+      "idle": true,
+      "variants": [
+        "overlap",
+        "outline",
+        "merge"
+      ],
+      "variantsNote": "overlap 圆从两侧靠拢重叠、交集闪光 / outline 轮廓描出、交集斜纹填满 / merge 汇合成一个大圆",
+      "group": "diagram"
+    },
+    "mindmap": {
+      "label": "思维导图",
+      "use": "一个主题展开 3–6 个方面，每个方面可再列 0–2 个要点：知识框架、话题拆解",
+      "props": {
+        "center": {
+          "type": "string",
+          "max": 8,
+          "required": true,
+          "label": "中心主题"
+        },
+        "icon": {
+          "type": "icon",
+          "label": "中心图标"
+        },
+        "branches": {
+          "type": "array",
+          "of": "object",
+          "minItems": 3,
+          "maxItems": 6,
+          "required": true,
+          "props": {
+            "text": {
+              "type": "string",
+              "max": 6,
+              "required": true
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "children": {
+              "type": "array",
+              "of": "string",
+              "max": 6,
+              "minItems": 0,
+              "maxItems": 2,
+              "label": "子项"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "1 + branches.length",
+        "meaning": [
+          "中心出现",
+          "每个分支（含子项）长出"
+        ]
+      },
+      "minDur": 4.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "radial",
+        "tree",
+        "bubbles"
+      ],
+      "variantsNote": "radial 放射状（竖屏上下两排）/ tree 右展树（竖屏左侧主干）/ bubbles 气泡簇漂浮",
+      "group": "diagram"
+    },
+    "matrix": {
+      "label": "2×2 象限",
+      "use": "两个维度把事物分成四类：重要/紧急、投入/回报、定位分析；可在象限里落几个点，priority 变体突出一个象限",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 18
+        },
+        "xLabel": {
+          "type": "string",
+          "max": 10,
+          "label": "横轴（向右增大）"
+        },
+        "yLabel": {
+          "type": "string",
+          "max": 10,
+          "label": "纵轴（向上增大）"
+        },
+        "quads": {
+          "type": "array",
+          "of": "string",
+          "max": 8,
+          "minItems": 4,
+          "maxItems": 4,
+          "required": true,
+          "label": "四个象限：左上、右上、左下、右下"
+        },
+        "points": {
+          "type": "array",
+          "of": "object",
+          "minItems": 0,
+          "maxItems": 6,
+          "label": "落入的点",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 6,
+              "required": true
+            },
+            "x": {
+              "type": "number",
+              "min": 0,
+              "max": 1,
+              "required": true
+            },
+            "y": {
+              "type": "number",
+              "min": 0,
+              "max": 1,
+              "required": true
+            }
+          }
+        },
+        "pick": {
+          "type": "integer",
+          "min": 1,
+          "max": 4,
+          "label": "priority 变体突出的象限（1–4，默认 2 右上）"
+        }
+      },
+      "cues": {
+        "count": 3,
+        "meaning": [
+          "坐标轴描出",
+          "四个象限依次出现",
+          "点落入 / 重点象限放大"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "quadrant",
+        "scatter",
+        "priority"
+      ],
+      "variantsNote": "quadrant 十字轴 + 象限翻起 / scatter L 形坐标 + 网格 + 扫描线 / priority 四色象限、重点放大其余变暗",
+      "group": "diagram"
+    },
+    "hub": {
+      "label": "中心辐射",
+      "use": "一个核心连接 3–8 个周边：平台与生态、能力清单、一个工具对接多个场景",
+      "props": {
+        "center": {
+          "type": "object",
+          "required": true,
+          "label": "中心",
+          "props": {
+            "text": {
+              "type": "string",
+              "max": 8,
+              "required": true
+            },
+            "icon": {
+              "type": "icon"
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 3,
+          "maxItems": 8,
+          "required": true,
+          "props": {
+            "text": {
+              "type": "string",
+              "max": 6,
+              "required": true
+            },
+            "icon": {
+              "type": "icon"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "1 + items.length",
+        "meaning": [
+          "中心出现",
+          "每个卫星出现（连线先射出）"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "star",
+        "grid",
+        "constellation"
+      ],
+      "variantsNote": "star 环形卫星卡 + 信号往返 / grid 两列（竖屏上下两排）电路折线 / constellation 星点 + 星座连线",
+      "group": "diagram"
+    },
+    "lowerthird": {
+      "label": "人名条",
+      "layer": "overlay",
+      "use": "第一次出现某个人、讲者、嘉宾或角色时标出名字和身份；也可当一条短字幕条。贴在左下（或右下），横屏在口播卡左侧、字幕之上",
+      "props": {
+        "name": {
+          "type": "string",
+          "max": 16,
+          "required": true,
+          "label": "名字（主行）"
+        },
+        "title": {
+          "type": "string",
+          "max": 28,
+          "label": "身份 / 头衔（副行）"
+        },
+        "avatar": {
+          "type": "media",
+          "label": "头像图片（可省略）"
+        },
+        "icon": {
+          "type": "icon",
+          "label": "没有头像时用的图标（可省略）"
+        },
+        "side": {
+          "type": "enum",
+          "values": [
+            "left",
+            "right"
+          ],
+          "label": "贴左还是贴右（默认 left）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "名字条出现",
+          "头衔出现"
+        ]
+      },
+      "minDur": 2,
+      "tail": 1,
+      "idle": true,
+      "variants": [
+        "bar",
+        "glass",
+        "line"
+      ],
+      "variantsNote": "bar 色块 + 擦条推出深色名字条与主色头衔条 / glass 玻璃卡三维翻入、头像描圈 / line 细线描出、名字从线上升起（极简）",
+      "group": "overlay"
+    },
+    "callout": {
+      "label": "箭头标注",
+      "layer": "overlay",
+      "use": "指出画面里的某个位置（录屏按钮、图片细节、口播卡外的内容）：给目标点 x/y（0–1 画面比例）和一句短标注",
+      "props": {
+        "text": {
+          "type": "string",
+          "max": 14,
+          "required": true,
+          "label": "标注文字，*重点* 用星号"
+        },
+        "x": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "required": true,
+          "label": "目标点横向位置（画面比例）"
+        },
+        "y": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "required": true,
+          "label": "目标点纵向位置（画面比例）"
+        },
+        "w": {
+          "type": "number",
+          "min": 0.05,
+          "max": 0.8,
+          "label": "box 变体：框宽（画面比例）"
+        },
+        "h": {
+          "type": "number",
+          "min": 0.05,
+          "max": 0.8,
+          "label": "box 变体：框高（画面比例）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "箭头 / 圈 / 框画出",
+          "标注文字弹出"
+        ]
+      },
+      "minDur": 1.6,
+      "tail": 1,
+      "idle": true,
+      "variants": [
+        "arrow",
+        "circle",
+        "box"
+      ],
+      "variantsNote": "arrow 手绘弯箭头指向目标 + 波纹 / circle 手绘圈出目标 + 引线 / box 四角飞入框选、虚线流动",
+      "group": "overlay"
+    },
+    "sticker": {
+      "label": "贴纸",
+      "layer": "overlay",
+      "use": "给一句话盖个情绪章：「绝了」「重点」「NEW」「必看」，或一个图标贴纸。位置 x/y 可选（默认右上），不压口播卡和字幕",
+      "props": {
+        "text": {
+          "type": "string",
+          "max": 6,
+          "label": "贴纸文字（短）"
+        },
+        "icon": {
+          "type": "icon",
+          "label": "图标（可与文字同时用；都不给时为星星）"
+        },
+        "x": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "label": "中心横向位置（画面比例）"
+        },
+        "y": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "label": "中心纵向位置（画面比例）"
+        },
+        "rot": {
+          "type": "number",
+          "min": -30,
+          "max": 30,
+          "label": "倾斜角度（度）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "贴纸落下",
+          "再强调一下（摇摆 / 盖章 / 再炸）"
+        ]
+      },
+      "minDur": 1.5,
+      "tail": 1,
+      "idle": true,
+      "variants": [
+        "pop",
+        "badge",
+        "burst"
+      ],
+      "variantsNote": "pop 白边贴纸从镜头前砸下压扁回弹 / badge 锯齿圆徽旋入、外圈慢转 / burst 漫画爆炸星弹开、边缘沸腾抖动",
+      "group": "overlay"
+    },
+    "emoji": {
+      "label": "表情飘赞",
+      "layer": "overlay",
+      "use": "情绪时刻的一阵表情：点赞、比心、火、笑。icon 用图标名（彩色圆泡），或 text 填 1–2 个 emoji 字符；n 为数量",
+      "props": {
+        "icon": {
+          "type": "icon",
+          "label": "图标（默认 heart）"
+        },
+        "text": {
+          "type": "string",
+          "max": 2,
+          "label": "emoji 字符（填了就不用 icon）"
+        },
+        "n": {
+          "type": "integer",
+          "min": 3,
+          "max": 40,
+          "label": "数量"
+        },
+        "x": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "label": "float / burst：起点横向位置（画面比例）"
+        },
+        "y": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "label": "burst：喷射中心纵向位置（画面比例）"
+        }
+      },
+      "cues": {
+        "count": 1,
+        "meaning": [
+          "开始飘 / 落 / 喷"
+        ]
+      },
+      "minDur": 2,
+      "tail": 2,
+      "idle": true,
+      "variants": [
+        "float",
+        "rain",
+        "burst"
+      ],
+      "variantsNote": "float 直播点赞从下往上飘、摇摆 / rain 从上落下弹跳停住 / burst 中心大表情心跳、分波向四周喷射",
+      "group": "overlay"
+    },
+    "progressbar": {
+      "label": "章节进度条",
+      "layer": "overlay",
+      "use": "告诉观众「现在讲到第几部分」：2–6 个章节名 + 当前章节序号。放在章节切换处，停留 2–6 秒",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 12,
+          "label": "左侧 / 上方小标题（可省略）"
+        },
+        "chapters": {
+          "type": "array",
+          "of": "string",
+          "max": 8,
+          "minItems": 2,
+          "maxItems": 6,
+          "required": true,
+          "label": "章节名（短）"
+        },
+        "current": {
+          "type": "integer",
+          "min": 1,
+          "max": 6,
+          "required": true,
+          "label": "当前第几章（从 1 起）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "进度条出现",
+          "指针滑到当前章"
+        ]
+      },
+      "minDur": 2,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "top",
+        "bottom",
+        "dots"
+      ],
+      "variantsNote": "top 顶部分段条、指针滑过已完成段 / bottom 底部胶囊组、选中块弹性滑到当前章 / dots 节点步进器、当前节点展开成带名字的胶囊",
+      "group": "overlay"
+    },
+    "tag": {
+      "label": "角标",
+      "layer": "overlay",
+      "use": "画面角落的话题标签、集数、属性：「#干货」「第 3 集」「新」，1–3 条，可整段常驻",
+      "props": {
+        "items": {
+          "type": "array",
+          "of": "string",
+          "max": 10,
+          "minItems": 1,
+          "maxItems": 3,
+          "required": true,
+          "label": "标签文字（第一条为主标签）"
+        },
+        "pos": {
+          "type": "enum",
+          "values": [
+            "tl",
+            "tr"
+          ],
+          "label": "左上 tl / 右上 tr（默认 tl）"
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每个标签出现"
+        ]
+      },
+      "minDur": 1.5,
+      "tail": 1,
+      "idle": true,
+      "variants": [
+        "corner",
+        "pill",
+        "ribbon"
+      ],
+      "variantsNote": "corner 角落叠块斜切滑入、红点闪 / pill 胶囊组弹落、轮流点亮 / ribbon 燕尾斜丝带展开、轻飘",
+      "group": "overlay"
+    },
+    "confetti": {
+      "label": "庆祝特效",
+      "layer": "overlay",
+      "use": "里程碑、达成、好消息、结尾致谢：彩纸 / 烟花，可选一句短字居中弹出。每个 cue 一波（最多 3 波）",
+      "props": {
+        "text": {
+          "type": "string",
+          "max": 8,
+          "label": "居中短字（可省略）"
+        }
+      },
+      "cues": {
+        "count": "1–3",
+        "meaning": [
+          "每一波彩纸 / 烟花"
+        ]
+      },
+      "minDur": 2,
+      "tail": 2.4,
+      "idle": true,
+      "variants": [
+        "cannons",
+        "rain",
+        "fireworks"
+      ],
+      "variantsNote": "cannons 两侧礼花炮向内喷出 / rain 彩纸从顶上飘落 + 闪星 / fireworks 烟花升空炸开",
+      "group": "overlay"
+    },
+    "frame": {
+      "label": "画面装饰框",
+      "layer": "overlay",
+      "use": "给整段画面加氛围：拍摄感取景框、录制中、霓虹边框。框住内容区（避开口播卡与字幕），可整段常驻",
+      "props": {
+        "label": {
+          "type": "string",
+          "max": 14,
+          "label": "角落 / 上边框小字（可省略）"
+        }
+      },
+      "cues": {
+        "count": 1,
+        "meaning": [
+          "框出现"
+        ]
+      },
+      "minDur": 1.5,
+      "tail": 1,
+      "idle": true,
+      "variants": [
+        "viewfinder",
+        "rec",
+        "glow"
+      ],
+      "variantsNote": "viewfinder 四角取景框飞入、对焦框确认 / rec 开机展开 + 红点 REC 时间码 + 扫描线 / glow 霓虹边框描出、光点环绕",
+      "group": "overlay"
+    },
+    "gallery": {
+      "label": "图集",
+      "use": "3–8 张图片/视频一起亮相：作品集、案例合集、活动照片、产品多角度；每个 cue 出一张（carousel/stack 是每个 cue 转到下一张）",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 20,
+          "label": "标题（可省略）"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 3,
+          "maxItems": 8,
+          "required": true,
+          "label": "图片",
+          "props": {
+            "src": {
+              "type": "media",
+              "label": "图片或视频（省略时为中性占位）"
+            },
+            "caption": {
+              "type": "string",
+              "max": 12,
+              "label": "说明"
+            },
+            "sourceStart": {
+              "type": "number",
+              "min": 0
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "grid：每张翻入；carousel / stack：第一张出现，之后每个 cue 换到下一张"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "grid",
+        "carousel",
+        "stack"
+      ],
+      "variantsNote": "grid 网格错峰三维翻入后轮流放大 / carousel 3D 旋转木马逐张转到正前 / stack 照片堆一张张甩向两侧",
+      "group": "showcase"
+    },
+    "beforeafter": {
+      "label": "前后对比",
+      "use": "同一对象改造前后、修图前后、旧版新版：两张素材对照，第二个 cue 揭示 after",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 20
+        },
+        "before": {
+          "type": "media",
+          "label": "之前（图片或视频）"
+        },
+        "after": {
+          "type": "media",
+          "label": "之后（图片或视频）"
+        },
+        "beforeLabel": {
+          "type": "string",
+          "max": 8,
+          "label": "之前标签（默认「之前」）"
+        },
+        "afterLabel": {
+          "type": "string",
+          "max": 8,
+          "label": "之后标签（默认「之后」）"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "画面出现",
+          "揭示 after"
+        ]
+      },
+      "minDur": 4,
+      "tail": 2.4,
+      "idle": true,
+      "variants": [
+        "slider",
+        "flip",
+        "split"
+      ],
+      "variantsNote": "slider 分割线扫过揭示并来回轻扫 / flip 卡片三维翻面 / split 并排后 before 压暗退后、after 推近",
+      "group": "showcase"
+    },
+    "kenburns": {
+      "label": "纪录片推拉",
+      "use": "讲故事、回顾、旅程、案例背景：1–4 张图片纪录片式慢推慢移、交叉溶解，底部逐字打出说明；每个 cue 换一张",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 16,
+          "label": "左上角小标签"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 4,
+          "required": true,
+          "props": {
+            "src": {
+              "type": "media",
+              "label": "图片或视频"
+            },
+            "caption": {
+              "type": "string",
+              "max": 20,
+              "label": "底部说明（逐字打出）"
+            },
+            "sourceStart": {
+              "type": "number",
+              "min": 0
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每张出现"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 2.2,
+      "idle": true,
+      "variants": [
+        "pan",
+        "zoom",
+        "parallax"
+      ],
+      "variantsNote": "pan 横向慢移 / zoom 交替推近拉远 / parallax 虚化背景 + 前景小窗反向视差",
+      "group": "showcase"
+    },
+    "polaroid": {
+      "label": "拍立得",
+      "use": "生活感、回忆、幕后花絮、团队/人物照片：1–4 张照片卡 + 手写说明；每个 cue 出一张",
+      "props": {
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 4,
+          "required": true,
+          "props": {
+            "src": {
+              "type": "media",
+              "label": "照片或视频"
+            },
+            "caption": {
+              "type": "string",
+              "max": 10,
+              "label": "手写说明"
+            },
+            "sourceStart": {
+              "type": "number",
+              "min": 0
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "每张出现（film：每格前进）"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 2,
+      "idle": true,
+      "variants": [
+        "drop",
+        "pin",
+        "film"
+      ],
+      "variantsNote": "drop 掉落弹跳后显影 / pin 拍在软木板上钉住、红线相连 / film 胶片条滚过、当前格放大",
+      "group": "showcase"
+    },
+    "device": {
+      "label": "设备样机",
+      "use": "展示 App、网页、录屏、作品画面：素材放进手机 / 平板 / 显示器屏幕里，视频按成片时钟播放；可配标题",
+      "props": {
+        "src": {
+          "type": "media",
+          "label": "屏幕内容（图片或视频，省略时为占位）"
+        },
+        "title": {
+          "type": "string",
+          "max": 16,
+          "label": "标题（横屏在右、竖屏在上）"
+        },
+        "sub": {
+          "type": "string",
+          "max": 20,
+          "label": "副标题"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "设备入场",
+          "屏幕点亮 + 标题"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "phone",
+        "tablet",
+        "monitor"
+      ],
+      "variantsNote": "phone 手机三维旋入 / tablet 平板从平放立起 / monitor 显示器落位后开机亮线展开",
+      "group": "showcase"
+    },
+    "collage": {
+      "label": "拼贴墙",
+      "use": "大量作品/截图/用户照片的气势感：作品墙、社区、合集封面。masonry / wall 用 4–9 张（不够会循环）；mosaic 只用第一张，碎片拼成整图",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 16,
+          "label": "标题"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 9,
+          "required": true,
+          "props": {
+            "src": {
+              "type": "media",
+              "label": "图片或视频"
+            },
+            "sourceStart": {
+              "type": "number",
+              "min": 0
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "拼贴入场",
+          "标题出现"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "masonry",
+        "mosaic",
+        "wall"
+      ],
+      "variantsNote": "masonry 瀑布流逐块落下后分列滚动 / mosaic 碎片飞入拼合成整图 / wall 多行无限滚动 + 中心高亮",
+      "group": "showcase"
+    },
+    "spotlight": {
+      "label": "聚光放大",
+      "use": "在一张截图/照片/视频画面里依次指出 1–3 个关注点（x、y 为 0–1 的相对位置），每个点带一个短标签",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 20
+        },
+        "src": {
+          "type": "media",
+          "label": "图片或视频"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0
+        },
+        "points": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 3,
+          "required": true,
+          "props": {
+            "x": {
+              "type": "number",
+              "min": 0,
+              "max": 1,
+              "required": true,
+              "label": "横向位置 0–1"
+            },
+            "y": {
+              "type": "number",
+              "min": 0,
+              "max": 1,
+              "required": true,
+              "label": "纵向位置 0–1"
+            },
+            "label": {
+              "type": "string",
+              "max": 10,
+              "label": "标签"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "1 + points.length",
+        "meaning": [
+          "画面出现",
+          "每个关注点"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "spotlight",
+        "magnifier",
+        "blur"
+      ],
+      "variantsNote": "spotlight 暗场聚光圈移动 / magnifier 放大镜跟随 / blur 其余区域虚化",
+      "group": "showcase"
+    },
+    "kinetic": {
+      "label": "逐行动态排版",
+      "use": "一句有节奏的观点拆成 2–5 个短行，跟着口播一行一行冲出来；适合开场钩子、口号、情绪句",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28,
+          "label": "上方小字"
+        },
+        "lines": {
+          "type": "array",
+          "of": "string",
+          "max": 10,
+          "minItems": 2,
+          "maxItems": 5,
+          "required": true,
+          "label": "每行文字（短，2–10 字）"
+        }
+      },
+      "cues": {
+        "count": "lines.length",
+        "meaning": [
+          "每行出现"
+        ]
+      },
+      "minDur": 2.5,
+      "tail": 1.2,
+      "idle": true,
+      "variants": [
+        "stack",
+        "beat",
+        "wave"
+      ],
+      "variantsNote": "stack 按字数撑满宽度、左右交替滑入 / beat 一次一行居中砸入、推镜头 / wave 逐字波浪弹起",
+      "group": "typo"
+    },
+    "highlight": {
+      "label": "重点词标记",
+      "use": "一句完整的话里有 1–2 个必须被看见的词（用 *星号* 标出）：先出整句，再在重点上画标记",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "text": {
+          "type": "string",
+          "max": 40,
+          "required": true,
+          "label": "整句，*重点* 用星号包住"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "整句出现",
+          "标记落下"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "marker",
+        "circle",
+        "underline"
+      ],
+      "variantsNote": "marker 荧光笔涂过 / circle 手绘圈出 / underline 波浪下划线 + 放大",
+      "group": "typo"
+    },
+    "scramble": {
+      "label": "乱码解码",
+      "use": "揭晓一个名字、术语、答案、代号：乱码逐位锁定。科技、数据、揭秘类内容",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "word": {
+          "type": "string",
+          "max": 14,
+          "required": true,
+          "label": "揭晓的词"
+        },
+        "sub": {
+          "type": "string",
+          "max": 28,
+          "label": "揭晓后补一句"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "开始解码",
+          "补充句出现"
+        ]
+      },
+      "minDur": 2.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "decode",
+        "matrix",
+        "terminal"
+      ],
+      "variantsNote": "decode 原地逐位锁定 / matrix 字符雨中逐字落下 / terminal 终端输入命令 + 回车出结果",
+      "group": "typo"
+    },
+    "rotator": {
+      "label": "轮换词",
+      "use": "同一句话换不同的词：「适合 学生 / 老师 / 公司」、「它能 写 / 画 / 剪」。最后一个词停住",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "lead": {
+          "type": "string",
+          "max": 14,
+          "required": true,
+          "label": "固定的前半句"
+        },
+        "words": {
+          "type": "array",
+          "of": "string",
+          "max": 8,
+          "minItems": 2,
+          "maxItems": 6,
+          "required": true,
+          "label": "依次轮换的词"
+        },
+        "tail": {
+          "type": "string",
+          "max": 28,
+          "label": "下方补充"
+        }
+      },
+      "cues": {
+        "count": "words.length",
+        "meaning": [
+          "每个词出现"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "slot",
+        "flip",
+        "type"
+      ],
+      "variantsNote": "slot 老虎机滚轮 / flip 三维翻牌 / type 删除后重新输入",
+      "group": "typo"
+    },
+    "marquee": {
+      "label": "滚动横幅",
+      "use": "一串关键词/标签/口号持续滚动：活动、清单很长、节奏型过渡；可在横幅上砸入一个大词",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 10,
+          "label": "ticker 变体左侧标签（默认 LIVE）"
+        },
+        "items": {
+          "type": "array",
+          "of": "string",
+          "max": 12,
+          "minItems": 2,
+          "maxItems": 8,
+          "required": true,
+          "label": "滚动的词"
+        },
+        "big": {
+          "type": "string",
+          "max": 8,
+          "label": "砸在横幅上的大词"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "横幅入场",
+          "大词砸入"
+        ]
+      },
+      "minDur": 2,
+      "tail": 1,
+      "idle": true,
+      "variants": [
+        "belt",
+        "ticker",
+        "wall"
+      ],
+      "variantsNote": "belt 两条交叉色带 / ticker 新闻滚动条 / wall 满屏描边大字",
+      "group": "typo"
+    },
+    "bigtype": {
+      "label": "巨字",
+      "use": "一个词撑满画面的冲击时刻：段落主题、结论词、品牌词；mask 变体可让图片/视频透过字显示",
+      "props": {
+        "kicker": {
+          "type": "string",
+          "max": 28
+        },
+        "word": {
+          "type": "string",
+          "max": 6,
+          "required": true,
+          "label": "巨字（1–6 字）"
+        },
+        "sub": {
+          "type": "string",
+          "max": 28,
+          "label": "副标题"
+        },
+        "src": {
+          "type": "media",
+          "label": "mask 变体：透过字显示的图片/视频（可省略）"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "巨字出现",
+          "副标题 / 切开"
+        ]
+      },
+      "minDur": 2.5,
+      "tail": 1.4,
+      "idle": true,
+      "variants": [
+        "mask",
+        "outline",
+        "split"
+      ],
+      "variantsNote": "mask 素材透过巨字 / outline 描边后液体灌满 / split 光线切开上下错位",
+      "group": "typo"
+    },
+    "chat": {
+      "label": "聊天对话",
+      "use": "把一段对话演出来：用户与客服/朋友的聊天、群里的讨论、向 AI 助手提问并得到回答；2–6 条消息逐条出现",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 12,
+          "label": "顶栏名字（默认取对方名字 / 群聊 / AI 助手）"
+        },
+        "messages": {
+          "type": "array",
+          "of": "object",
+          "minItems": 2,
+          "maxItems": 6,
+          "required": true,
+          "label": "消息（按顺序）",
+          "props": {
+            "who": {
+              "type": "enum",
+              "values": [
+                "left",
+                "right"
+              ],
+              "required": true,
+              "label": "left 对方 / right 自己"
+            },
+            "text": {
+              "type": "string",
+              "max": 40,
+              "required": true,
+              "label": "消息文字，*重点* 用星号；ai 变体的回答（left）可到 40 字"
+            },
+            "name": {
+              "type": "string",
+              "max": 8,
+              "label": "发送者名字（thread 变体显示）"
+            },
+            "avatar": {
+              "type": "media",
+              "label": "头像图片（可省略，省略时显示首字母圆）"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "messages.length",
+        "meaning": [
+          "每条消息出现（自己的消息在此刻发送；ai 回答从此刻开始流式输出）"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "bubbles",
+        "thread",
+        "ai"
+      ],
+      "variantsNote": "bubbles 手机聊天：输入框打字发送 / 对方正在输入三个点后弹出，自动上滚 / thread 宽面板群聊：头像 + 名字 / ai 助手问答：问题发出，回答逐字流式输出",
+      "group": "ui"
+    },
+    "comment": {
+      "label": "评论 / 弹幕",
+      "use": "展示观众反馈、网友评论、热评、弹幕刷屏：2–5 条评论逐条浮现，点赞数上涨，最高赞那条被强调（热评 / 置顶 / 放大停住）",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 14,
+          "label": "评论区标题（cards / pinned，可省略）"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 2,
+          "maxItems": 5,
+          "required": true,
+          "label": "评论（最高赞的一条会被强调）",
+          "props": {
+            "user": {
+              "type": "string",
+              "max": 10,
+              "required": true,
+              "label": "用户名（示意）"
+            },
+            "text": {
+              "type": "string",
+              "max": 30,
+              "required": true,
+              "label": "评论文字，*重点* 用星号"
+            },
+            "likes": {
+              "type": "integer",
+              "min": 0,
+              "max": 99999999,
+              "label": "点赞数（示意）"
+            },
+            "time": {
+              "type": "string",
+              "max": 8,
+              "label": "时间，如「2 小时前」"
+            },
+            "avatar": {
+              "type": "media",
+              "label": "头像（可省略，省略时显示首字母圆）"
+            }
+          }
+        },
+        "src": {
+          "type": "media",
+          "label": "danmaku 变体：弹幕下面的播放画面（图片/视频，可省略）"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0
+        }
+      },
+      "cues": {
+        "count": "items.length + 1",
+        "meaning": [
+          "每条评论出现（弹幕发出）",
+          "最高赞那条被强调：盖热评章 / 置顶 / 放大停住"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.8,
+      "idle": true,
+      "variants": [
+        "cards",
+        "danmaku",
+        "pinned"
+      ],
+      "variantsNote": "cards 评论卡翻起浮现、点赞数增长、盖热评章 / danmaku 弹幕从右飞过播放画面，热评放大停在中央 / pinned 评论卡落下，最高赞那条被拎起移到最上方置顶",
+      "group": "ui"
+    },
+    "notify": {
+      "label": "通知横幅",
+      "use": "表现「消息来了」：订单、提醒、私信、系统通知一条接一条弹出；也可做锁屏收到通知的画面",
+      "props": {
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 4,
+          "required": true,
+          "label": "通知（按到达顺序）",
+          "props": {
+            "app": {
+              "type": "string",
+              "max": 8,
+              "required": true,
+              "label": "来源名称（中性，如「日程」「消息」）"
+            },
+            "title": {
+              "type": "string",
+              "max": 16,
+              "required": true,
+              "label": "标题"
+            },
+            "text": {
+              "type": "string",
+              "max": 30,
+              "label": "正文（最多两行）"
+            },
+            "icon": {
+              "type": "icon",
+              "label": "图标（默认 bell）"
+            },
+            "time": {
+              "type": "string",
+              "max": 6,
+              "label": "时间（默认「刚刚」）"
+            }
+          }
+        },
+        "time": {
+          "type": "string",
+          "max": 5,
+          "label": "lock 变体：锁屏时间，如 08:30"
+        },
+        "date": {
+          "type": "string",
+          "max": 12,
+          "label": "lock 变体：锁屏日期，如「10 月 12 日 星期一」"
+        }
+      },
+      "cues": {
+        "count": "items.length + 1",
+        "meaning": [
+          "每条通知到达",
+          "收尾：stack 展开成列表 / toast 按下「查看」/ lock 上滑提示"
+        ]
+      },
+      "minDur": 3,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "stack",
+        "toast",
+        "lock"
+      ],
+      "variantsNote": "stack 从顶部依次滑下叠成一摞、铃铛角标跳动，最后展开 / toast 中心弹窗依次弹出，最后按下查看 / lock 锁屏亮起、通知滑入、手机震动",
+      "group": "ui"
+    },
+    "search": {
+      "label": "搜索框",
+      "use": "演示「搜一下」：输入关键词 → 回车 → 联想/结果出现、命中词高亮；适合讲搜索热度、怎么找资料、工具里的命令面板",
+      "props": {
+        "query": {
+          "type": "string",
+          "max": 20,
+          "required": true,
+          "label": "输入的搜索词"
+        },
+        "placeholder": {
+          "type": "string",
+          "max": 12,
+          "label": "输入前的占位文字（默认「搜索」）"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 0,
+          "maxItems": 5,
+          "label": "联想词 / 结果（命中搜索词的部分自动高亮）",
+          "props": {
+            "text": {
+              "type": "string",
+              "max": 24,
+              "required": true,
+              "label": "联想词 / 结果标题"
+            },
+            "desc": {
+              "type": "string",
+              "max": 40,
+              "label": "说明（spotlight 一行；results 最多两行）"
+            },
+            "icon": {
+              "type": "icon",
+              "label": "spotlight 变体的图标"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": 3,
+        "meaning": [
+          "开始输入",
+          "回车，结果展开",
+          "选中 / 打开第一条（最佳匹配）"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "bar",
+        "spotlight",
+        "results"
+      ],
+      "variantsNote": "bar 大搜索框展开、打字、联想列表下拉 / spotlight 背景压暗的居中命令面板、方向键选中后回车 / results 结果页：加载条 + 骨架屏，结果卡片替换骨架，第一条标最佳匹配",
+      "group": "ui"
+    },
+    "browser": {
+      "label": "浏览器 / 应用窗口",
+      "use": "演示「打开一个网页 / 网站 / 应用」：地址栏输入网址、加载、页面滚动，再用 1–3 个高亮框标出重点区域。只需要静态录屏展示用 0.2.0 的 media",
+      "props": {
+        "url": {
+          "type": "string",
+          "max": 32,
+          "required": true,
+          "label": "网址（示意，如 example.com/docs）"
+        },
+        "title": {
+          "type": "string",
+          "max": 16,
+          "label": "标签页标题"
+        },
+        "src": {
+          "type": "media",
+          "label": "网页截图 / 录屏（可省略，省略时显示占位）"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0
+        },
+        "callouts": {
+          "type": "array",
+          "of": "object",
+          "minItems": 0,
+          "maxItems": 3,
+          "label": "高亮框（坐标为视口比例 0–1）",
+          "props": {
+            "x": {
+              "type": "number",
+              "min": 0,
+              "max": 1,
+              "label": "左"
+            },
+            "y": {
+              "type": "number",
+              "min": 0,
+              "max": 1,
+              "label": "上"
+            },
+            "w": {
+              "type": "number",
+              "min": 0.05,
+              "max": 1,
+              "label": "宽"
+            },
+            "h": {
+              "type": "number",
+              "min": 0.05,
+              "max": 1,
+              "label": "高"
+            },
+            "text": {
+              "type": "string",
+              "max": 14,
+              "required": true,
+              "label": "标注文字"
+            }
+          }
+        }
+      },
+      "cues": {
+        "count": "2 + callouts.length",
+        "meaning": [
+          "开始输入网址",
+          "页面滚动",
+          "每个高亮框描出"
+        ]
+      },
+      "minDur": 4,
+      "tail": 1.6,
+      "idle": true,
+      "variants": [
+        "browser",
+        "phone",
+        "laptop"
+      ],
+      "variantsNote": "browser 桌面浏览器窗口透视转正 / phone 手机浏览器从下方升起 / laptop 笔记本开盖、屏幕亮起",
+      "group": "ui"
+    },
+    "social": {
+      "label": "社交数据卡",
+      "use": "展示一条内容的反响：帖子被点赞、主页涨粉、三项互动数据；数字滚动上涨。数字请标注示意",
+      "props": {
+        "user": {
+          "type": "string",
+          "max": 12,
+          "required": true,
+          "label": "账号名（示意）"
+        },
+        "text": {
+          "type": "string",
+          "max": 40,
+          "label": "帖子文字 / 个人简介 / 数据卡标题（stats 一行）"
+        },
+        "src": {
+          "type": "media",
+          "label": "post 配图 / profile 封面（可省略）"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0
+        },
+        "avatar": {
+          "type": "media",
+          "label": "头像（可省略，省略时显示首字母圆）"
+        },
+        "time": {
+          "type": "string",
+          "max": 8,
+          "label": "发布时间"
+        },
+        "likes": {
+          "type": "integer",
+          "min": 0,
+          "max": 9999999999,
+          "label": "点赞 / 获赞数"
+        },
+        "comments": {
+          "type": "integer",
+          "min": 0,
+          "max": 9999999999,
+          "label": "评论数"
+        },
+        "shares": {
+          "type": "integer",
+          "min": 0,
+          "max": 9999999999,
+          "label": "转发数"
+        },
+        "followers": {
+          "type": "integer",
+          "min": 0,
+          "max": 9999999999,
+          "label": "profile 变体：粉丝数（默认用 likes）"
+        }
+      },
+      "cues": {
+        "count": 2,
+        "meaning": [
+          "卡片入场",
+          "点赞 / 关注 / 数字开始滚动（stats 可再给 3 个 cue 分别对应三个数字）"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.8,
+      "idle": true,
+      "variants": [
+        "post",
+        "profile",
+        "stats"
+      ],
+      "variantsNote": "post 帖子卡翻起、点赞爱心爆开、三个数字滚动上涨 / profile 个人主页按下关注、粉丝数滚动、+N 飘起 / stats 三个指标并排、数字滚动 + 迷你折线描出",
+      "group": "ui"
+    },
+    "cursor": {
+      "label": "鼠标点击演示",
+      "use": "演示软件操作步骤：依次点几个按钮、把文件拖进某个区域、打开菜单选一项。可以放截图作为背景",
+      "props": {
+        "title": {
+          "type": "string",
+          "max": 14,
+          "label": "click 标题 / drag 放置区文字 / menu 选择前的按钮文字"
+        },
+        "items": {
+          "type": "array",
+          "of": "object",
+          "minItems": 1,
+          "maxItems": 4,
+          "required": true,
+          "label": "按钮 / 卡片 / 菜单项",
+          "props": {
+            "label": {
+              "type": "string",
+              "max": 10,
+              "required": true
+            },
+            "icon": {
+              "type": "icon"
+            }
+          }
+        },
+        "pick": {
+          "type": "integer",
+          "min": 1,
+          "max": 4,
+          "label": "menu 变体：最后选中第几项（默认最后一项）"
+        },
+        "src": {
+          "type": "media",
+          "label": "背景截图（可省略，压暗显示）"
+        },
+        "sourceStart": {
+          "type": "number",
+          "min": 0
+        }
+      },
+      "cues": {
+        "count": "items.length",
+        "meaning": [
+          "click 每次点击 / drag 每张卡片放下 / menu 两个 cue：打开菜单、选中"
+        ]
+      },
+      "minDur": 3.5,
+      "tail": 1.2,
+      "idle": true,
+      "variants": [
+        "click",
+        "drag",
+        "menu"
+      ],
+      "variantsNote": "click 鼠标沿弧线依次点按钮、波纹 + 打勾 / drag 把卡片逐张拖进放置区 / menu 打开下拉菜单、逐项悬停后选中",
+      "group": "ui"
+    }
+  },
+  "icons": [
+    "check",
+    "x",
+    "plus",
+    "minus",
+    "alert",
+    "info",
+    "question",
+    "star",
+    "heart",
+    "like",
+    "fire",
+    "bolt",
+    "target",
+    "trophy",
+    "medal",
+    "crown",
+    "gift",
+    "rocket",
+    "sparkle",
+    "user",
+    "users",
+    "chat",
+    "mail",
+    "phone",
+    "bell",
+    "share",
+    "send",
+    "eye",
+    "mic",
+    "play",
+    "pause",
+    "video",
+    "camera",
+    "image",
+    "music",
+    "code",
+    "terminal",
+    "cpu",
+    "cloud",
+    "database",
+    "lock",
+    "key",
+    "shield",
+    "gear",
+    "tool",
+    "search",
+    "link",
+    "file",
+    "folder",
+    "calendar",
+    "clock",
+    "pin",
+    "globe",
+    "home",
+    "book",
+    "idea",
+    "brain",
+    "chart",
+    "bars",
+    "pie",
+    "trend",
+    "down",
+    "money",
+    "cart",
+    "tag",
+    "card",
+    "box",
+    "truck",
+    "building",
+    "flag",
+    "layers",
+    "grid",
+    "cycle",
+    "arrow",
+    "up",
+    "filter",
+    "speed",
+    "sun",
+    "moon",
+    "leaf",
+    "coffee",
+    "smile"
+  ]
+}

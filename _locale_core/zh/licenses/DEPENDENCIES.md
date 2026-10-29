@@ -1,0 +1,12 @@
+# Code, media, fonts and external tools
+
+- Authored source and runtime code retain MIT notices in `licenses/SOURCE-MIT.txt`, `licenses/TEMPLATE-LICENSE.txt`, and each original `src/packs/*/LICENSE` where present. Original source records remain unchanged.
+- The derived adapter and explanatory documentation retain `licenses/ADAPTER-LICENSE.txt`. The authored asset generator retains `assets/LICENSE-GENERATOR-MIT.txt`.
+- The original procedural music/noise/legacy abstract demonstration assets identified individually as CC0 retain `assets/LICENSE-ASSETS-CC0.txt` and their provenance. This does not apply to the fictional AI portrait, website TTS, brand marks or fonts.
+- The fictional Western technical male portrait and authorized standard website TTS previews are described separately in `licenses/EFFECTS-PREVIEW.txt`. No real-person endorsement, lip-sync, voice cloning, transfer of voice-model rights or blanket CC0 grant is claimed. The source-code viewer is an authored illustrative interface, not a recording of a shipped product or client work.
+- MotionGit animation marks retain `licenses/MOTIONGIT-BRAND.txt` and their specific attribution purpose.
+- Bundled Noto Sans SC and Noto Sans Mono are SIL OFL fonts; notices are `runtime/adu-motion-video/assets/fonts/notosanssc-OFL.txt` and `runtime/adu-motion-video/assets/fonts/notosansmono-OFL.txt`. Bundled Geist and Geist Mono retain `licenses/Geist-OFL.txt` and `licenses/Geist-Mono-OFL.txt`. Actual font paths/hashes are listed in `adapter/font-profile.json` and original provenance files. Fonts are supplied for portable fallback; macOS fonts are not required or bundled.
+- Node dependencies are specified in `runtime/adu-motion-video/package-lock.json`; Acorn is MIT and Playwright Core Apache-2.0. Python dependencies use the compatibility ranges in `runtime/adu-motion-video/requirements-runtime.txt`; installed wheel versions depend on host Python/OS. NumPy/SciPy retain BSD notices, Pillow its HPND/Pillow notices, OpenCV its distribution notices and fontTools its distribution license. Dependencies are installed in an external cache, not distributed as implementations in the template.
+- Python, Node, Chrome/Edge, FFmpeg and ffprobe are separate host tools and are not distributed here. Their licenses are independent from the template license.
+
+Users record rights for their own footage, music and evidence in their instances. A dependency lock or generated preview does not transfer third-party content rights.

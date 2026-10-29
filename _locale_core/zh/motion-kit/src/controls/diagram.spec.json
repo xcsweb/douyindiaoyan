@@ -1,0 +1,102 @@
+{
+  "controls": {
+    "flow": {
+      "label": "流程图",
+      "use": "3–6 个有先后顺序的环节（步骤、流水线、因果链），或一个起点分出多个去向（branch）；节点可带图标",
+      "props": {
+        "title": { "type": "string", "max": 18, "label": "上方标题" },
+        "nodes": { "type": "array", "of": "object", "minItems": 3, "maxItems": 6, "required": true, "label": "节点（branch 变体：第一个是起点，其余是分支）",
+          "props": { "text": { "type": "string", "max": 10, "required": true }, "icon": { "type": "icon" } } }
+      },
+      "cues": { "count": "nodes.length", "meaning": ["每个节点出现（连线在它之前描出）"] },
+      "minDur": 4, "tail": 1.5, "idle": true,
+      "variants": ["chain", "snake", "branch"],
+      "variantsNote": "chain 单行（竖屏单列）箭头链 / snake 两行折返 / branch 一个起点分出多个分支"
+    },
+    "cycle": {
+      "label": "循环图",
+      "use": "首尾相接、周而复始的 3–6 个环节：飞轮、迭代闭环、生命周期；中心可写主题",
+      "props": {
+        "title": { "type": "string", "max": 8, "label": "中心文字" },
+        "nodes": { "type": "array", "of": "object", "minItems": 3, "maxItems": 6, "required": true,
+          "props": { "text": { "type": "string", "max": 8, "required": true }, "icon": { "type": "icon" } } }
+      },
+      "cues": { "count": "nodes.length", "meaning": ["每个环节出现"] },
+      "minDur": 4.5, "tail": 1.6, "idle": true,
+      "variants": ["ring", "orbit", "wheel"],
+      "variantsNote": "ring 圆环 + 弧形箭头逐段描出 / orbit 节点在椭圆轨道上绕转 / wheel 扇区转盘轮流弹出"
+    },
+    "funnel": {
+      "label": "漏斗 / 层级",
+      "use": "逐层收窄的转化、筛选（funnel），或自下而上的层级、金字塔、技术栈（pyramid / layers）；每层可带一个数值",
+      "props": {
+        "title": { "type": "string", "max": 18 },
+        "layers": { "type": "array", "of": "object", "minItems": 3, "maxItems": 5, "required": true, "label": "从上到下（金字塔从塔尖到塔底）",
+          "props": { "label": { "type": "string", "max": 8, "required": true }, "value": { "type": "string", "max": 8, "label": "数值，如 100% / 3.2万（示意）" } } }
+      },
+      "cues": { "count": "layers.length", "meaning": ["每层出现（funnel 自上而下，pyramid / layers 自下而上）"] },
+      "minDur": 4, "tail": 1.5, "idle": true,
+      "variants": ["funnel", "pyramid", "layers"],
+      "variantsNote": "funnel 漏斗逐层落下、粒子流过 / pyramid 金字塔自下而上 / layers 等轴测叠层板"
+    },
+    "venn": {
+      "label": "交集图",
+      "use": "两三个概念的交集或合成：A + B 的重叠点、三者兼得；merge 变体表示合而为一",
+      "props": {
+        "title": { "type": "string", "max": 18 },
+        "sets": { "type": "array", "of": "string", "max": 6, "minItems": 2, "maxItems": 3, "required": true, "label": "每个圆的名字" },
+        "center": { "type": "string", "max": 6, "label": "交集 / 合成后的文字" }
+      },
+      "cues": { "count": "1 + sets.length", "meaning": ["每个圆出现", "交集 / 合成"] },
+      "minDur": 4, "tail": 1.5, "idle": true,
+      "variants": ["overlap", "outline", "merge"],
+      "variantsNote": "overlap 圆从两侧靠拢重叠、交集闪光 / outline 轮廓描出、交集斜纹填满 / merge 汇合成一个大圆"
+    },
+    "mindmap": {
+      "label": "思维导图",
+      "use": "一个主题展开 3–6 个方面，每个方面可再列 0–2 个要点：知识框架、话题拆解",
+      "props": {
+        "center": { "type": "string", "max": 8, "required": true, "label": "中心主题" },
+        "icon": { "type": "icon", "label": "中心图标" },
+        "branches": { "type": "array", "of": "object", "minItems": 3, "maxItems": 6, "required": true,
+          "props": { "text": { "type": "string", "max": 6, "required": true }, "icon": { "type": "icon" },
+            "children": { "type": "array", "of": "string", "max": 6, "minItems": 0, "maxItems": 2, "label": "子项" } } }
+      },
+      "cues": { "count": "1 + branches.length", "meaning": ["中心出现", "每个分支（含子项）长出"] },
+      "minDur": 4.5, "tail": 1.6, "idle": true,
+      "variants": ["radial", "tree", "bubbles"],
+      "variantsNote": "radial 放射状（竖屏上下两排）/ tree 右展树（竖屏左侧主干）/ bubbles 气泡簇漂浮"
+    },
+    "matrix": {
+      "label": "2×2 象限",
+      "use": "两个维度把事物分成四类：重要/紧急、投入/回报、定位分析；可在象限里落几个点，priority 变体突出一个象限",
+      "props": {
+        "title": { "type": "string", "max": 18 },
+        "xLabel": { "type": "string", "max": 10, "label": "横轴（向右增大）" },
+        "yLabel": { "type": "string", "max": 10, "label": "纵轴（向上增大）" },
+        "quads": { "type": "array", "of": "string", "max": 8, "minItems": 4, "maxItems": 4, "required": true, "label": "四个象限：左上、右上、左下、右下" },
+        "points": { "type": "array", "of": "object", "minItems": 0, "maxItems": 6, "label": "落入的点",
+          "props": { "label": { "type": "string", "max": 6, "required": true }, "x": { "type": "number", "min": 0, "max": 1, "required": true }, "y": { "type": "number", "min": 0, "max": 1, "required": true } } },
+        "pick": { "type": "integer", "min": 1, "max": 4, "label": "priority 变体突出的象限（1–4，默认 2 右上）" }
+      },
+      "cues": { "count": 3, "meaning": ["坐标轴描出", "四个象限依次出现", "点落入 / 重点象限放大"] },
+      "minDur": 4, "tail": 1.6, "idle": true,
+      "variants": ["quadrant", "scatter", "priority"],
+      "variantsNote": "quadrant 十字轴 + 象限翻起 / scatter L 形坐标 + 网格 + 扫描线 / priority 四色象限、重点放大其余变暗"
+    },
+    "hub": {
+      "label": "中心辐射",
+      "use": "一个核心连接 3–8 个周边：平台与生态、能力清单、一个工具对接多个场景",
+      "props": {
+        "center": { "type": "object", "required": true, "label": "中心",
+          "props": { "text": { "type": "string", "max": 8, "required": true }, "icon": { "type": "icon" } } },
+        "items": { "type": "array", "of": "object", "minItems": 3, "maxItems": 8, "required": true,
+          "props": { "text": { "type": "string", "max": 6, "required": true }, "icon": { "type": "icon" } } }
+      },
+      "cues": { "count": "1 + items.length", "meaning": ["中心出现", "每个卫星出现（连线先射出）"] },
+      "minDur": 4, "tail": 1.6, "idle": true,
+      "variants": ["star", "grid", "constellation"],
+      "variantsNote": "star 环形卫星卡 + 信号往返 / grid 两列（竖屏上下两排）电路折线 / constellation 星点 + 星座连线"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "video": "D:\\backup-zips\\www\\douyindiaoyan\\横屏口播\\_work\\master\\master.mp4",
+  "checkedAt": "2026-10-29 12:34:02",
+  "publishMode": false,
+  "version": "2.7.18-alpha.3",
+  "duration": 141.4,
+  "items": [
+    {
+      "name": "时长",
+      "level": "PASS",
+      "detail": "实际 141.40s，目标 141.40s，误差 0.00s",
+      "value": {
+        "actual": 141.4,
+        "target": 141.4,
+        "diff": 0.0
+      }
+    },
+    {
+      "name": "分辨率与帧率",
+      "level": "WARN",
+      "detail": "帧率 30.00fps，未达目标的 60fps（发布版应为 60fps）",
+      "value": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30.0,
+        "targetSize": [
+          1920,
+          1080
+        ],
+        "targetFps": 60
+      }
+    },
+    {
+      "name": "视频码率",
+      "level": "WARN",
+      "detail": "平均 4.69 Mbps，低于发布下限 8 Mbps（需重编码）",
+      "value": 4.69
+    },
+    {
+      "name": "响度",
+      "level": "FAIL",
+      "detail": "Integrated -16.0 LUFS（目标 -16.0），峰值 0.20 dB；峰值超过上限 -1.0 dB",
+      "value": {
+        "integrated": -16.0,
+        "peak": 0.2,
+        "target": -16.0,
+        "peakLimit": -1.0,
+        "mode": "master"
+      }
+    },
+    {
+      "name": "黑帧",
+      "level": "PASS",
+      "detail": "未检测到 ≥0.2s 的黑帧",
+      "value": []
+    },
+    {
+      "name": "静音",
+      "level": "PASS",
+      "detail": "未检测到 ≥2s 静音段",
+      "value": []
+    },
+    {
+      "name": "字幕覆盖率",
+      "level": "PASS",
+      "detail": "55 条字幕，覆盖 83.1%，无超时与超长间隔",
+      "value": {
+        "count": 55,
+        "ratio": 0.8308,
+        "beyond": [],
+        "gaps": []
+      }
+    },
+    {
+      "name": "字幕安全区",
+      "level": "PASS",
+      "detail": "未提供 D:\\backup-zips\\www\\douyindiaoyan\\横屏口播\\_work\\publish\\subtitle-bounds.json，跳过检查",
+      "value": null
+    }
+  ],
+  "summary": {
+    "PASS": 5,
+    "WARN": 2,
+    "FAIL": 1
+  },
+  "result": "FAIL"
+}

@@ -1,0 +1,187 @@
+{
+  "schema": "motiongit-native-preservation/1",
+  "styles": [
+    {
+      "style": "01-A",
+      "originalSelection": "classic-performance@1.1.0-candidate",
+      "executionSelection": "classic-performance@1.1.0-candidate",
+      "originalManifestSha256": "e6884cf04b099d2b9ae64c612a9849fab7dfc7500f07b513e49fb2431e9a331c",
+      "executionManifestSha256": "e6884cf04b099d2b9ae64c612a9849fab7dfc7500f07b513e49fb2431e9a331c",
+      "sourceFiles": {
+        "LICENSE": "0f1d5e25e1035cf4fb24809d66dff30642a2d4c5a33837ba7e0e8af4ff66fdfc",
+        "README.md": "4b6654d2516bd83411143d04cf3fbacbdc81a4ca6b76bb8f38a388d803d1a533",
+        "audio_timeline.json": "26e2ae3e409b2c4126962ec830edaa6e589abe8e739ea698515d814e0f496648",
+        "config.js": "03695c9ebeea6897245f792d67ed44345ac4caaca8bed8b3ab7a6f005d7d7d64",
+        "lib.js": "feced1178a494b7b7bd7f1632f5c25652d6e06e304bcd99dcd085a0f4b5bcd33",
+        "manifest.json": "e6884cf04b099d2b9ae64c612a9849fab7dfc7500f07b513e49fb2431e9a331c",
+        "motion.js": "0618fac74ae393dda4745f6b71c151678ef3a465a8399740faa1ee67decfb3d9",
+        "portrait.css": "9e030169becf590a62d69caa90bddff19c3e6153e017f9783dcef4347e882b63",
+        "portrait.js": "5057d37dda49dce275e012da3051bddd3189ffff3d4528bccf6c3528dcbbea90",
+        "review.json": "c443fded3f220c51838bc815c220705013a52abad46ec4eb8479c9a14acaad06",
+        "style.css": "3644fefb556c4a2a2f47d1799c524a8e010452f9f68bf616f6785fb0e7213887",
+        "units/claim-into-container.js": "6dda3cacea9d11239f594807c4c7abdb8c5a202f22a21918062f0bc26b2da577",
+        "units/decompose-and-consolidate.js": "3e002508e96c802c7c7a25f96fb088f1f4db3e84767ac62846118ef58928874f",
+        "units/evidence-focus.js": "2e0ac04a41d46a55354af09c183d515ceaa7e59657b773bdeaedb72efb6f2678"
+      },
+      "allOriginalFilesPreserved": true,
+      "authoredUnitHelperStyleAndOriginalLayoutBytesEqual": true,
+      "executionContractChanges": [
+        "Language edition zh: example inputs and catalogue metadata only; native units/helpers/layouts unchanged"
+      ]
+    },
+    {
+      "style": "01-B",
+      "originalSelection": "continuous-performance@1.1.0-candidate",
+      "executionSelection": "continuous-performance@1.1.0-candidate",
+      "originalManifestSha256": "4b1f45b09374d0c78d62f2952fc804b1cd51a4e8b13b1da3a45b5482055ecfac",
+      "executionManifestSha256": "09b60d59044f705698630d220c9af78a9ef16c4adf6c22402c63d0e3498352bb",
+      "sourceFiles": {
+        "LICENSE": "0f1d5e25e1035cf4fb24809d66dff30642a2d4c5a33837ba7e0e8af4ff66fdfc",
+        "README.md": "5fcaf9c39c1df27c344b6134b4377c4ec14ee239c9793d0aa4f2a6b28e9026f8",
+        "audio_timeline.json": "40970e56a4d1880fcef0225e38075f51162ab054d8f05bba5852456c2ba1d8ee",
+        "config.js": "03695c9ebeea6897245f792d67ed44345ac4caaca8bed8b3ab7a6f005d7d7d64",
+        "lib.js": "feced1178a494b7b7bd7f1632f5c25652d6e06e304bcd99dcd085a0f4b5bcd33",
+        "manifest.json": "4b1f45b09374d0c78d62f2952fc804b1cd51a4e8b13b1da3a45b5482055ecfac",
+        "motion.js": "0618fac74ae393dda4745f6b71c151678ef3a465a8399740faa1ee67decfb3d9",
+        "portrait.css": "9e030169becf590a62d69caa90bddff19c3e6153e017f9783dcef4347e882b63",
+        "portrait.js": "5057d37dda49dce275e012da3051bddd3189ffff3d4528bccf6c3528dcbbea90",
+        "review.json": "9c7a68d32b4efc6eebb6fa75324445767932e16fadeff4f9d22d17fbfa46c878",
+        "style.css": "3644fefb556c4a2a2f47d1799c524a8e010452f9f68bf616f6785fb0e7213887",
+        "units/claim-into-container.js": "917fb644defb4d5b4d5637a7b0b5eb3e037c959431fd40b57698df98ae1c6c6b",
+        "units/decompose-and-consolidate.js": "3949f08a380e4c647dfb7b57afe32983c742b76fc61b65174435968ac1520f2e"
+      },
+      "allOriginalFilesPreserved": true,
+      "authoredUnitHelperStyleAndOriginalLayoutBytesEqual": true,
+      "executionContractChanges": [
+        "Language edition zh: example inputs and catalogue metadata only; native units/helpers/layouts unchanged",
+        "Chinese portrait example concept 留下来→留存; default/catalog short word plus real-font output capacity guard; original unit bytes and clocks preserved"
+      ]
+    },
+    {
+      "style": "01-C",
+      "originalSelection": "stage-performance@1.1.0-candidate",
+      "executionSelection": "stage-performance@1.1.0-candidate",
+      "originalManifestSha256": "6530f8c7e0f38140f8c7ee01b3a4528c5622bed16d300ebace32e9c232f0f4ed",
+      "executionManifestSha256": "6530f8c7e0f38140f8c7ee01b3a4528c5622bed16d300ebace32e9c232f0f4ed",
+      "sourceFiles": {
+        "README.md": "51664959494111644721caef19fdfb9045fb970ed2452c2a3fcbccc3c4e74f59",
+        "audio_timeline.json": "3e13bc73a152a6626d7722f38b291cada0075fb99bb3d2001c27d2c1a3454ee6",
+        "config.js": "03695c9ebeea6897245f792d67ed44345ac4caaca8bed8b3ab7a6f005d7d7d64",
+        "lib.js": "feced1178a494b7b7bd7f1632f5c25652d6e06e304bcd99dcd085a0f4b5bcd33",
+        "manifest.json": "6530f8c7e0f38140f8c7ee01b3a4528c5622bed16d300ebace32e9c232f0f4ed",
+        "motion.js": "0618fac74ae393dda4745f6b71c151678ef3a465a8399740faa1ee67decfb3d9",
+        "portrait.css": "9e030169becf590a62d69caa90bddff19c3e6153e017f9783dcef4347e882b63",
+        "portrait.js": "5057d37dda49dce275e012da3051bddd3189ffff3d4528bccf6c3528dcbbea90",
+        "review.json": "c443fded3f220c51838bc815c220705013a52abad46ec4eb8479c9a14acaad06",
+        "style.css": "443a828ca6d206a4b148c7acd38669156e48c4f977f4a9bf503bfe009832ad92",
+        "units/claim-and-response.js": "39bc3f3577abb71513703133f51638947a42c3cbb7171d24b7cb92666cd65603",
+        "units/decompose-and-consolidate.js": "63f3354311fc4c413e11a08ff92e0cfe1408347c0774ab615b2cff3046b3e51d",
+        "units/evidence-and-focus.js": "42785febdbbda540f290b2df5c4455633e375399d8c40125dab08fb795ab31af"
+      },
+      "allOriginalFilesPreserved": true,
+      "authoredUnitHelperStyleAndOriginalLayoutBytesEqual": true,
+      "executionContractChanges": [
+        "Language edition zh: example inputs and catalogue metadata only; native units/helpers/layouts unchanged"
+      ]
+    },
+    {
+      "style": "01-D",
+      "originalSelection": "editorial-performance@1.2.0-candidate",
+      "executionSelection": "editorial-performance@1.2.0-candidate",
+      "originalManifestSha256": "b877e9d7ee139e26acdc4ed441e1cadcb4160760aeb1ea7bb9143bf9b6d90fdc",
+      "executionManifestSha256": "b877e9d7ee139e26acdc4ed441e1cadcb4160760aeb1ea7bb9143bf9b6d90fdc",
+      "sourceFiles": {
+        "README.md": "a7907c128fa186bc1991d840765655d215df9b177d1439080fc8b87f81332447",
+        "audio_timeline.json": "918da5e4cf57d2d417c0e27b289c4201d28378e8b164a60453a11674863c9467",
+        "config.js": "5eb45adfa7fc5065816249d367acbec0a2f0df874cb27555deed3fb2d103674c",
+        "lib.js": "48faf877384f842070f225a905bc75aec103d34f8c454c8c51de19abce10c55b",
+        "manifest.json": "b877e9d7ee139e26acdc4ed441e1cadcb4160760aeb1ea7bb9143bf9b6d90fdc",
+        "motion.js": "0618fac74ae393dda4745f6b71c151678ef3a465a8399740faa1ee67decfb3d9",
+        "portrait.css": "9e030169becf590a62d69caa90bddff19c3e6153e017f9783dcef4347e882b63",
+        "portrait.js": "0a94f64504170a3540124d874861057317132ba3a59991c52a33aaebb28119c7",
+        "review.json": "17b2dae3a858b981d7a917460a0d596f4444eca21d2f1ef42d49f60c98b060dc",
+        "style.css": "57d47273749b079df15412f7b07fcbb85da1f087611eae2a3949cae3907a5af9",
+        "units/animated-contents.js": "7b2559429cc2dcb7fb96ad46f5edc1b2bc0883a605a0d2c144cd5988024d1f1f",
+        "units/basic-keyword.js": "bb8253647e177ac989added476f705976152d19838b6560a0cc4a86270a9072c",
+        "units/basic-points.js": "a64403f6facaa0103a15ea48054ed3f85c9cb1ae04da1c845628163709057f79",
+        "units/basic-summary.js": "71b56f99993535ac0185b34ba451f303f11ddb6790992fe9a5fe00741eeee161",
+        "units/claim-and-response.js": "8dc7ae6048aba879a1bf78f18fb0953c280ceb7a9b61b50815401aee89697fd0",
+        "units/claim-to-evolving-timeline.js": "17731232e9d6e6f55f594b3b2c290d7b8ebc88181050efc56b3079cbd123ca7e",
+        "units/closing-with-invitation.js": "cda8bf6fea94fb1ce301622b46a70e18348ca4478cb3bff2e0063eed5eb548e2",
+        "units/decompose-and-consolidate.js": "2417287b26a7ef86713d520539c0f2a6f0a71108bc79082b7d72f410df2e9890",
+        "units/evidence-and-focus.js": "b2613f2f343cedefd53cb947b85ef5029a7c2050dccc9034c57cc7edf91b1e56",
+        "units/evidence-to-handbook.js": "340a8662a5031cf77b2baea34498e5fc53a5c3a51030a3c344ee5e4eaf160fc7",
+        "units/recap-to-evidence-to-incident.js": "b5bafe4391255497f1c90f709ceb86446610ff1f0a5c09fa9c42615772e3a781",
+        "units/simplify-and-interrupt.js": "329ca10c67d80c39789eecfc80c0ab1098a7700209b202e98dd65fe1c63e441f",
+        "units/transfer-and-consequence.js": "d619406c28d6b24aae6e3b3c117f017c5975b4d13444f8df98acaf43f46359b9"
+      },
+      "allOriginalFilesPreserved": true,
+      "authoredUnitHelperStyleAndOriginalLayoutBytesEqual": true,
+      "executionContractChanges": [
+        "Language edition zh: example inputs and catalogue metadata only; native units/helpers/layouts unchanged"
+      ]
+    },
+    {
+      "style": "01-E",
+      "originalSelection": "kinetic-performance@1.2.0-candidate",
+      "executionSelection": "kinetic-performance@1.2.0-candidate",
+      "originalManifestSha256": "fba71c0198a714f50fde838895245dfcca0c32fddd2bd715c64f2465ab858733",
+      "executionManifestSha256": "dfc3d1a763bb6ebdadd54a0aa79943c02b5ef23f853ee19e7e633640f8c4f9de",
+      "sourceFiles": {
+        "README.md": "8d1473eb5664faa5b28f5f1f6ebd75d23d025619f651705efc3b83db741e119e",
+        "audio_timeline.json": "3597311f8f9fb8fe508965fe3559c0d6f3bee99e2ec9a3567f0295ed75041a84",
+        "config.js": "bff860aab3622a42823031593d97c3654c04997ebd3d84d787ae542a3cdc751f",
+        "lib.js": "48faf877384f842070f225a905bc75aec103d34f8c454c8c51de19abce10c55b",
+        "manifest.json": "fba71c0198a714f50fde838895245dfcca0c32fddd2bd715c64f2465ab858733",
+        "motion.js": "0618fac74ae393dda4745f6b71c151678ef3a465a8399740faa1ee67decfb3d9",
+        "portrait.css": "9e030169becf590a62d69caa90bddff19c3e6153e017f9783dcef4347e882b63",
+        "portrait.js": "2a9e8a14a2e119571fb8929d328a146ac2686ba2d714035f48dadd6135fe71d2",
+        "review.json": "cf9724e1433dbe79a1019d078fd4f0e6b535ecf2dc1b94d1a9988bcddb40c6f6",
+        "style.css": "e9c4546df676c87ba60c8d9777fbe9cdc383817fc28e3e6e2c90350d2f528e6e",
+        "units/claim-and-response.js": "7cd0d13bc79b92df9c5ddba65a40a3eab0e658ea8be6191370cbbb7665ce2393",
+        "units/decompose-and-consolidate.js": "0837ea2a9f7f4529a0d3bab7bf7e19b8f7956537e5799e19e5fee0bc0d8c1cd2",
+        "units/evidence-and-focus.js": "4e7deaf7471b38b400598c7f8fa0ca90b982cec5ca37be2f255e6dd9807cbffb",
+        "units/three-items-consolidate.js": "67e7dfb90f753c234a051141d49c3197e4ee97dbb06820cdd4e3f07c9b6c1194"
+      },
+      "allOriginalFilesPreserved": true,
+      "authoredUnitHelperStyleAndOriginalLayoutBytesEqual": true,
+      "executionContractChanges": [
+        "Correct copied three-item description/effects/sourceEvidence only; cardinality and choreography unchanged",
+        "Language edition zh: example inputs and catalogue metadata only; native units/helpers/layouts unchanged"
+      ]
+    },
+    {
+      "style": "01-B-legacy",
+      "originalSelection": "continuous-performance@0.2.1-candidate",
+      "executionSelection": "continuous-performance@0.2.1-integrated.1-candidate",
+      "originalManifestSha256": "1ba0f2696ee79f48ac8e524637c79ca081f69b79d7f0456772e1e0dba3ee1d38",
+      "executionManifestSha256": "78ec0a3586256d356a2b600916ece7a52e61e9677567f446feac8f5eb41371ca",
+      "sourceFiles": {
+        "LICENSE": "0f1d5e25e1035cf4fb24809d66dff30642a2d4c5a33837ba7e0e8af4ff66fdfc",
+        "README.md": "4ada4366cc5ac444617e1268d5cd136dc0a5e94015685d3482d68202155e79fd",
+        "audio_timeline.json": "40970e56a4d1880fcef0225e38075f51162ab054d8f05bba5852456c2ba1d8ee",
+        "config.js": "03695c9ebeea6897245f792d67ed44345ac4caaca8bed8b3ab7a6f005d7d7d64",
+        "lib.js": "feced1178a494b7b7bd7f1632f5c25652d6e06e304bcd99dcd085a0f4b5bcd33",
+        "manifest.json": "1ba0f2696ee79f48ac8e524637c79ca081f69b79d7f0456772e1e0dba3ee1d38",
+        "motion.js": "0618fac74ae393dda4745f6b71c151678ef3a465a8399740faa1ee67decfb3d9",
+        "style.css": "3644fefb556c4a2a2f47d1799c524a8e010452f9f68bf616f6785fb0e7213887",
+        "units/claim-into-container.js": "917fb644defb4d5b4d5637a7b0b5eb3e037c959431fd40b57698df98ae1c6c6b",
+        "units/decompose-and-consolidate.js": "3949f08a380e4c647dfb7b57afe32983c742b76fc61b65174435968ac1520f2e",
+        "units/simplify-plan-disrupt.js": "2e564c316c8566a576b6dc61676e02595a2503f7a4c6f925539115fbf9fd8a3b"
+      },
+      "allOriginalFilesPreserved": true,
+      "authoredUnitHelperStyleAndOriginalLayoutBytesEqual": true,
+      "executionContractChanges": [
+        "Expose only recovered simplify-plan-disrupt; original complete pack remains under src/packs",
+        "Add explicit semantic profile; 4 many + 4 steps + 3 interruptions + 3 container parts",
+        "Copy current B portrait.js/css as a separately declared, unaccepted portrait candidate",
+        "Language edition zh: example inputs and catalogue metadata only; native units/helpers/layouts unchanged"
+      ]
+    }
+  ],
+  "originalPackTrees": "src/packs",
+  "executionViews": "runtime/adu-motion-video/packs",
+  "totalExposedGroups": 26,
+  "universalReplacementGroups": 0,
+  "artisticAcceptance": "pending; schema or byte checks do not prove final visual quality"
+}

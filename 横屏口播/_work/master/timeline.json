@@ -1,0 +1,45 @@
+{
+  "total": 141.32,
+  "clips": [
+    {
+      "stem": "video_20261028_155938",
+      "offset": 0.0,
+      "length": 2.98
+    },
+    {
+      "stem": "video_20261028_160139",
+      "offset": 2.98,
+      "length": 8.22
+    },
+    {
+      "stem": "video_20261028_160211",
+      "offset": 11.2,
+      "length": 10.56
+    },
+    {
+      "stem": "video_20261028_160235",
+      "offset": 21.76,
+      "length": 27.16
+    },
+    {
+      "stem": "video_20261028_160316",
+      "offset": 48.92,
+      "length": 26.72
+    },
+    {
+      "stem": "video_20261028_160353",
+      "offset": 75.64,
+      "length": 35.14
+    },
+    {
+      "stem": "video_20261028_160437",
+      "offset": 110.78,
+      "length": 16.5
+    },
+    {
+      "stem": "video_20261028_160458",
+      "offset": 127.28,
+      "length": 14.04
+    }
+  ]
+}

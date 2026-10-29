@@ -1,0 +1,315 @@
+{
+  "file": "video_20261028_160458.wav",
+  "duration": 15.04,
+  "language": "zh",
+  "language_probability": 1.0,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.22,
+      "text": "吹的社区还有很多小伙伴",
+      "words": [
+        {
+          "word": "吹",
+          "start": 0.0,
+          "end": 0.46,
+          "probability": 0.5664
+        },
+        {
+          "word": "的",
+          "start": 0.46,
+          "end": 0.62,
+          "probability": 0.8391
+        },
+        {
+          "word": "社",
+          "start": 0.62,
+          "end": 0.8,
+          "probability": 0.9834
+        },
+        {
+          "word": "区",
+          "start": 0.8,
+          "end": 1.02,
+          "probability": 0.9565
+        },
+        {
+          "word": "还有",
+          "start": 1.02,
+          "end": 1.26,
+          "probability": 0.6145
+        },
+        {
+          "word": "很多",
+          "start": 1.26,
+          "end": 1.48,
+          "probability": 0.9703
+        },
+        {
+          "word": "小",
+          "start": 1.48,
+          "end": 1.7,
+          "probability": 0.9909
+        },
+        {
+          "word": "伙",
+          "start": 1.7,
+          "end": 1.9,
+          "probability": 0.9979
+        },
+        {
+          "word": "伴",
+          "start": 1.9,
+          "end": 2.22,
+          "probability": 0.9987
+        }
+      ]
+    },
+    {
+      "start": 3.16,
+      "end": 5.74,
+      "text": "然后你可以看一下人家做的东西",
+      "words": [
+        {
+          "word": "然后",
+          "start": 3.16,
+          "end": 3.6,
+          "probability": 0.3691
+        },
+        {
+          "word": "你可以",
+          "start": 3.6,
+          "end": 4.04,
+          "probability": 0.4065
+        },
+        {
+          "word": "看一下",
+          "start": 4.04,
+          "end": 4.64,
+          "probability": 0.9855
+        },
+        {
+          "word": "人",
+          "start": 4.64,
+          "end": 4.98,
+          "probability": 0.944
+        },
+        {
+          "word": "家",
+          "start": 4.98,
+          "end": 5.14,
+          "probability": 0.9997
+        },
+        {
+          "word": "做",
+          "start": 5.14,
+          "end": 5.28,
+          "probability": 0.9763
+        },
+        {
+          "word": "的",
+          "start": 5.28,
+          "end": 5.38,
+          "probability": 0.997
+        },
+        {
+          "word": "东",
+          "start": 5.38,
+          "end": 5.52,
+          "probability": 0.9811
+        },
+        {
+          "word": "西",
+          "start": 5.52,
+          "end": 5.74,
+          "probability": 0.9992
+        }
+      ]
+    },
+    {
+      "start": 5.74,
+      "end": 7.36,
+      "text": "你也可以渐渐一下思路",
+      "words": [
+        {
+          "word": "你",
+          "start": 5.74,
+          "end": 6.14,
+          "probability": 0.0576
+        },
+        {
+          "word": "也可以",
+          "start": 6.14,
+          "end": 6.36,
+          "probability": 0.5795
+        },
+        {
+          "word": "渐",
+          "start": 6.36,
+          "end": 6.58,
+          "probability": 0.5391
+        },
+        {
+          "word": "渐",
+          "start": 6.58,
+          "end": 6.7,
+          "probability": 0.9965
+        },
+        {
+          "word": "一下",
+          "start": 6.7,
+          "end": 6.9,
+          "probability": 0.9541
+        },
+        {
+          "word": "思",
+          "start": 6.9,
+          "end": 7.14,
+          "probability": 0.8196
+        },
+        {
+          "word": "路",
+          "start": 7.14,
+          "end": 7.36,
+          "probability": 0.9994
+        }
+      ]
+    },
+    {
+      "start": 9.32,
+      "end": 10.54,
+      "text": "我觉得学习嘛",
+      "words": [
+        {
+          "word": "我觉得",
+          "start": 9.32,
+          "end": 9.76,
+          "probability": 0.9665
+        },
+        {
+          "word": "学",
+          "start": 9.76,
+          "end": 10.2,
+          "probability": 0.9363
+        },
+        {
+          "word": "习",
+          "start": 10.2,
+          "end": 10.38,
+          "probability": 0.9944
+        },
+        {
+          "word": "嘛",
+          "start": 10.38,
+          "end": 10.54,
+          "probability": 0.5711
+        }
+      ]
+    },
+    {
+      "start": 10.54,
+      "end": 12.22,
+      "text": "大家都共同学习",
+      "words": [
+        {
+          "word": "大家都",
+          "start": 10.54,
+          "end": 10.82,
+          "probability": 0.7786
+        },
+        {
+          "word": "共",
+          "start": 10.82,
+          "end": 11.22,
+          "probability": 0.8092
+        },
+        {
+          "word": "同",
+          "start": 11.22,
+          "end": 11.92,
+          "probability": 0.9967
+        },
+        {
+          "word": "学",
+          "start": 11.92,
+          "end": 12.06,
+          "probability": 0.8776
+        },
+        {
+          "word": "习",
+          "start": 12.06,
+          "end": 12.22,
+          "probability": 0.9981
+        }
+      ]
+    },
+    {
+      "start": 12.22,
+      "end": 13.06,
+      "text": "互相学习",
+      "words": [
+        {
+          "word": "互",
+          "start": 12.22,
+          "end": 12.36,
+          "probability": 0.7774
+        },
+        {
+          "word": "相",
+          "start": 12.36,
+          "end": 12.48,
+          "probability": 0.8992
+        },
+        {
+          "word": "学",
+          "start": 12.48,
+          "end": 12.62,
+          "probability": 0.9915
+        },
+        {
+          "word": "习",
+          "start": 12.62,
+          "end": 13.06,
+          "probability": 0.9992
+        }
+      ]
+    },
+    {
+      "start": 13.06,
+      "end": 13.8,
+      "text": "不想鼓励嘛",
+      "words": [
+        {
+          "word": "不",
+          "start": 13.06,
+          "end": 13.28,
+          "probability": 0.5995
+        },
+        {
+          "word": "想",
+          "start": 13.28,
+          "end": 13.38,
+          "probability": 0.5491
+        },
+        {
+          "word": "鼓",
+          "start": 13.38,
+          "end": 13.52,
+          "probability": 0.8815
+        },
+        {
+          "word": "励",
+          "start": 13.52,
+          "end": 13.64,
+          "probability": 0.9749
+        },
+        {
+          "word": "嘛",
+          "start": 13.64,
+          "end": 13.8,
+          "probability": 0.7724
+        }
+      ]
+    }
+  ]
+}

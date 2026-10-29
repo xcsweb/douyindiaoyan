@@ -1,0 +1,109 @@
+{
+  "stages": {
+    "params": {
+      "status": "ok",
+      "startedAt": "2026-10-29T18:10:07+08:00",
+      "finishedAt": "2026-10-29T18:10:07+08:00",
+      "error": "",
+      "logFile": "/workspace/横屏口播/_work/logs/params.log",
+      "products": [
+        "/workspace/横屏口播/_work/instance/params.json",
+        "/workspace/横屏口播/_work/instance/inputs/master.mp4",
+        "/workspace/横屏口播/_work/instance/inputs/captions.json"
+      ]
+    },
+    "check": {
+      "status": "ok",
+      "startedAt": "2026-10-29T17:40:36+08:00",
+      "finishedAt": "2026-10-29T17:40:44+08:00",
+      "error": "",
+      "logFile": "/workspace/横屏口播/_work/logs/check.log",
+      "products": [
+        "/workspace/横屏口播/_work/logs/check.log"
+      ]
+    },
+    "plan": {
+      "status": "ok",
+      "startedAt": "2026-10-29T18:10:08+08:00",
+      "finishedAt": "2026-10-29T18:10:26+08:00",
+      "error": "",
+      "logFile": "/workspace/横屏口播/_work/logs/plan.log",
+      "products": [
+        "/workspace/横屏口播/_work/instance/plan"
+      ]
+    },
+    "prepare": {
+      "status": "ok",
+      "startedAt": "2026-10-29T18:10:26+08:00",
+      "finishedAt": "2026-10-29T18:12:26+08:00",
+      "error": "",
+      "logFile": "/workspace/横屏口播/_work/logs/prepare.log",
+      "products": [
+        "/workspace/横屏口播/_work/instance/project"
+      ]
+    },
+    "preview": {
+      "status": "ok",
+      "startedAt": "2026-10-29T18:12:26+08:00",
+      "finishedAt": "2026-10-29T18:12:36+08:00",
+      "error": "",
+      "logFile": "/workspace/横屏口播/_work/logs/preview.log",
+      "products": [
+        "/workspace/横屏口播/_work/logs/preview.log"
+      ]
+    },
+    "clips": {
+      "status": "ok",
+      "startedAt": "2026-10-29T18:13:40+08:00",
+      "finishedAt": "2026-10-29T18:14:14+08:00",
+      "error": "",
+      "logFile": "/workspace/横屏口播/_work/logs/clips.log",
+      "products": [
+        "/workspace/横屏口播/_work/logs/clips.log"
+      ]
+    },
+    "render": {
+      "status": "failed",
+      "startedAt": "2026-10-29T18:14:56+08:00",
+      "finishedAt": "2026-10-29T18:33:16+08:00",
+      "error": "模板运行时语言包初始化失败（依赖缓存可能不完整）",
+      "logFile": "/workspace/横屏口播/_work/logs/render.log",
+      "products": [
+        "/workspace/横屏口播/03-成片/video.mp4"
+      ]
+    },
+    "prep": {
+      "status": "ok",
+      "startedAt": "2026-10-29T17:09:35+08:00",
+      "finishedAt": "2026-10-29T17:09:36+08:00",
+      "error": "",
+      "logFile": "/workspace/横屏口播/_work/logs/prep.log",
+      "products": [
+        "/workspace/横屏口播/_work/audio/video_20261028_155938.wav",
+        "/workspace/横屏口播/_work/audio/video_20261028_160139.wav",
+        "/workspace/横屏口播/_work/audio/video_20261028_160211.wav",
+        "/workspace/横屏口播/_work/audio/video_20261028_160235.wav",
+        "/workspace/横屏口播/_work/audio/video_20261028_160316.wav",
+        "/workspace/横屏口播/_work/audio/video_20261028_160353.wav",
+        "/workspace/横屏口播/_work/audio/video_20261028_160437.wav",
+        "/workspace/横屏口播/_work/audio/video_20261028_160458.wav"
+      ]
+    }
+  },
+  "stage": "render",
+  "status": "failed",
+  "startedAt": "2026-10-29T18:14:56+08:00",
+  "finishedAt": "2026-10-29T18:33:16+08:00",
+  "error": "模板运行时语言包初始化失败（依赖缓存可能不完整）",
+  "logFile": "/workspace/横屏口播/_work/logs/render.log",
+  "products": [
+    "/workspace/横屏口播/03-成片/video.mp4"
+  ],
+  "updatedAt": "2026-10-29T18:33:16+08:00",
+  "lastFailure": {
+    "stage": "render",
+    "error": "模板运行时语言包初始化失败（依赖缓存可能不完整）",
+    "at": "2026-10-29T18:33:16+08:00",
+    "logFile": "/workspace/横屏口播/_work/logs/render.log"
+  }
+}

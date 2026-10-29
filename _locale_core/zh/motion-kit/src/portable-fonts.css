@@ -1,0 +1,2 @@
+@font-face{font-family:'MotionKit CJK';font-style:normal;font-weight:100 900;src:url('fonts/NotoSansSC.ttf') format('truetype')}
+:root{--fz:'Geist','MotionKit CJK',sans-serif;--fm:'Geist Mono','MotionKit CJK',monospace}

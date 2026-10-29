@@ -1,0 +1,30 @@
+{
+  "profile": "motiongit-release-readiness/1",
+  "templateFamily": "01",
+  "language": "zh",
+  "layout": "landscape",
+  "version": "2.2.0-rc.11",
+  "status": "release-build; source verification scope retained",
+  "websiteUploaded": false,
+  "originalNativeSourceBytesPreserved": true,
+  "componentVersion": "0.3.0",
+  "componentDigest": "4fe4812f94d860b31b25a22b11f0b7bd55d852f6d426bbb0ef40e7ffab36a809",
+  "ownerContinuation": {
+    "date": "2026-10-12",
+    "statement": "模板问题已经修正，继续完善，准备更新.motion",
+    "scope": "Continue the five talking-head families; propagate reviewed console media into new local candidates. Website upload remains paused."
+  },
+  "consoleMediaCorrection": null,
+  "coverageComplete": false,
+  "limitations": [
+    "Unified native+kit production timeline is not implemented; explicit workflows are retained.",
+    "Real-human lip-sync/multiple moving faces and continuous owner audiovisual review are not established by controlled fixtures.",
+    "Windows/Linux native execution is not tested."
+  ],
+  "publicationBuild": {
+    "version": "2.3.0",
+    "previousArchiveSha256": "8522022613d56db8f30de97d3e805aaf6871fda5847425fd3ac3d71c85fb2f45",
+    "animationAndMediaUnchanged": true,
+    "changedScope": "publication metadata and license declarations only"
+  }
+}

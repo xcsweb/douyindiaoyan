@@ -1,0 +1,208 @@
+{
+  "schema": "motiongit-guide/1",
+  "guideVersion": "0.1",
+  "template": "template-01-integrated",
+  "version": "2.7.0",
+  "defaultMode": "user-media",
+  "firstReply": "这是模板01「现代图文口播」中文版，整合A–E完整原生动画，默认中文字幕，保留英文翻译参考。[横屏预览](previews/landscape.mp4) · [竖屏预览](previews/portrait.mp4)。请提供本期口播视频、文稿或SRT、相关素材、表达目的和所需画幅。",
+  "fit": {
+    "summary": "现代图文口播完整原生动作库",
+    "placement": "whole",
+    "genres": [
+      "talking-head",
+      "knowledge"
+    ],
+    "goodFor": [
+      "有语义依据的主张、拆解、证据、过程、归纳与收尾",
+      "按内容选择原生完整组，保留动作与状态接力"
+    ],
+    "notFor": [
+      "任意数量硬塞固定数量组",
+      "编造不存在的步骤、证据或结果",
+      "未验证的自动口型"
+    ]
+  },
+  "duration": {
+    "policy": "fit-voiceover",
+    "min": 6,
+    "max": 600,
+    "default": 120,
+    "param": "brief.narrationDuration",
+    "rules": [
+      "以真实口播时长和整数帧规划；所有段总帧数必须一致",
+      "每组仍执行自己的原速动作、停留、素材和尾声合同",
+      "长片须绑定覆盖全片的授权配乐；默认曲不够长时补素材，不循环冒充完整"
+    ]
+  },
+  "materials": [
+    {
+      "role": "video.presenter",
+      "required": true,
+      "use": "本期口播视频与原声",
+      "ask": "请提供本期口播视频",
+      "maps": [
+        "media"
+      ]
+    },
+    {
+      "role": "text.subtitles",
+      "required": true,
+      "use": "匹配口播的中英字幕",
+      "ask": "文稿或 SRT 一起提供，助手翻译和核对时间",
+      "maps": [
+        "media"
+      ]
+    },
+    {
+      "role": "x-production-plan",
+      "required": false,
+      "use": "完整文稿、画幅、证据与真实动作锚点",
+      "ask": "这条视频最想表达什么，需要横屏还是竖屏",
+      "maps": [
+        "brief"
+      ],
+      "ifMissing": "先理解已有材料并给方案，不让用户填写复杂参数"
+    }
+  ],
+  "inputPolicy": "核对已有上下文和本期媒体；保留否定、条件、数字、实体与顺序。只有文稿时先安排内容；授权生成配音或示意媒体后取得真实时长与对齐，再进入制作，不自动用 demo 人物替换用户。",
+  "selection": "共 26 个完整原生/恢复组；命名为 style:group。局部固定数量只约束对应组，内容不符时换组；不得删除原动作或用通用卡片冒充原生编舞。",
+  "styles": [
+    {
+      "id": "01-A",
+      "title": "原片节奏",
+      "status": "candidate",
+      "selection": "classic-performance@1.1.0-candidate",
+      "portraitSelection": "classic-performance@1.1.0-candidate"
+    },
+    {
+      "id": "01-B",
+      "title": "连续形变",
+      "status": "candidate",
+      "selection": "continuous-performance@1.1.0-candidate",
+      "portraitSelection": "continuous-performance@1.1.0-candidate"
+    },
+    {
+      "id": "01-C",
+      "title": "纵深舞台",
+      "status": "candidate",
+      "selection": "stage-performance@1.1.0-candidate",
+      "portraitSelection": "stage-performance@1.1.0-candidate"
+    },
+    {
+      "id": "01-D",
+      "title": "杂志分屏",
+      "status": "candidate",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "portraitSelection": "editorial-performance@1.2.0-candidate"
+    },
+    {
+      "id": "01-E",
+      "title": "节拍字效",
+      "status": "candidate",
+      "selection": "kinetic-performance@1.2.0-candidate",
+      "portraitSelection": "kinetic-performance@1.2.0-candidate"
+    },
+    {
+      "id": "01-B-legacy",
+      "title": "连续形变 · 目标与干扰（恢复组）",
+      "status": "candidate",
+      "selection": "continuous-performance@0.2.1-integrated.1-candidate",
+      "portraitSelection": "continuous-performance@0.2.1-integrated.1-candidate"
+    }
+  ],
+  "contracts": "capacity-matrix.json, source-preservation.json, adapter/parameter-map.json",
+  "demoPolicy": "仅明确要求演示时使用。主片展示7组完整原生动画，26组逐项目录另附；7.5秒可执行小样用于验证正常制作入口，和117.4667秒动作巡演用途不同。人物是获准使用的AI静态示意，声音由MotionGit标准男声合成，没有口型同步。",
+  "captions": {
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "required": true,
+    "pairing": "同一真实句级时间，英文为忠实翻译",
+    "layout": "默认显示中文，翻译参考保留；真实短句一行，声明时最多两明确行，不使用浏览器自动换行",
+    "highlight": "仅用 ASR 或核验的真实中文词区间驱动逐字扫色，不按字数估计",
+    "endPunctuation": "仅显示层清理结尾逗号、句号；原文、内部标点与词时间不变",
+    "primary": "zh"
+  },
+  "workflow": [
+    "inspect user media and full narration",
+    "paired bilingual captions and real word alignment",
+    "check-params → plan",
+    "inspect plan/report and set review.json reviewed=true after real review",
+    "prepare fresh project → preview",
+    "inspect stills and set preview.json reviewed=true after real review",
+    "render → encoded motion/audio review → owner artistic review"
+  ],
+  "commands": {
+    "new": "motion new <personal.motion> <instance>",
+    "setup": "motion run <personal.motion> --instance <instance> setup",
+    "checkParams": "motion run <personal.motion> --instance <instance> check-params <params.json> --inputs <inputs>",
+    "plan": "motion run <personal.motion> --instance <instance> plan <params.json> --inputs <inputs> --out <instance/plan>",
+    "prepare": "motion run <personal.motion> --instance <instance> prepare @vault --inputs @vault --plan <instance/plan> --out <instance/project>",
+    "preview": "motion run <personal.motion> --instance <instance> preview <instance/project> --times <times>",
+    "render": "motion run <personal.motion> --instance <instance> render <instance/project> --out <instance/video.mp4>"
+  },
+  "commandsWindows": {
+    "doctor": "python adapter/run.py doctor",
+    "setup": "python adapter/run.py setup",
+    "capabilities": "python adapter/run.py capabilities --layout portrait",
+    "check": "python adapter/run.py check-params params.json --inputs INPUTS",
+    "plan": "python adapter/run.py plan params.json --inputs INPUTS --out PLAN",
+    "prepare": "python adapter/run.py prepare params.json --inputs INPUTS --plan PLAN --out PROJECT",
+    "preview": "python adapter/run.py preview PROJECT --times 0,1,4,8",
+    "render": "python adapter/run.py render PROJECT --out VIDEO.mp4 --workers 4",
+    "demoCheck": "python adapter/run.py check-params presets/demo.json --inputs .",
+    "demoPlan": "python adapter/run.py plan presets/demo.json --inputs . --out DEMO_PLAN"
+  },
+  "commandExecutable": "motion",
+  "layoutPolicy": "使用各包原生独立画幅布局；背景全出血、前景含运动轨迹留安全边距。恢复 B 竖屏是单独派生候选，需要逐帧检查。",
+  "brand": "官方圆形深浅 .m 位于右上角时间位置；同一输出帧淡入淡出与时间交替。按实际角标区域背景选变体，每约 30 秒出现一次。",
+  "music": "明确授权 track/path/offset；缺省 CC0 曲目仅在覆盖全片时可用。原生音效保留动作时刻与尾音。",
+  "network": "本地渲染可离线；setup 只在外部运行缓存安装锁定依赖，不下载浏览器或 FFmpeg。MotionGit 查询、素材和 TTS 需授权；付费先报价，不附带个人 Key，不强制解密联网。",
+  "platforms": "Windows/macOS/Linux 无 Bash 依赖；实际目标平台验证见 VALIDATION.md",
+  "hostWithoutTools": [
+    "助手读 guide 和容量合同，交付 params.json 与匹配的双语时间字幕；由具备 Python、Node、Chrome/Edge 和 FFmpeg 的本机执行 commands。没有真实逐字时间时补对齐，不编造。"
+  ],
+  "noToolsHost": "助手读 guide 和容量合同，交付 params.json 与匹配的双语时间字幕；由具备 Python、Node、Chrome/Edge 和 FFmpeg 的本机执行 commands。没有真实逐字时间时补对齐，不编造。",
+  "conversation": [
+    "先附预览并收集本期素材与目标，不自动安装渲染 demo",
+    "助手完成语义、容量、时间和素材核对，文稿优先",
+    "审查计划和实际静帧后再渲染；效果由所有者连续看听确认"
+  ],
+  "previews": [
+    {
+      "layout": "landscape",
+      "path": "previews/landscape.mp4"
+    },
+    {
+      "layout": "portrait"
+    }
+  ],
+  "ownerAcceptance": "Accepted base art; language edition pending owner continuous AV review",
+  "controlsPreview": "previews/controls/index.html",
+  "previewCoverage": {
+    "groupsInPackage": 26,
+    "mainGroupsShown": 7,
+    "mainGroupsNotShown": 19,
+    "details": "previews/coverage.json",
+    "controls": "previews/controls/index.html",
+    "primaryLanguage": "zh",
+    "originalChoreographyUnchanged": true
+  },
+  "demoContract": "presets/demo.json是真实可执行7.5秒小样：一个关键词，保留4条真实测时中英字幕；reading=1.4是明确导演提示，不冒充口播关键词时间。正常用户按真实材料重新规划。",
+  "language": "zh",
+  "portraitConceptCapacity": "01-B concept uses actual-font uniform fitting inside right safe edge; minimum50px glyph height, original max5 unchanged. Normal prepare runs a browser capacity gate and rejects unreadable text. Landscape source capacity remains unchanged.",
+  "delivery": {
+    "profile": "personal-download-v1",
+    "credentials": "verified-personal-envelope",
+    "helper": "MotionGit official motion helper",
+    "instanceInputs": "permanent-vault",
+    "apiExecution": "host",
+    "updates": "https://motiongit.com/api/v1/template-updates"
+  },
+  "currentNarrationRelease": {
+    "version": "2.7.0",
+    "guide": "NARRATION-VISUAL.md",
+    "delivery": "Use the verified personal package entry and currentTemplate identity. Prior author/source review notes are historical; they do not require another account, key or tool."
+  }
+}

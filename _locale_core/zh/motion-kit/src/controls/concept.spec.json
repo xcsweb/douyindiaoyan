@@ -1,0 +1,140 @@
+{
+  "controls": {
+    "iconcards": {
+      "label": "图标要点卡",
+      "use": "2–4 个并列要点，每个配一个图标：功能亮点、方法要素、几个理由。比 list 更有画面感；要点有顺序/因果时改用 steps",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "title": { "type": "string", "max": 20, "label": "标题（可省略）" },
+        "items": { "type": "array", "of": "object", "minItems": 2, "maxItems": 4, "required": true,
+          "props": {
+            "icon": { "type": "icon", "required": true },
+            "title": { "type": "string", "max": 8, "required": true, "label": "卡片标题" },
+            "text": { "type": "string", "max": 24, "label": "一句说明（可省略）" }
+          } }
+      },
+      "cues": { "count": "items.length", "meaning": ["每张卡翻起"] },
+      "minDur": 3.5, "tail": 1.4, "idle": true,
+      "variants": ["row", "grid", "stack"],
+      "variantsNote": "row 并排竖卡以底边翻起 / grid 2×2 横卡左右翻开 / stack 卡组发牌、飞行中翻面；停留时轮流浮起高亮"
+    },
+    "qa": {
+      "label": "问答",
+      "use": "先抛出一个问题，停顿后揭晓答案：设问、观众常问、知识小测。cue 对准口播说出答案的那一刻",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "question": { "type": "string", "max": 30, "required": true, "label": "问题" },
+        "answer": { "type": "string", "max": 40, "required": true, "label": "答案，*重点* 用星号" }
+      },
+      "cues": { "count": 2, "meaning": ["问题出现", "答案揭晓"] },
+      "minDur": 3.5, "tail": 1.4, "idle": true,
+      "variants": ["reveal", "flip", "chat"],
+      "variantsNote": "reveal 条纹挡板 + 倒计时条后对开 / flip 大卡翻面 / chat 提问气泡、思考中、问号翻成灯泡"
+    },
+    "myth": {
+      "label": "误区与真相",
+      "use": "纠正一个常见错误说法：先摆出误区、否定它、再给出正确说法。辟谣、避坑、常见误解",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "myth": { "type": "string", "max": 30, "required": true, "label": "错误说法" },
+        "fact": { "type": "string", "max": 36, "required": true, "label": "正确说法，*重点* 用星号" },
+        "mythLabel": { "type": "string", "max": 6, "label": "误区标签（默认 误区）" },
+        "factLabel": { "type": "string", "max": 6, "label": "真相标签（默认 真相）" }
+      },
+      "cues": { "count": 3, "meaning": ["误区出现", "被否定", "真相出现"] },
+      "minDur": 3.5, "tail": 1.4, "idle": true,
+      "variants": ["cross", "shatter", "swap"],
+      "variantsNote": "cross 红叉打掉 + 逐行划线，真相砸入 / shatter 裂纹后碎成玻璃片 / swap 开关拨到绿色，文字逐字翻牌换成真相"
+    },
+    "prosCons": {
+      "label": "优缺点",
+      "use": "权衡一件事的好处与代价，最后给结论（偏向哪边）。选购、方案评估、利弊分析",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "title": { "type": "string", "max": 20 },
+        "pros": { "type": "array", "of": "string", "max": 12, "minItems": 1, "maxItems": 4, "required": true, "label": "优点" },
+        "cons": { "type": "array", "of": "string", "max": 12, "minItems": 1, "maxItems": 4, "required": true, "label": "缺点" },
+        "proLabel": { "type": "string", "max": 6, "label": "默认 优点" },
+        "conLabel": { "type": "string", "max": 6, "label": "默认 缺点" },
+        "verdict": { "type": "string", "max": 16, "label": "结论一句（可省略）" },
+        "lean": { "type": "enum", "values": ["pros", "cons", "even"], "label": "结论偏向（缺省按条数）" }
+      },
+      "cues": { "count": "pros.length + cons.length + 1", "meaning": ["每条优点", "每条缺点", "结论"] },
+      "minDur": 4.5, "tail": 1.6, "idle": true,
+      "variants": ["columns", "scale", "cards"],
+      "variantsNote": "columns 中线两栏 + 拔河条拉向占优一方 / scale 砝码落入托盘、天平倾斜 / cards 两张卡翻入，胜方前推发光、败方后退"
+    },
+    "definition": {
+      "label": "名词解释",
+      "use": "解释一个术语/概念：词条 + 注音/英文 + 类别 + 一句定义 + 可选例句。知识科普、行业黑话、新概念",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "term": { "type": "string", "max": 10, "required": true, "label": "词条" },
+        "phonetic": { "type": "string", "max": 24, "label": "拼音或英文" },
+        "pos": { "type": "string", "max": 8, "label": "词性/类别，如 名词、术语" },
+        "definition": { "type": "string", "max": 48, "required": true, "label": "一句定义，*重点* 用星号" },
+        "example": { "type": "string", "max": 30, "label": "例句（可省略）" }
+      },
+      "cues": { "count": 3, "meaning": ["词条出现", "定义出现", "例句 / 强调"] },
+      "minDur": 4, "tail": 1.4, "idle": true,
+      "variants": ["dictionary", "wiki", "sticky"],
+      "variantsNote": "dictionary 词典条目，词头逐字落下、注音打出 / wiki 搜索框打字回车后展开百科卡 / sticky 便签贴上、记号笔写出并圈词"
+    },
+    "tip": {
+      "label": "小贴士 / 警告",
+      "use": "插一句提醒：小技巧（tip）、注意事项（warn）、补充信息（info）、确认无误（ok）。类型决定图标与颜色",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "kind": { "type": "enum", "values": ["tip", "warn", "info", "ok"], "label": "tip 灯泡暖色 / warn 警示红 / info 信息主色 / ok 对勾绿" },
+        "title": { "type": "string", "max": 12, "label": "标题（默认按类型：小贴士/注意/提示/没问题）" },
+        "text": { "type": "string", "max": 44, "required": true, "label": "正文，*重点* 用星号" }
+      },
+      "cues": { "count": 2, "meaning": ["出现", "正文"] },
+      "minDur": 3, "tail": 1.6, "idle": true,
+      "variants": ["banner", "card", "bubble"],
+      "variantsNote": "banner 横幅展开、色块砸入（warn 带滚动警示条）/ card 图标徽章弹跳落下、卡片展开 / bubble 圆形角色 + 气泡逐字打出"
+    },
+    "checklist": {
+      "label": "待办清单",
+      "use": "逐项完成的清单：准备步骤、检查项、已做到的事。和 list 的区别是有打勾过程、进度计数和最后的完成章",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "title": { "type": "string", "max": 16 },
+        "items": { "type": "array", "of": "string", "max": 14, "minItems": 2, "maxItems": 6, "required": true },
+        "done": { "type": "string", "max": 4, "label": "完成章文字（默认 完成）" }
+      },
+      "cues": { "count": "items.length + 1", "meaning": ["每项打勾", "完成章"] },
+      "minDur": 4, "tail": 1.6, "idle": true,
+      "variants": ["todo", "clipboard", "progress"],
+      "variantsNote": "todo 玻璃面板 + 计数 + 进度条，完成章砸下 / clipboard 写字板手绘勾与划线、圆章盖下 / progress 分段进度环与清单同步、光点飞入"
+    },
+    "vs": {
+      "label": "两方对决",
+      "use": "两个对象正面比拼 1–3 项数值并分出胜负：产品 A/B、方案、两个人或团队。只比观点不比数值时用 compare",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "a": { "type": "object", "required": true, "props": {
+          "name": { "type": "string", "max": 8, "required": true },
+          "tag": { "type": "string", "max": 14, "label": "小字身份" },
+          "src": { "type": "media", "label": "头像/图片（可省略，省略时显示首字）" } } },
+        "b": { "type": "object", "required": true, "props": {
+          "name": { "type": "string", "max": 8, "required": true },
+          "tag": { "type": "string", "max": 14 },
+          "src": { "type": "media" } } },
+        "stats": { "type": "array", "of": "object", "minItems": 1, "maxItems": 3, "required": true,
+          "props": {
+            "label": { "type": "string", "max": 6, "required": true },
+            "a": { "type": "number", "min": 0, "required": true },
+            "b": { "type": "number", "min": 0, "required": true },
+            "unit": { "type": "string", "max": 3 },
+            "low": { "type": "boolean", "label": "true 表示越小越好（价格、耗时）" }
+          } },
+        "winner": { "type": "enum", "values": ["a", "b", "none"], "label": "缺省按胜项数" }
+      },
+      "cues": { "count": "2 + stats.length + 1", "meaning": ["双方冲入", "VS", "每项属性", "胜方"] },
+      "minDur": 4.5, "tail": 1.6, "idle": true,
+      "variants": ["fight", "scale", "cards"],
+      "variantsNote": "fight 格斗游戏式冲入相撞、VS 闪电、属性条对冲、胜方光环王冠 / scale 头像滚入、双色比例条拔河 / cards 对战卡牌飞入翻开、逐项比数值、胜方浮起 WIN"
+    }
+  }
+}

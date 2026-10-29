@@ -1,0 +1,119 @@
+{
+  "controls": {
+    "lowerthird": {
+      "label": "人名条",
+      "layer": "overlay",
+      "use": "第一次出现某个人、讲者、嘉宾或角色时标出名字和身份；也可当一条短字幕条。贴在左下（或右下），横屏在口播卡左侧、字幕之上",
+      "props": {
+        "name": { "type": "string", "max": 16, "required": true, "label": "名字（主行）" },
+        "title": { "type": "string", "max": 28, "label": "身份 / 头衔（副行）" },
+        "avatar": { "type": "media", "label": "头像图片（可省略）" },
+        "icon": { "type": "icon", "label": "没有头像时用的图标（可省略）" },
+        "side": { "type": "enum", "values": ["left", "right"], "label": "贴左还是贴右（默认 left）" }
+      },
+      "cues": { "count": 2, "meaning": ["名字条出现", "头衔出现"] },
+      "minDur": 2, "tail": 1, "idle": true,
+      "variants": ["bar", "glass", "line"],
+      "variantsNote": "bar 色块 + 擦条推出深色名字条与主色头衔条 / glass 玻璃卡三维翻入、头像描圈 / line 细线描出、名字从线上升起（极简）"
+    },
+    "callout": {
+      "label": "箭头标注",
+      "layer": "overlay",
+      "use": "指出画面里的某个位置（录屏按钮、图片细节、口播卡外的内容）：给目标点 x/y（0–1 画面比例）和一句短标注",
+      "props": {
+        "text": { "type": "string", "max": 14, "required": true, "label": "标注文字，*重点* 用星号" },
+        "x": { "type": "number", "min": 0, "max": 1, "required": true, "label": "目标点横向位置（画面比例）" },
+        "y": { "type": "number", "min": 0, "max": 1, "required": true, "label": "目标点纵向位置（画面比例）" },
+        "w": { "type": "number", "min": 0.05, "max": 0.8, "label": "box 变体：框宽（画面比例）" },
+        "h": { "type": "number", "min": 0.05, "max": 0.8, "label": "box 变体：框高（画面比例）" }
+      },
+      "cues": { "count": 2, "meaning": ["箭头 / 圈 / 框画出", "标注文字弹出"] },
+      "minDur": 1.6, "tail": 1, "idle": true,
+      "variants": ["arrow", "circle", "box"],
+      "variantsNote": "arrow 手绘弯箭头指向目标 + 波纹 / circle 手绘圈出目标 + 引线 / box 四角飞入框选、虚线流动"
+    },
+    "sticker": {
+      "label": "贴纸",
+      "layer": "overlay",
+      "use": "给一句话盖个情绪章：「绝了」「重点」「NEW」「必看」，或一个图标贴纸。位置 x/y 可选（默认右上），不压口播卡和字幕",
+      "props": {
+        "text": { "type": "string", "max": 6, "label": "贴纸文字（短）" },
+        "icon": { "type": "icon", "label": "图标（可与文字同时用；都不给时为星星）" },
+        "x": { "type": "number", "min": 0, "max": 1, "label": "中心横向位置（画面比例）" },
+        "y": { "type": "number", "min": 0, "max": 1, "label": "中心纵向位置（画面比例）" },
+        "rot": { "type": "number", "min": -30, "max": 30, "label": "倾斜角度（度）" }
+      },
+      "cues": { "count": 2, "meaning": ["贴纸落下", "再强调一下（摇摆 / 盖章 / 再炸）"] },
+      "minDur": 1.5, "tail": 1, "idle": true,
+      "variants": ["pop", "badge", "burst"],
+      "variantsNote": "pop 白边贴纸从镜头前砸下压扁回弹 / badge 锯齿圆徽旋入、外圈慢转 / burst 漫画爆炸星弹开、边缘沸腾抖动"
+    },
+    "emoji": {
+      "label": "表情飘赞",
+      "layer": "overlay",
+      "use": "情绪时刻的一阵表情：点赞、比心、火、笑。icon 用图标名（彩色圆泡），或 text 填 1–2 个 emoji 字符；n 为数量",
+      "props": {
+        "icon": { "type": "icon", "label": "图标（默认 heart）" },
+        "text": { "type": "string", "max": 2, "label": "emoji 字符（填了就不用 icon）" },
+        "n": { "type": "integer", "min": 3, "max": 40, "label": "数量" },
+        "x": { "type": "number", "min": 0, "max": 1, "label": "float / burst：起点横向位置（画面比例）" },
+        "y": { "type": "number", "min": 0, "max": 1, "label": "burst：喷射中心纵向位置（画面比例）" }
+      },
+      "cues": { "count": 1, "meaning": ["开始飘 / 落 / 喷"] },
+      "minDur": 2, "tail": 2, "idle": true,
+      "variants": ["float", "rain", "burst"],
+      "variantsNote": "float 直播点赞从下往上飘、摇摆 / rain 从上落下弹跳停住 / burst 中心大表情心跳、分波向四周喷射"
+    },
+    "progressbar": {
+      "label": "章节进度条",
+      "layer": "overlay",
+      "use": "告诉观众「现在讲到第几部分」：2–6 个章节名 + 当前章节序号。放在章节切换处，停留 2–6 秒",
+      "props": {
+        "title": { "type": "string", "max": 12, "label": "左侧 / 上方小标题（可省略）" },
+        "chapters": { "type": "array", "of": "string", "max": 8, "minItems": 2, "maxItems": 6, "required": true, "label": "章节名（短）" },
+        "current": { "type": "integer", "min": 1, "max": 6, "required": true, "label": "当前第几章（从 1 起）" }
+      },
+      "cues": { "count": 2, "meaning": ["进度条出现", "指针滑到当前章"] },
+      "minDur": 2, "tail": 1.4, "idle": true,
+      "variants": ["top", "bottom", "dots"],
+      "variantsNote": "top 顶部分段条、指针滑过已完成段 / bottom 底部胶囊组、选中块弹性滑到当前章 / dots 节点步进器、当前节点展开成带名字的胶囊"
+    },
+    "tag": {
+      "label": "角标",
+      "layer": "overlay",
+      "use": "画面角落的话题标签、集数、属性：「#干货」「第 3 集」「新」，1–3 条，可整段常驻",
+      "props": {
+        "items": { "type": "array", "of": "string", "max": 10, "minItems": 1, "maxItems": 3, "required": true, "label": "标签文字（第一条为主标签）" },
+        "pos": { "type": "enum", "values": ["tl", "tr"], "label": "左上 tl / 右上 tr（默认 tl）" }
+      },
+      "cues": { "count": "items.length", "meaning": ["每个标签出现"] },
+      "minDur": 1.5, "tail": 1, "idle": true,
+      "variants": ["corner", "pill", "ribbon"],
+      "variantsNote": "corner 角落叠块斜切滑入、红点闪 / pill 胶囊组弹落、轮流点亮 / ribbon 燕尾斜丝带展开、轻飘"
+    },
+    "confetti": {
+      "label": "庆祝特效",
+      "layer": "overlay",
+      "use": "里程碑、达成、好消息、结尾致谢：彩纸 / 烟花，可选一句短字居中弹出。每个 cue 一波（最多 3 波）",
+      "props": {
+        "text": { "type": "string", "max": 8, "label": "居中短字（可省略）" }
+      },
+      "cues": { "count": "1–3", "meaning": ["每一波彩纸 / 烟花"] },
+      "minDur": 2, "tail": 2.4, "idle": true,
+      "variants": ["cannons", "rain", "fireworks"],
+      "variantsNote": "cannons 两侧礼花炮向内喷出 / rain 彩纸从顶上飘落 + 闪星 / fireworks 烟花升空炸开"
+    },
+    "frame": {
+      "label": "画面装饰框",
+      "layer": "overlay",
+      "use": "给整段画面加氛围：拍摄感取景框、录制中、霓虹边框。框住内容区（避开口播卡与字幕），可整段常驻",
+      "props": {
+        "label": { "type": "string", "max": 14, "label": "角落 / 上边框小字（可省略）" }
+      },
+      "cues": { "count": 1, "meaning": ["框出现"] },
+      "minDur": 1.5, "tail": 1, "idle": true,
+      "variants": ["viewfinder", "rec", "glow"],
+      "variantsNote": "viewfinder 四角取景框飞入、对焦框确认 / rec 开机展开 + 红点 REC 时间码 + 扫描线 / glow 霓虹边框描出、光点环绕"
+    }
+  }
+}

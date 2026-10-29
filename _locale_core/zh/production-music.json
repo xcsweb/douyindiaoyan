@@ -1,0 +1,69 @@
+{
+  "profile": "motiongit.production-music/1",
+  "default": "api-matched",
+  "trigger": "用户提供文案后，按文意、情绪、模板类别/风格和目标时长，通过官网当前推荐 API 获取一首授权背景音乐。",
+  "identity": "随包已验证入口使用下载者自己的调用标识；不增加登录、手动找音乐或单独保存标识。",
+  "exceptions": [
+    "用户明确要求无配乐或完全静音。",
+    "用户明确提供或指定本期音乐，按其要求和许可使用。",
+    "修改已审核视频时保留原配乐，除非用户明确要求替换。"
+  ],
+  "steps": [
+    "按当前能力合同请求匹配",
+    "选择并下载到本期永久实例",
+    "校验曲目身份与文件 SHA",
+    "保留许可和署名",
+    "绑定本期独立音乐输入",
+    "与旁白、动作音效分轨混音",
+    "检查完整视频并试听"
+  ],
+  "mix": "保留动作音效原起音、尾音和旁白；有人声时压低配乐，音乐起止淡入淡出。不在包含旧配乐的混音上再次叠曲。",
+  "duration": "选择覆盖成片时长的曲目。只有返回元数据允许循环时才可按实际循环合同处理；不得靠尾部补静音冒充全片配乐。",
+  "failure": "接口不可用、权限拒绝、无匹配或模板尚未开放音乐输入时，明确记录待解决；继续独立内容规划，不默默改成无配乐、原样片音乐或付费生成。",
+  "credentialsInProject": false,
+  "paidGenerationFallback": false,
+  "acceptance": "实际推荐、选择/下载、音乐输入重放、完整混音与试听逐项验收；宣告默认策略不等于端到端已通过。",
+  "contract": "motiongit.music-recommendation/1",
+  "minimumBundledHelper": "1.0.0-rc.10",
+  "prepare": {
+    "command": [
+      "node",
+      "assistant/motion.mjs",
+      "api",
+      "<original.motion>",
+      "music-prepare",
+      "<instance/music-request.json>",
+      "<instance/music-v1>"
+    ],
+    "input": {
+      "text": "本期实际用户文案",
+      "template_category": "本模板实际类别",
+      "template_style": "本模板实际风格和音乐情绪",
+      "duration_s": 45,
+      "language": "zh"
+    },
+    "result": "返回本期可绑定 background.wav 路径，保存原曲、推荐、下载、时长适配和许可回执；还需按模板输入规则绑定并混音。",
+    "notes": [
+      "替换示例字段；实例父目录需存在，音乐输出子目录必须是新版本。",
+      "使用已有 FFmpeg/ffprobe，缺少时准确报告环境能力，不要求另下 MotionGit 宿主。",
+      "不必创建网站私人资产即可直接完整下载；原曲按许可截取或循环，原 SHA 和派生 SHA 分别保存。",
+      "若有 failure.json，不视为配乐完成。配音后时长改变要重新核对或另存新版。"
+    ],
+    "endToEndAccepted": false,
+    "availability": {
+      "apiEvidence": {
+        "status": "previously-deployed-and-verified",
+        "observedAt": "2026-10-13T17:55:59.710826+00:00",
+        "sourceRevision": "c39728485fd9cae11251d6470e99bec3e9a9cccb",
+        "scope": "Recommendation and licensed download succeeded; this is historical evidence, not a live availability result."
+      },
+      "currentService": "At use, query current capabilities and perform the request through the verified personal package identifier. Do not infer present service failure or success from this static file.",
+      "bundledClient": {
+        "minimumVersion": "1.0.0-rc.10",
+        "check": "Check the actual bundled helper and its music-prepare command. A candidate client or missing command does not mean the server API is undeployed."
+      },
+      "templateBinding": "Check this core schema and nativeBinding separately. Missing music input is a template integration gap, not a server deployment result.",
+      "personalPackageEndToEnd": "Not established by this metadata repair; actual recommendation, download, input replay, mix and listening still need applicable evidence."
+    }
+  }
+}

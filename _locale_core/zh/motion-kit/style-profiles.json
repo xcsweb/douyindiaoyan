@@ -1,0 +1,33 @@
+{
+  "schema": "motiongit-template-style-profiles/1",
+  "templateFamily": "01",
+  "defaultProfile": "light",
+  "profiles": {
+    "light": {
+      "root": "style-profiles/light",
+      "description": "Native light editorial/gallery panels with blue emphasis"
+    },
+    "dark": {
+      "root": "style-profiles/dark",
+      "description": "Native black review chapters with blue emphasis"
+    }
+  },
+  "newControlRecommendations": [
+    "checklist",
+    "compare",
+    "definition",
+    "flow",
+    "iconcards",
+    "kinetic",
+    "number",
+    "qa",
+    "quote",
+    "steps",
+    "timeline",
+    "tip"
+  ],
+  "recommendationsAreAdvisory": true,
+  "selection": "Read the original scene material, palette, typography, framing and motion first; choose the matching profile per scene. Never assume one appearance fits all templates.",
+  "acceptance": "direction-approved-with-template-specific-style-adaptation",
+  "freezePolicy": "New library versions require a new verified template release and visual review; no hot replacement."
+}

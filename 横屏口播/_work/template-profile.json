@@ -1,0 +1,28 @@
+{
+  "packagePath": "d:\\backup-zips\\www\\douyindiaoyan\\横屏口播\\模板\\MotionGit-现代图文 · 口播讲解--template-01-integrated-v2.7.18-alpha.3.zip",
+  "workflow": "native",
+  "toolsDir": "d:\\backup-zips\\www\\douyindiaoyan\\横屏口播\\_work\\tools-a3",
+  "entrySha256": "7004609ddbc0ccf6451beeb477aff0d3c85bda74f902e5922465c85cd347f6f3",
+  "templateVersion": "2.7.18-alpha.3",
+  "templateId": 605,
+  "frameRate": 60,
+  "routes": [
+    "native",
+    "motion-kit"
+  ],
+  "requiredParams": [
+    "media.talk",
+    "media.captions",
+    "brief.segments",
+    "music"
+  ],
+  "slots": [
+    "talk",
+    "captions",
+    "scenes",
+    "header"
+  ],
+  "verified": true,
+  "rawStart": "{\n  \"profile\": \"motiongit.assistant-start/1\",\n  \"verified\": true,\n  \"productionEntry\": {\n    \"guide\": \"guide.json\",\n    \"parameterSchema\": \"params.schema.json\",\n    \"instance\": {\n      \"create\": [\n        \"node\",\n        \"<verified-helper>\",\n        \"new\",\n        \"<original.motion>\"\n      ],\n      \"instruction\": \"For new production use new without a destination and follow the returned canonical instanceDirectory. Keep working params, media, plans, projects and rendering there, then copy the verified movie and public records to the user delivery directory. This keeps transient filesystem operations on the system volume. Explicit destinations remain supported; no existing instance is relocated.\"\n    },\n    \"extension\": {\n      \"workflow\": \"motion-kit\",\n      \"parameterSchema\": \"kit.params.schema.json\",\n      \"read\": [\n        \"node\",\n        \"<verified-helper>\",\n        \"read\",\n        \"<new.motion>\",\n        \"kit.params.schema.json\"\n      ],\n      \"contract\": [\n        \"node\",\n        \"<verified-helper>\",\n        \"contract\",\n        \"<new.motion>\",\n        \"motion-kit\",\n        \"<selected-control>\"\n      ],\n      \"instruction\": \"Read the selected workflow contract before writing parameters; it includes root requirements and selected controls from this exact public schema. Keep workflow in the JSON. Full schema remains available through read.\"\n    },\n    \"publicParameterSchemas\": [\n      \"kit.params.schema.json\",\n      \"locales/en/kit.params.schema.json\",\n      \"locales/en/native.params.schema.json\",\n      \"locales/en/params.schema.json\",\n      \"locales/zh/kit.params.schema.json\",\n      \"locales/zh/native.params.schema.json\",\n      \"locales/zh/params.schema.json\",\n      \"native.params.schema.json\",\n      \"params.schema.json\"\n    ],\n    \"safety\": \"Use read on the declared public documents. Never inspect, watch, copy or retain transient runtime/core directories to discover parameters. If an advertised schema is unavailable, report the exact public path and stop that production step.\"\n  },\n  \"assistantGuide\": {\n    \"profile\": \"motiongit.assistant-entry/1\",\n    \"template\": {\n      \"id\": \"template-01-integrated\",\n      \"name\": \"现代图文 · 口播讲解\",\n      \"version\": \"2.7.18-alpha.3\",\n      \"layout\": \"landscape\",\n      \"width\": 1920,\n      \"height\": 1080\n    },\n    \"templateApi\": {\n      \"profile\": \"motiongit.template-api-guide/1\",\n      \"purpose\": \"Prepare and bind material for this .motion production, using its verified bundled entry and original downloader Key.\",\n      \"when\": \"Use during the existing material planning step when an online asset is needed. Reading usage instructions or opening a template never authorizes paid generation.\",\n      \"docs\": \"https://motiongit.com/media-api.md\",\n      \"credential\": \"The helper reads the original Key from the verified personal .motion. Do not unpack personal/, export a Key to the project, request a supplier Key or automatically widen permissions. No particular assistant product is required.\",\n      \"check\": [\n        \"node\",\n        \"assistant/motion.mjs\",\n        \"api\",\n        \"<original.motion>\",\n        \"usage\"\n      ],\n      \"quota\": {\n        \"freeCredits\": 0,\n        \"defaultDailyRequests\": 30,\n        \"scope\": \"account; shared by all Keys and templates\",\n        \"timezone\": \"Asia/Shanghai\",\n        \"fields\": [\n          \"free_material_requests.daily_limit\",\n          \"free_material_requests.remaining_today\",\n          \"free_material_requests.resets_at\"\n        ],\n        \"paidFields\": [\n          \"credits.remaining\",\n          \"key_limits.daily_remaining\",\n          \"key_limits.monthly_remaining\"\n        ],\n        \"rule\": \"Read current usage before needed material calls. Daily requests and paid credits are independent. Zero credits do not block authorized free materials. Search, selection and file download are separate requests; reuse prepared material within the instance.\"\n      },\n      \"image\": {\n        \"query\": {\n          \"kind\": \"image\",\n          \"provider\": \"pexels\",\n          ",
+  "generatedAt": "2026-10-29T11:15:06+08:00"
+}

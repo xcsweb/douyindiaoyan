@@ -1,0 +1,12 @@
+{
+  "schema": "motiongit-portrait-concept-capacity/1",
+  "group": "01-B:decompose-and-consolidate",
+  "inputPath": "concept",
+  "layout": "portrait",
+  "maxChars": "unchanged source max5",
+  "glyphHeightMinimumPx": 50,
+  "rightSafeEdgePx": 994,
+  "method": "Uniform text-only display scale from actual browser glyph bounds; source anchor/motion clocks unchanged",
+  "normalEntry": "Installed for every prepare; real-font browser gate runs at four actual mapped source times before prepare completes",
+  "failure": "Shorten concept when safe width would need glyph height below50px; no silent crop"
+}

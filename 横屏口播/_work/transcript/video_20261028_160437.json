@@ -1,0 +1,365 @@
+{
+  "file": "video_20261028_160437.wav",
+  "duration": 16.965,
+  "language": "zh",
+  "language_probability": 1.0,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.84,
+      "text": "实现的完整过程",
+      "words": [
+        {
+          "word": "实",
+          "start": 0.0,
+          "end": 0.56,
+          "probability": 0.4281
+        },
+        {
+          "word": "现",
+          "start": 0.56,
+          "end": 0.82,
+          "probability": 0.9767
+        },
+        {
+          "word": "的",
+          "start": 0.82,
+          "end": 0.92,
+          "probability": 0.8632
+        },
+        {
+          "word": "完",
+          "start": 0.92,
+          "end": 1.14,
+          "probability": 0.8976
+        },
+        {
+          "word": "整",
+          "start": 1.14,
+          "end": 1.34,
+          "probability": 0.9997
+        },
+        {
+          "word": "过",
+          "start": 1.34,
+          "end": 1.52,
+          "probability": 0.8486
+        },
+        {
+          "word": "程",
+          "start": 1.52,
+          "end": 1.84,
+          "probability": 0.9994
+        }
+      ]
+    },
+    {
+      "start": 1.84,
+      "end": 2.96,
+      "text": "你想知道的话",
+      "words": [
+        {
+          "word": "你想",
+          "start": 1.84,
+          "end": 2.36,
+          "probability": 0.2284
+        },
+        {
+          "word": "知道",
+          "start": 2.36,
+          "end": 2.64,
+          "probability": 0.9896
+        },
+        {
+          "word": "的话",
+          "start": 2.64,
+          "end": 2.96,
+          "probability": 0.9276
+        }
+      ]
+    },
+    {
+      "start": 2.96,
+      "end": 4.32,
+      "text": "都可以来去的社区",
+      "words": [
+        {
+          "word": "都",
+          "start": 2.96,
+          "end": 3.16,
+          "probability": 0.7689
+        },
+        {
+          "word": "可以",
+          "start": 3.16,
+          "end": 3.34,
+          "probability": 0.9907
+        },
+        {
+          "word": "来",
+          "start": 3.34,
+          "end": 3.5,
+          "probability": 0.9348
+        },
+        {
+          "word": "去",
+          "start": 3.5,
+          "end": 3.74,
+          "probability": 0.3425
+        },
+        {
+          "word": "的",
+          "start": 3.74,
+          "end": 3.86,
+          "probability": 0.9169
+        },
+        {
+          "word": "社",
+          "start": 3.86,
+          "end": 3.98,
+          "probability": 0.9854
+        },
+        {
+          "word": "区",
+          "start": 3.98,
+          "end": 4.32,
+          "probability": 0.9997
+        }
+      ]
+    },
+    {
+      "start": 4.8,
+      "end": 5.46,
+      "text": "来看",
+      "words": [
+        {
+          "word": "来",
+          "start": 4.8,
+          "end": 5.04,
+          "probability": 0.8744
+        },
+        {
+          "word": "看",
+          "start": 5.04,
+          "end": 5.46,
+          "probability": 0.9949
+        }
+      ]
+    },
+    {
+      "start": 5.82,
+      "end": 7.28,
+      "text": "然后有我的那个",
+      "words": [
+        {
+          "word": "然后",
+          "start": 5.82,
+          "end": 6.06,
+          "probability": 0.5989
+        },
+        {
+          "word": "有",
+          "start": 6.06,
+          "end": 6.28,
+          "probability": 0.4112
+        },
+        {
+          "word": "我的",
+          "start": 6.28,
+          "end": 6.9,
+          "probability": 0.7888
+        },
+        {
+          "word": "那个",
+          "start": 6.9,
+          "end": 7.28,
+          "probability": 0.7833
+        }
+      ]
+    },
+    {
+      "start": 7.28,
+      "end": 9.9,
+      "text": "整个调试的过程",
+      "words": [
+        {
+          "word": "整",
+          "start": 7.28,
+          "end": 7.96,
+          "probability": 0.8999
+        },
+        {
+          "word": "个",
+          "start": 7.96,
+          "end": 8.2,
+          "probability": 0.998
+        },
+        {
+          "word": "调",
+          "start": 8.2,
+          "end": 8.66,
+          "probability": 0.9655
+        },
+        {
+          "word": "试",
+          "start": 8.66,
+          "end": 8.82,
+          "probability": 0.8771
+        },
+        {
+          "word": "的",
+          "start": 8.82,
+          "end": 8.9,
+          "probability": 0.9916
+        },
+        {
+          "word": "过",
+          "start": 8.9,
+          "end": 9.06,
+          "probability": 0.9922
+        },
+        {
+          "word": "程",
+          "start": 9.06,
+          "end": 9.9,
+          "probability": 0.9999
+        }
+      ]
+    },
+    {
+      "start": 9.9,
+      "end": 11.62,
+      "text": "怎么进行POINT的",
+      "words": [
+        {
+          "word": "怎么",
+          "start": 9.9,
+          "end": 10.22,
+          "probability": 0.8622
+        },
+        {
+          "word": "进",
+          "start": 10.22,
+          "end": 10.84,
+          "probability": 0.7805
+        },
+        {
+          "word": "行",
+          "start": 10.84,
+          "end": 10.98,
+          "probability": 0.9985
+        },
+        {
+          "word": "PO",
+          "start": 10.98,
+          "end": 11.18,
+          "probability": 0.1546
+        },
+        {
+          "word": "INT",
+          "start": 11.18,
+          "end": 11.36,
+          "probability": 0.4337
+        },
+        {
+          "word": "的",
+          "start": 11.36,
+          "end": 11.62,
+          "probability": 0.8198
+        }
+      ]
+    },
+    {
+      "start": 12.96,
+      "end": 14.14,
+      "text": "大家可以来看",
+      "words": [
+        {
+          "word": "大家",
+          "start": 12.96,
+          "end": 13.44,
+          "probability": 0.9667
+        },
+        {
+          "word": "可以",
+          "start": 13.44,
+          "end": 13.72,
+          "probability": 0.9976
+        },
+        {
+          "word": "来",
+          "start": 13.72,
+          "end": 13.88,
+          "probability": 0.9973
+        },
+        {
+          "word": "看",
+          "start": 13.88,
+          "end": 14.14,
+          "probability": 0.9982
+        }
+      ]
+    },
+    {
+      "start": 14.14,
+      "end": 16.26,
+      "text": "然后你可以可能也能学到东西",
+      "words": [
+        {
+          "word": "然后",
+          "start": 14.14,
+          "end": 14.46,
+          "probability": 0.889
+        },
+        {
+          "word": "你可以",
+          "start": 14.46,
+          "end": 14.8,
+          "probability": 0.8788
+        },
+        {
+          "word": "可能",
+          "start": 14.8,
+          "end": 15.26,
+          "probability": 0.9936
+        },
+        {
+          "word": "也",
+          "start": 15.26,
+          "end": 15.46,
+          "probability": 0.9895
+        },
+        {
+          "word": "能",
+          "start": 15.46,
+          "end": 15.58,
+          "probability": 0.9947
+        },
+        {
+          "word": "学",
+          "start": 15.58,
+          "end": 15.78,
+          "probability": 0.9984
+        },
+        {
+          "word": "到",
+          "start": 15.78,
+          "end": 15.92,
+          "probability": 0.9934
+        },
+        {
+          "word": "东",
+          "start": 15.92,
+          "end": 16.06,
+          "probability": 0.9832
+        },
+        {
+          "word": "西",
+          "start": 16.06,
+          "end": 16.26,
+          "probability": 0.9977
+        }
+      ]
+    }
+  ]
+}

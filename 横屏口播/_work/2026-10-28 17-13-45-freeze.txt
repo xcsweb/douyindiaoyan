@@ -1,0 +1,1 @@
+﻿[Parsed_freezedetect_0 @ 000001b3b4e6dd00] lavfi.freezedetect.freeze_start: 0

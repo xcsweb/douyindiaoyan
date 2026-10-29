@@ -1,0 +1,378 @@
+﻿{
+  "path": "native.params.schema.json",
+  "deliveryIdentity": {
+    "stage": "personal-download",
+    "templateId": 605,
+    "releaseId": 1033,
+    "templateVersion": "2.7.18-alpha.3",
+    "recipientAccountId": 5008,
+    "apiKeyId": 5028,
+    "releaseArchiveSha256": "72353ffdc032ccb51413a2878ab8f20a0ba61aaa0b539cfd605c6d9760ee999a",
+    "protection": "protected"
+  },
+  "currentTemplate": {
+    "id": "template-01-integrated",
+    "name": "现代图文 · 口播讲解",
+    "version": "2.7.18-alpha.3",
+    "layout": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  "consumerExecution": {
+    "entry": "assistant/motion.mjs",
+    "commandPrefix": [
+      "node",
+      "<outer-package>/assistant/motion.mjs"
+    ],
+    "sourceVersionsAreHistorical": true,
+    "globalMotionInstallationRequired": false,
+    "instruction": "For a package with the assistant-entry extension use its bundled entry. Historical motion commands mean this entry; do not download a separate host. Read currentTemplate for delivered version/layout."
+  },
+  "documentLayer": "release-public-document",
+  "archiveDocumentSha256": "564aafc8f6f25266372ec96adf91e9fa5cdfc0c853c55f6f3d501a901e8a2f10",
+  "documentRole": "public-instructions",
+  "renderedWithVerifiedRecipientContext": false,
+  "content": {
+    "type": "object",
+    "required": [
+      "media",
+      "brief"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "media": {
+        "type": "object",
+        "required": [
+          "talk",
+          "captions"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "talk": {
+            "type": "string"
+          },
+          "captions": {
+            "type": "string",
+            "description": "Path to a nonempty native subtitle JSON array; exact contract in guide.json captions.nativeContract and CAPTIONS-EXPORT.md. Required per row: t0, t1, zh, en, highlight; optional: id, formatting. Sentence-only data uses the separately declared component workflow.",
+            "x-contentSchema": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "t0",
+                  "t1",
+                  "zh",
+                  "en",
+                  "highlight"
+                ],
+                "properties": {
+                  "id": {},
+                  "formatting": {},
+                  "t0": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "t1": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "zh": {
+                    "type": "string",
+                    "minLength": 1,
+                    "not": {
+                      "pattern": "\n"
+                    }
+                  },
+                  "en": {
+                    "type": "string",
+                    "minLength": 1,
+                    "not": {
+                      "pattern": "\n"
+                    }
+                  },
+                  "highlight": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "source",
+                      "language",
+                      "units"
+                    ],
+                    "properties": {
+                      "source": {
+                        "enum": [
+                          "asr-word-boundaries",
+                          "verified-word-boundaries"
+                        ]
+                      },
+                      "language": {
+                        "const": "zh"
+                      },
+                      "units": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "text",
+                            "start",
+                            "end"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "start": {
+                              "type": "number",
+                              "minimum": -0.001
+                            },
+                            "end": {
+                              "type": "number",
+                              "minimum": -0.001
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "brief": {
+        "type": "object",
+        "required": [
+          "schema",
+          "brand",
+          "layout",
+          "segments",
+          "narrationDuration"
+        ],
+        "properties": {
+          "schema": {
+            "const": "adu-auto-brief/1"
+          },
+          "brand": {
+            "type": "string",
+            "minLength": 1
+          },
+          "layout": {
+            "enum": [
+              "landscape",
+              "portrait"
+            ]
+          },
+          "segments": {
+            "type": "array",
+            "minItems": 1
+          },
+          "allowedStyles": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "01-A",
+                "01-B",
+                "01-C",
+                "01-D",
+                "01-E",
+                "01-B-legacy"
+              ]
+            }
+          },
+          "narrationDuration": {
+            "type": "number",
+            "minimum": 6,
+            "maximum": 600
+          },
+          "header": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "shortTitle"
+            ],
+            "properties": {
+              "shortTitle": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "source": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "kind",
+                  "field"
+                ],
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "user-explicit",
+                      "assistant-summary",
+                      "bound-excerpt"
+                    ]
+                  },
+                  "field": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "header": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shortTitle"
+        ],
+        "properties": {
+          "shortTitle": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "field"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "user-explicit",
+                  "assistant-summary",
+                  "bound-excerpt"
+                ]
+              },
+              "field": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "template_update": {
+    "status": "checked",
+    "checked_at": "2026-10-29T01:51:28.049Z",
+    "source": {
+      "authorAccountId": 3,
+      "templateId": 605,
+      "releaseId": 1033,
+      "currentVersion": "2.7.18-alpha.3",
+      "releaseArchiveSha256": "72353ffdc032ccb51413a2878ab8f20a0ba61aaa0b539cfd605c6d9760ee999a"
+    },
+    "update": {
+      "identity_status": "verified",
+      "update_status": "current",
+      "compatibility_status": "compatible",
+      "entitlement_status": "not-checked",
+      "available": false,
+      "templateId": 605,
+      "currentVersion": "2.7.18-alpha.3",
+      "latestVersion": "2.7.18-alpha.3",
+      "releaseId": 1033,
+      "templateUrl": "https://motiongit.com/@adunext/template-01-integrated",
+      "downloadUrl": "https://motiongit.com/@adunext/template-01-integrated/download/2.7.18-alpha.3.motion",
+      "downloadAvailable": true,
+      "authenticationRequired": true,
+      "releaseArchiveSha256": "72353ffdc032ccb51413a2878ab8f20a0ba61aaa0b539cfd605c6d9760ee999a",
+      "releaseSize": 26409499,
+      "requiredProfiles": [
+        "personal-download-v1",
+        "motiongit-host/1",
+        "protected-objects-v1",
+        "split-root-v1"
+      ],
+      "minHelperVersion": "1.0.0-rc.25",
+      "notes": [
+        "新版制作的成片不再显示顶部周期小标题；画面主体和字幕布局保持不变。"
+      ]
+    }
+  },
+  "template_download": {
+    "profile": "motiongit.bearer-template-update/1",
+    "mode": "original",
+    "source": {
+      "downloadId": "d443e670-0437-41a0-b50b-56a4d0fd2341",
+      "receiptSha256": "d4149d2269906e6bc17823ac96b5617cd9f9f256d6502a2899b18be654b83f22",
+      "recipientAccountId": 5008,
+      "apiKeyId": 5028,
+      "authorAccountId": 3,
+      "templateId": 605,
+      "releaseId": 1033,
+      "templateVersion": "2.7.18-alpha.3",
+      "releaseArchiveSha256": "72353ffdc032ccb51413a2878ab8f20a0ba61aaa0b539cfd605c6d9760ee999a"
+    },
+    "credentialKeyId": 5028,
+    "status": "current",
+    "reason": "NO_NEWER_RELEASE",
+    "target": {
+      "releaseId": 1033,
+      "templateVersion": "2.7.18-alpha.3",
+      "releaseArchiveSha256": "72353ffdc032ccb51413a2878ab8f20a0ba61aaa0b539cfd605c6d9760ee999a",
+      "releaseSize": 26409499
+    },
+    "prepareUrl": "https://motiongit.com/api/v1/template-updates/download",
+    "requiresWebsiteSession": false,
+    "confirmationRequired": true,
+    "credits": 0
+  },
+  "helper_refresh": {
+    "profile": "motiongit.personal-helper-refresh/1",
+    "mode": "original",
+    "source": {
+      "downloadId": "d443e670-0437-41a0-b50b-56a4d0fd2341",
+      "receiptSha256": "d4149d2269906e6bc17823ac96b5617cd9f9f256d6502a2899b18be654b83f22",
+      "recipientAccountId": 5008,
+      "apiKeyId": 5028,
+      "authorAccountId": 3,
+      "templateId": 605,
+      "releaseId": 1033,
+      "templateVersion": "2.7.18-alpha.3",
+      "releaseArchiveSha256": "72353ffdc032ccb51413a2878ab8f20a0ba61aaa0b539cfd605c6d9760ee999a"
+    },
+    "credentialKeyId": 5028,
+    "status": "current",
+    "reason": "HELPER_CURRENT",
+    "target": {
+      "releaseId": 1033,
+      "templateVersion": "2.7.18-alpha.3",
+      "releaseArchiveSha256": "72353ffdc032ccb51413a2878ab8f20a0ba61aaa0b539cfd605c6d9760ee999a",
+      "releaseSize": 26409499,
+      "helperVersion": "1.0.0-rc.50",
+      "helperSha256": "7004609ddbc0ccf6451beeb477aff0d3c85bda74f902e5922465c85cd347f6f3",
+      "helperBytes": 836994,
+      "buildSha256": "3c8349a063d4c6854961a893d51d5adc47d321b0fe82dce858a5617417f07d26"
+    },
+    "prepareUrl": "https://motiongit.com/api/v1/template-updates/download",
+    "requiresWebsiteSession": false,
+    "confirmationRequired": true,
+    "credits": 0
+  },
+  "helper_download": {
+    "profile": "motiongit.helper-update-download/1",
+    "helperVersion": "1.0.0-rc.50",
+    "bearerUpdateSupported": true,
+    "sameReleaseHelperRefreshSupported": true,
+    "requiresWebsiteSession": false,
+    "confirmationRequired": true,
+    "credentialPolicy": "reuse-source-package-key",
+    "explicitOwnCredentialRecoverySupported": true,
+    "existingSignedPackageGuidanceOverride": "current-official-helper-capability"
+  }
+}

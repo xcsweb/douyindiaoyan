@@ -1,0 +1,83 @@
+{
+  "controls": {
+    "kinetic": {
+      "label": "逐行动态排版",
+      "use": "一句有节奏的观点拆成 2–5 个短行，跟着口播一行一行冲出来；适合开场钩子、口号、情绪句",
+      "props": {
+        "kicker": { "type": "string", "max": 28, "label": "上方小字" },
+        "lines": { "type": "array", "of": "string", "max": 10, "minItems": 2, "maxItems": 5, "required": true, "label": "每行文字（短，2–10 字）" }
+      },
+      "cues": { "count": "lines.length", "meaning": ["每行出现"] },
+      "minDur": 2.5, "tail": 1.2, "idle": true,
+      "variants": ["stack", "beat", "wave"],
+      "variantsNote": "stack 按字数撑满宽度、左右交替滑入 / beat 一次一行居中砸入、推镜头 / wave 逐字波浪弹起"
+    },
+    "highlight": {
+      "label": "重点词标记",
+      "use": "一句完整的话里有 1–2 个必须被看见的词（用 *星号* 标出）：先出整句，再在重点上画标记",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "text": { "type": "string", "max": 40, "required": true, "label": "整句，*重点* 用星号包住" }
+      },
+      "cues": { "count": 2, "meaning": ["整句出现", "标记落下"] },
+      "minDur": 3, "tail": 1.4, "idle": true,
+      "variants": ["marker", "circle", "underline"],
+      "variantsNote": "marker 荧光笔涂过 / circle 手绘圈出 / underline 波浪下划线 + 放大"
+    },
+    "scramble": {
+      "label": "乱码解码",
+      "use": "揭晓一个名字、术语、答案、代号：乱码逐位锁定。科技、数据、揭秘类内容",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "word": { "type": "string", "max": 14, "required": true, "label": "揭晓的词" },
+        "sub": { "type": "string", "max": 28, "label": "揭晓后补一句" }
+      },
+      "cues": { "count": 2, "meaning": ["开始解码", "补充句出现"] },
+      "minDur": 2.5, "tail": 1.6, "idle": true,
+      "variants": ["decode", "matrix", "terminal"],
+      "variantsNote": "decode 原地逐位锁定 / matrix 字符雨中逐字落下 / terminal 终端输入命令 + 回车出结果"
+    },
+    "rotator": {
+      "label": "轮换词",
+      "use": "同一句话换不同的词：「适合 学生 / 老师 / 公司」、「它能 写 / 画 / 剪」。最后一个词停住",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "lead": { "type": "string", "max": 14, "required": true, "label": "固定的前半句" },
+        "words": { "type": "array", "of": "string", "max": 8, "minItems": 2, "maxItems": 6, "required": true, "label": "依次轮换的词" },
+        "tail": { "type": "string", "max": 28, "label": "下方补充" }
+      },
+      "cues": { "count": "words.length", "meaning": ["每个词出现"] },
+      "minDur": 3, "tail": 1.4, "idle": true,
+      "variants": ["slot", "flip", "type"],
+      "variantsNote": "slot 老虎机滚轮 / flip 三维翻牌 / type 删除后重新输入"
+    },
+    "marquee": {
+      "label": "滚动横幅",
+      "use": "一串关键词/标签/口号持续滚动：活动、清单很长、节奏型过渡；可在横幅上砸入一个大词",
+      "props": {
+        "kicker": { "type": "string", "max": 10, "label": "ticker 变体左侧标签（默认 LIVE）" },
+        "items": { "type": "array", "of": "string", "max": 12, "minItems": 2, "maxItems": 8, "required": true, "label": "滚动的词" },
+        "big": { "type": "string", "max": 8, "label": "砸在横幅上的大词" }
+      },
+      "cues": { "count": 2, "meaning": ["横幅入场", "大词砸入"] },
+      "minDur": 2, "tail": 1, "idle": true,
+      "variants": ["belt", "ticker", "wall"],
+      "variantsNote": "belt 两条交叉色带 / ticker 新闻滚动条 / wall 满屏描边大字"
+    },
+    "bigtype": {
+      "label": "巨字",
+      "use": "一个词撑满画面的冲击时刻：段落主题、结论词、品牌词；mask 变体可让图片/视频透过字显示",
+      "props": {
+        "kicker": { "type": "string", "max": 28 },
+        "word": { "type": "string", "max": 6, "required": true, "label": "巨字（1–6 字）" },
+        "sub": { "type": "string", "max": 28, "label": "副标题" },
+        "src": { "type": "media", "label": "mask 变体：透过字显示的图片/视频（可省略）" },
+        "sourceStart": { "type": "number", "min": 0 }
+      },
+      "cues": { "count": 2, "meaning": ["巨字出现", "副标题 / 切开"] },
+      "minDur": 2.5, "tail": 1.4, "idle": true,
+      "variants": ["mask", "outline", "split"],
+      "variantsNote": "mask 素材透过巨字 / outline 描边后液体灌满 / split 光线切开上下错位"
+    }
+  }
+}

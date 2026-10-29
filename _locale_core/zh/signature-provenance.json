@@ -1,0 +1,28 @@
+{
+  "profile": "motiongit.signature-derivative/1",
+  "rendererChanges": [
+    {
+      "path": "motion-kit/tools/render.mjs",
+      "beforeSha256": "011495c4042fe95f86ea04b33abe04ab30a4ca7a49bc3e6f3892fb96658ef3f7",
+      "afterSha256": "24e69e54b0c231ca218166f1843cc221b4585c2e7ae0743e5b96ef1b6465e245"
+    },
+    {
+      "path": "adapter/bridge/brand_mark.py",
+      "beforeSha256": "3b04bb94c058b66b4c602d2ac4c30e050255199554bbc0d1069311a90d23ddac",
+      "afterSha256": "1ae4a5306a8a11714df4faff86f0549e2ac4c408e8b90be90d8cf670cb49e5b2",
+      "behavior": "Short clips include an attribution window; frame-tone changes preserve parent animation phase and complementary fade."
+    }
+  ],
+  "nativeSceneBodiesChanged": false,
+  "nativeAudioChanged": false,
+  "layoutDerivative": "Reserve fixed right slot; shift intersecting source HUD labels; preserve the story-deadline HUD as a group; replace blueprint output debug time; suppress duplicate pre-existing VIVID clock/mark.",
+  "pendingAcceptance": [
+    "normal entry replay",
+    "final encoded signature-window inspection"
+  ],
+  "compositors": {
+    "motion-kit/tools/signature.mjs": "98938c39eca2f8ed39b6df18ec16a30b5789814a132970e2d6cca69118c8b61d"
+  },
+  "designElement": "time-corner-ornament",
+  "terminologyUpdate": "Decoration terminology; visual compositor is unchanged apart from a diagnostic property name."
+}

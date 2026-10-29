@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "c01",
+    "t0": 0.0,
+    "t1": 1.245,
+    "zh": "600 个社区成员，",
+    "en": "600 community members,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "600 个社区成员，",
+          "start": 0.0,
+          "end": 1.245
+        }
+      ]
+    }
+  },
+  {
+    "id": "c02",
+    "t0": 1.245,
+    "t1": 2.739,
+    "zh": "我给他们做了一个全家福。",
+    "en": "I made them a family portrait.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "我给他们做了",
+          "start": 1.36,
+          "end": 2.14
+        },
+        {
+          "text": "一个全家福。",
+          "start": 2.14,
+          "end": 2.739
+        }
+      ]
+    }
+  },
+  {
+    "id": "c03",
+    "t0": 3.16,
+    "t1": 5.68,
+    "zh": "这不是截图，打开网页。",
+    "en": "This isn't a screenshot — open the page.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "这不是截图，",
+          "start": 3.16,
+          "end": 4.52
+        },
+        {
+          "text": "打开网页。",
+          "start": 4.52,
+          "end": 5.68
+        }
+      ]
+    }
+  },
+  {
+    "id": "c04",
+    "t0": 6.9,
+    "t1": 10.96,
+    "zh": "距离 1024 还有多久，每秒跳一次。",
+    "en": "How long until 1024 — it ticks every second.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "距离 1024 还有多久，",
+          "start": 6.9,
+          "end": 9.6
+        },
+        {
+          "text": "每秒跳一次。",
+          "start": 9.6,
+          "end": 10.96
+        }
+      ]
+    }
+  },
+  {
+    "id": "c05",
+    "t0": 11.38,
+    "t1": 13.98,
+    "zh": "它还可以连成夜空。",
+    "en": "It can also link up into a night sky.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "它还可以连成夜空。",
+          "start": 11.38,
+          "end": 13.98
+        }
+      ]
+    }
+  },
+  {
+    "id": "c06",
+    "t0": 15.34,
+    "t1": 17.32,
+    "zh": "所有的成员都可以连成夜空。",
+    "en": "Every member can be linked into that night sky.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "所有的成员都",
+          "start": 15.34,
+          "end": 16.3
+        },
+        {
+          "text": "可以连成夜空。",
+          "start": 16.3,
+          "end": 17.32
+        }
+      ]
+    }
+  },
+  {
+    "id": "c07",
+    "t0": 17.32,
+    "t1": 19.6,
+    "zh": "然后也可以变成地球。",
+    "en": "Then it can turn into a globe.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后也可以",
+          "start": 17.32,
+          "end": 18.28
+        },
+        {
+          "text": "变成地球。",
+          "start": 18.28,
+          "end": 19.6
+        }
+      ]
+    }
+  },
+  {
+    "id": "c08",
+    "t0": 19.6,
+    "t1": 21.52,
+    "zh": "所有的成员都可以在地球上看到。",
+    "en": "All the members show up on the globe.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "所有的成员都可",
+          "start": 19.6,
+          "end": 20.66
+        },
+        {
+          "text": "以在地球上看到。",
+          "start": 20.66,
+          "end": 21.52
+        }
+      ]
+    }
+  },
+  {
+    "id": "c09",
+    "t0": 21.76,
+    "t1": 23.98,
+    "zh": "真正难做的是拼字和拼脸。",
+    "en": "The really hard part was spelling words and piecing faces.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "真正难做的是",
+          "start": 21.76,
+          "end": 22.92
+        },
+        {
+          "text": "拼字和拼脸。",
+          "start": 22.92,
+          "end": 23.98
+        }
+      ]
+    }
+  },
+  {
+    "id": "c10",
+    "t0": 23.98,
+    "t1": 25.28,
+    "zh": "本来想的是……",
+    "en": "What I originally had in mind was…",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "本来想的是……",
+          "start": 23.98,
+          "end": 25.28
+        }
+      ]
+    }
+  },
+  {
+    "id": "c11",
+    "t0": 27.54,
+    "t1": 29.8,
+    "zh": "本来就是一些群创想。",
+    "en": "It started as some community ideas.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "本来就是一",
+          "start": 27.54,
+          "end": 28.66
+        },
+        {
+          "text": "些群创想。",
+          "start": 28.66,
+          "end": 29.8
+        }
+      ]
+    }
+  },
+  {
+    "id": "c12",
+    "t0": 29.8,
+    "t1": 33.6,
+    "zh": "比如说在抖音上看到一些想法。",
+    "en": "Like ideas you see on Douyin.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "比如说在抖音上",
+          "start": 29.8,
+          "end": 31.2
+        },
+        {
+          "text": "看到一些想法。",
+          "start": 31.2,
+          "end": 33.6
+        }
+      ]
+    }
+  },
+  {
+    "id": "c13",
+    "t0": 34.22,
+    "t1": 35.76,
+    "zh": "通过很多头像拼出来。",
+    "en": "Built out of lots of avatars.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "通过很多头",
+          "start": 34.22,
+          "end": 35.0
+        },
+        {
+          "text": "像拼出来。",
+          "start": 35.0,
+          "end": 35.76
+        }
+      ]
+    }
+  },
+  {
+    "id": "c14",
+    "t0": 35.76,
+    "t1": 37.76,
+    "zh": "拼成一张脸，或者拼成一个字。",
+    "en": "Pieced into a face, or into a character.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "拼成一张脸，",
+          "start": 35.76,
+          "end": 36.78
+        },
+        {
+          "text": "或者拼成一个字。",
+          "start": 36.78,
+          "end": 37.76
+        }
+      ]
+    }
+  },
+  {
+    "id": "c15",
+    "t0": 39.44,
+    "t1": 40.84,
+    "zh": "这个想法也比较难。",
+    "en": "This idea is also hard.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "这个想法也比较难。",
+          "start": 39.44,
+          "end": 40.84
+        }
+      ]
+    }
+  },
+  {
+    "id": "c16",
+    "t0": 42.06,
+    "t1": 44.2,
+    "zh": "然后实现起来、解决起来很麻烦。",
+    "en": "And implementing and solving it is painful.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后实现起来、",
+          "start": 42.06,
+          "end": 43.18
+        },
+        {
+          "text": "解决起来很麻烦。",
+          "start": 43.42,
+          "end": 44.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "c17",
+    "t0": 44.2,
+    "t1": 45.94,
+    "zh": "比如说验证之类的。",
+    "en": "Things like verification.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "比如说验证之类的。",
+          "start": 44.2,
+          "end": 45.94
+        }
+      ]
+    }
+  },
+  {
+    "id": "c18",
+    "t0": 46.4,
+    "t1": 48.68,
+    "zh": "还有就是前端的技术能不能做。",
+    "en": "And whether the frontend can even do it.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "还有就是前端的",
+          "start": 46.76,
+          "end": 47.82
+        },
+        {
+          "text": "技术能不能做。",
+          "start": 47.82,
+          "end": 48.68
+        }
+      ]
+    }
+  },
+  {
+    "id": "c19",
+    "t0": 49.1,
+    "t1": 52.76,
+    "zh": "其实最大的问题，就是中间还是踩了几个坑。",
+    "en": "The biggest issue is that I still hit a few pitfalls.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "其实最大的问题，",
+          "start": 49.1,
+          "end": 50.36
+        },
+        {
+          "text": "就是中间还是",
+          "start": 50.36,
+          "end": 51.86
+        },
+        {
+          "text": "踩了几个坑。",
+          "start": 51.86,
+          "end": 52.76
+        }
+      ]
+    }
+  },
+  {
+    "id": "c20",
+    "t0": 52.76,
+    "t1": 57.82,
+    "zh": "一个是渲染确实有点难。",
+    "en": "One is that rendering really is hard.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "一个是渲染",
+          "start": 52.76,
+          "end": 55.29
+        },
+        {
+          "text": "确实有点难。",
+          "start": 55.29,
+          "end": 57.82
+        }
+      ]
+    }
+  },
+  {
+    "id": "c21",
+    "t0": 57.82,
+    "t1": 61.02,
+    "zh": "还有一个是性能之类的，要做性能优化。",
+    "en": "Another is performance — it needs optimization.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "还有一个是",
+          "start": 57.82,
+          "end": 58.82
+        },
+        {
+          "text": "性能之类的，",
+          "start": 58.82,
+          "end": 59.94
+        },
+        {
+          "text": "要做性能优化。",
+          "start": 59.94,
+          "end": 61.02
+        }
+      ]
+    }
+  },
+  {
+    "id": "c22",
+    "t0": 61.02,
+    "t1": 64.18,
+    "zh": "因为 600 个头像图片确实……",
+    "en": "Because 600 avatar images really do…",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "因为 600 个头",
+          "start": 61.02,
+          "end": 62.63
+        },
+        {
+          "text": "像图片确实……",
+          "start": 62.63,
+          "end": 64.18
+        }
+      ]
+    }
+  },
+  {
+    "id": "c23",
+    "t0": 64.88,
+    "t1": 66.799,
+    "zh": "还有就是它的数据怎么采集，",
+    "en": "And how the data gets collected,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "还有就是它的",
+          "start": 64.88,
+          "end": 65.58
+        },
+        {
+          "text": "数据怎么采集，",
+          "start": 65.58,
+          "end": 66.799
+        }
+      ]
+    }
+  },
+  {
+    "id": "c24",
+    "t0": 66.799,
+    "t1": 67.979,
+    "zh": "这些数据怎么来。",
+    "en": "where the data comes from.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "这些数据怎么来。",
+          "start": 66.84,
+          "end": 67.979
+        }
+      ]
+    }
+  },
+  {
+    "id": "c25",
+    "t0": 68.8,
+    "t1": 70.36,
+    "zh": "这些都是问题。",
+    "en": "Those are all problems.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "这些都是问题。",
+          "start": 68.8,
+          "end": 70.36
+        }
+      ]
+    }
+  },
+  {
+    "id": "c26",
+    "t0": 70.36,
+    "t1": 73.54,
+    "zh": "然后一点点和 AI 沟通，",
+    "en": "Then step by step, talking with AI,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后一点点",
+          "start": 70.36,
+          "end": 72.1
+        },
+        {
+          "text": "和 AI 沟通，",
+          "start": 72.1,
+          "end": 73.54
+        }
+      ]
+    }
+  },
+  {
+    "id": "c27",
+    "t0": 73.54,
+    "t1": 75.4,
+    "zh": "然后也就把问题解决了。",
+    "en": "and the problems got solved.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后也就把",
+          "start": 73.54,
+          "end": 74.7
+        },
+        {
+          "text": "问题解决了。",
+          "start": 74.7,
+          "end": 75.4
+        }
+      ]
+    }
+  },
+  {
+    "id": "c28",
+    "t0": 75.64,
+    "t1": 78.32,
+    "zh": "然后我最后实现的是那个星流。",
+    "en": "What I finally built was that star flow.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后我最后实现",
+          "start": 75.64,
+          "end": 77.22
+        },
+        {
+          "text": "的是那个星流。",
+          "start": 77.22,
+          "end": 78.32
+        }
+      ]
+    }
+  },
+  {
+    "id": "c29",
+    "t0": 79.2,
+    "t1": 81.74,
+    "zh": "我最后实现的是星流。",
+    "en": "I ended up building the star flow.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "我最后实现",
+          "start": 79.2,
+          "end": 80.34
+        },
+        {
+          "text": "的是星流。",
+          "start": 80.34,
+          "end": 81.74
+        }
+      ]
+    }
+  },
+  {
+    "id": "c30",
+    "t0": 82.28,
+    "t1": 85.88,
+    "zh": "星流我也是根据我之前的想法来做的。",
+    "en": "The star flow also came from my earlier idea.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "星流我也是根据我",
+          "start": 82.28,
+          "end": 84.36
+        },
+        {
+          "text": "之前的想法来做的。",
+          "start": 84.36,
+          "end": 85.88
+        }
+      ]
+    }
+  },
+  {
+    "id": "c31",
+    "t0": 85.88,
+    "t1": 86.56,
+    "zh": "然后就是……",
+    "en": "And then…",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后就是……",
+          "start": 85.88,
+          "end": 86.56
+        }
+      ]
+    }
+  },
+  {
+    "id": "c32",
+    "t0": 88.6,
+    "t1": 91.56,
+    "zh": "我想之前的那些什么拼图、拼……",
+    "en": "I thought, could those earlier mosaics, piec…",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "我想之前的那",
+          "start": 88.6,
+          "end": 89.86
+        },
+        {
+          "text": "些什么拼图、",
+          "start": 89.86,
+          "end": 91.2
+        },
+        {
+          "text": "拼……",
+          "start": 91.2,
+          "end": 91.56
+        }
+      ]
+    }
+  },
+  {
+    "id": "c33",
+    "t0": 91.56,
+    "t1": 94.88,
+    "zh": "拼人这个东西能不能利用起来。",
+    "en": "could this face-piecing thing be reused.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "拼人这个东西能",
+          "start": 91.56,
+          "end": 93.98
+        },
+        {
+          "text": "不能利用起来。",
+          "start": 93.98,
+          "end": 94.88
+        }
+      ]
+    }
+  },
+  {
+    "id": "c34",
+    "t0": 94.88,
+    "t1": 97.4,
+    "zh": "然后就通过……想的是，",
+    "en": "Then through… the idea was,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后就通过…",
+          "start": 94.88,
+          "end": 95.94
+        },
+        {
+          "text": "…想的是，",
+          "start": 96.62,
+          "end": 97.4
+        }
+      ]
+    }
+  },
+  {
+    "id": "c35",
+    "t0": 97.4,
+    "t1": 99.98,
+    "zh": "输入文字或者输入图片，",
+    "en": "type text or upload an image,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "输入文字或",
+          "start": 97.4,
+          "end": 99.24
+        },
+        {
+          "text": "者输入图片，",
+          "start": 99.24,
+          "end": 99.98
+        }
+      ]
+    }
+  },
+  {
+    "id": "c36",
+    "t0": 100.46,
+    "t1": 102.14,
+    "zh": "然后转成星流。",
+    "en": "and it turns into a star flow.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后转成星流。",
+          "start": 100.46,
+          "end": 102.14
+        }
+      ]
+    }
+  },
+  {
+    "id": "c37",
+    "t0": 102.66,
+    "t1": 104.66,
+    "zh": "就像转成一幅图。",
+    "en": "Like turning into a picture.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "就像转成一幅图。",
+          "start": 102.66,
+          "end": 104.66
+        }
+      ]
+    }
+  },
+  {
+    "id": "c38",
+    "t0": 106.16,
+    "t1": 108.42,
+    "zh": "转出来的文字你想改就改，",
+    "en": "The text that comes out, change it as you like,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "转出来的文字",
+          "start": 106.16,
+          "end": 107.58
+        },
+        {
+          "text": "你想改就改，",
+          "start": 107.58,
+          "end": 108.42
+        }
+      ]
+    }
+  },
+  {
+    "id": "c39",
+    "t0": 108.42,
+    "t1": 110.54,
+    "zh": "然后拼图发出去也很方便。",
+    "en": "and it's easy to post as a mosaic.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后拼图发出",
+          "start": 108.42,
+          "end": 109.96
+        },
+        {
+          "text": "去也很方便。",
+          "start": 109.96,
+          "end": 110.54
+        }
+      ]
+    }
+  },
+  {
+    "id": "c40",
+    "t0": 110.78,
+    "t1": 112.62,
+    "zh": "实现的完整过程，",
+    "en": "The full process of how it was built,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "实现的完整过程，",
+          "start": 110.78,
+          "end": 112.62
+        }
+      ]
+    }
+  },
+  {
+    "id": "c41",
+    "t0": 112.62,
+    "t1": 113.74,
+    "zh": "你想知道的话，",
+    "en": "if you want to know,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "你想知道的话，",
+          "start": 112.62,
+          "end": 113.74
+        }
+      ]
+    }
+  },
+  {
+    "id": "c42",
+    "t0": 113.74,
+    "t1": 115.1,
+    "zh": "都可以来 TRAE 社区。",
+    "en": "come to the TRAE community.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "都可以来 TRAE 社区。",
+          "start": 113.74,
+          "end": 115.1
+        }
+      ]
+    }
+  },
+  {
+    "id": "c43",
+    "t0": 115.58,
+    "t1": 116.24,
+    "zh": "来看。",
+    "en": "Take a look.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "来看。",
+          "start": 115.58,
+          "end": 116.24
+        }
+      ]
+    }
+  },
+  {
+    "id": "c44",
+    "t0": 116.6,
+    "t1": 118.06,
+    "zh": "然后有我的那个……",
+    "en": "And there's my…",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后有我的那个……",
+          "start": 116.6,
+          "end": 118.06
+        }
+      ]
+    }
+  },
+  {
+    "id": "c45",
+    "t0": 118.06,
+    "t1": 120.68,
+    "zh": "整个调试的过程，",
+    "en": "the whole debugging process,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "整个调试的过程，",
+          "start": 118.06,
+          "end": 120.68
+        }
+      ]
+    }
+  },
+  {
+    "id": "c46",
+    "t0": 120.68,
+    "t1": 122.4,
+    "zh": "怎么进行部署的。",
+    "en": "and how it was deployed.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "怎么进行部署的。",
+          "start": 120.68,
+          "end": 122.4
+        }
+      ]
+    }
+  },
+  {
+    "id": "c47",
+    "t0": 123.74,
+    "t1": 124.92,
+    "zh": "大家可以来看。",
+    "en": "You can all come and see.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "大家可以来看。",
+          "start": 123.74,
+          "end": 124.92
+        }
+      ]
+    }
+  },
+  {
+    "id": "c48",
+    "t0": 124.92,
+    "t1": 127.04,
+    "zh": "然后你可能也能学到东西。",
+    "en": "And you might learn something too.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后你可能也",
+          "start": 124.92,
+          "end": 126.24
+        },
+        {
+          "text": "能学到东西。",
+          "start": 126.24,
+          "end": 127.04
+        }
+      ]
+    }
+  },
+  {
+    "id": "c49",
+    "t0": 127.28,
+    "t1": 129.5,
+    "zh": "TRAE 社区还有很多小伙伴。",
+    "en": "The TRAE community has lots of people.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "TRAE 社区还有",
+          "start": 127.28,
+          "end": 128.54
+        },
+        {
+          "text": "很多小伙伴。",
+          "start": 128.54,
+          "end": 129.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "c50",
+    "t0": 130.44,
+    "t1": 133.02,
+    "zh": "然后你可以看一下人家做的东西。",
+    "en": "You can look at what they've made.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "然后你可以看一",
+          "start": 130.44,
+          "end": 131.92
+        },
+        {
+          "text": "下人家做的东西。",
+          "start": 131.92,
+          "end": 133.02
+        }
+      ]
+    }
+  },
+  {
+    "id": "c51",
+    "t0": 133.02,
+    "t1": 134.64,
+    "zh": "你也可以借鉴一下思路。",
+    "en": "You can borrow the ideas.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "你也可以借",
+          "start": 133.02,
+          "end": 133.81
+        },
+        {
+          "text": "鉴一下思路。",
+          "start": 133.81,
+          "end": 134.64
+        }
+      ]
+    }
+  },
+  {
+    "id": "c52",
+    "t0": 136.6,
+    "t1": 137.82,
+    "zh": "我觉得学习嘛……",
+    "en": "I think with learning…",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "我觉得学习嘛……",
+          "start": 136.6,
+          "end": 137.82
+        }
+      ]
+    }
+  },
+  {
+    "id": "c53",
+    "t0": 137.82,
+    "t1": 139.5,
+    "zh": "大家都共同学习，",
+    "en": "we all learn together,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "大家都共同学习，",
+          "start": 137.82,
+          "end": 139.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "c54",
+    "t0": 139.5,
+    "t1": 140.34,
+    "zh": "互相学习，",
+    "en": "learn from each other,",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "互相学习，",
+          "start": 139.5,
+          "end": 140.34
+        }
+      ]
+    }
+  },
+  {
+    "id": "c55",
+    "t0": 140.34,
+    "t1": 141.08,
+    "zh": "互相鼓励嘛。",
+    "en": "and encourage each other.",
+    "highlight": {
+      "source": "asr-word-boundaries",
+      "language": "zh",
+      "units": [
+        {
+          "text": "互相鼓励嘛。",
+          "start": 140.34,
+          "end": 141.08
+        }
+      ]
+    }
+  }
+]

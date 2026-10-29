@@ -1,0 +1,55 @@
+{
+  "assets": [
+    {
+      "path": "src/fonts/Geist-Variable.woff2",
+      "role": "font",
+      "source": "https://github.com/vercel/geist-font",
+      "license": "SIL-OFL-1.1",
+      "licenseFile": "licenses/OFL-Geist.txt",
+      "sha256": "0c855f7567881c1f3c41738616d4274cea4afbd2bf6aa198be467aefc157ee6d",
+      "bytes": 23280,
+      "distributed": true
+    },
+    {
+      "path": "src/fonts/GeistMono-Variable.woff2",
+      "role": "font",
+      "source": "https://github.com/vercel/geist-font",
+      "license": "SIL-OFL-1.1",
+      "licenseFile": "licenses/OFL-Geist.txt",
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+      "bytes": 23108,
+      "distributed": true
+    },
+    {
+      "path": "src/fonts/NotoSansSC.ttf",
+      "role": "font",
+      "source": "https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+      "license": "SIL-OFL-1.1",
+      "licenseFile": "licenses/OFL-NotoSansSC.txt",
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "bytes": 17772300,
+      "distributed": true
+    },
+    {
+      "path": "src/fonts/NotoSansSC.woff2",
+      "role": "font",
+      "source": "Owner-reviewed native MotionGit profile font, hash-locked",
+      "license": "SIL-OFL-1.1",
+      "licenseFile": "licenses/notosanssc-OFL.txt",
+      "sha256": "d99ca2b52af1e6cc3f880216751cb6365fa405bc311225b8322ff16100849d13",
+      "bytes": 2052684,
+      "distributed": true
+    },
+    {
+      "path": "src/fonts/NotoSansMono.woff2",
+      "role": "font",
+      "source": "Owner-reviewed native MotionGit profile font, hash-locked",
+      "license": "SIL-OFL-1.1",
+      "licenseFile": "licenses/notosansmono-OFL.txt",
+      "sha256": "30b52e0316e140a19f61431ef2b03133a17c72684ea31d1c8a10eac3f4b938ad",
+      "bytes": 133632,
+      "distributed": true
+    }
+  ],
+  "userMedia": "Supplied through the reviewed permanent instance; no demo user media is packaged."
+}

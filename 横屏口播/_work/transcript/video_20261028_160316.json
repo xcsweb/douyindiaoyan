@@ -1,0 +1,544 @@
+{
+  "file": "video_20261028_160316.wav",
+  "duration": 28.245,
+  "language": "zh",
+  "language_probability": 1.0,
+  "segments": [
+    {
+      "start": 0.98,
+      "end": 4.64,
+      "text": "其实最大的问题就是中间还是踩了几个坑",
+      "words": [
+        {
+          "word": "其实",
+          "start": 0.98,
+          "end": 1.5,
+          "probability": 0.3683
+        },
+        {
+          "word": "最",
+          "start": 1.5,
+          "end": 1.78,
+          "probability": 0.9643
+        },
+        {
+          "word": "大的",
+          "start": 1.78,
+          "end": 1.96,
+          "probability": 0.9091
+        },
+        {
+          "word": "问题",
+          "start": 1.96,
+          "end": 2.24,
+          "probability": 0.9951
+        },
+        {
+          "word": "就是",
+          "start": 2.24,
+          "end": 2.6,
+          "probability": 0.7718
+        },
+        {
+          "word": "中",
+          "start": 2.6,
+          "end": 3.06,
+          "probability": 0.7952
+        },
+        {
+          "word": "间",
+          "start": 3.06,
+          "end": 3.28,
+          "probability": 0.9283
+        },
+        {
+          "word": "还是",
+          "start": 3.28,
+          "end": 3.74,
+          "probability": 0.9393
+        },
+        {
+          "word": "踩",
+          "start": 3.74,
+          "end": 4.02,
+          "probability": 0.7034
+        },
+        {
+          "word": "了",
+          "start": 4.02,
+          "end": 4.14,
+          "probability": 0.9955
+        },
+        {
+          "word": "几",
+          "start": 4.14,
+          "end": 4.3,
+          "probability": 0.9984
+        },
+        {
+          "word": "个",
+          "start": 4.3,
+          "end": 4.42,
+          "probability": 0.9729
+        },
+        {
+          "word": "坑",
+          "start": 4.42,
+          "end": 4.64,
+          "probability": 0.9964
+        }
+      ]
+    },
+    {
+      "start": 4.64,
+      "end": 9.7,
+      "text": "一个是一个是一个是渲染确实有点难",
+      "words": [
+        {
+          "word": "一个",
+          "start": 4.64,
+          "end": 5.22,
+          "probability": 0.9035
+        },
+        {
+          "word": "是",
+          "start": 5.22,
+          "end": 5.58,
+          "probability": 0.9888
+        },
+        {
+          "word": "一个",
+          "start": 5.58,
+          "end": 7.76,
+          "probability": 0.8677
+        },
+        {
+          "word": "是",
+          "start": 7.76,
+          "end": 8.04,
+          "probability": 0.9849
+        },
+        {
+          "word": "一个",
+          "start": 8.04,
+          "end": 8.24,
+          "probability": 0.8408
+        },
+        {
+          "word": "是",
+          "start": 8.24,
+          "end": 8.42,
+          "probability": 0.9914
+        },
+        {
+          "word": "渲",
+          "start": 8.42,
+          "end": 8.6,
+          "probability": 0.7333
+        },
+        {
+          "word": "染",
+          "start": 8.6,
+          "end": 8.76,
+          "probability": 0.9982
+        },
+        {
+          "word": "确",
+          "start": 8.76,
+          "end": 8.98,
+          "probability": 0.98
+        },
+        {
+          "word": "实",
+          "start": 8.98,
+          "end": 9.12,
+          "probability": 0.9983
+        },
+        {
+          "word": "有",
+          "start": 9.12,
+          "end": 9.34,
+          "probability": 0.9681
+        },
+        {
+          "word": "点",
+          "start": 9.34,
+          "end": 9.46,
+          "probability": 0.9991
+        },
+        {
+          "word": "难",
+          "start": 9.46,
+          "end": 9.7,
+          "probability": 0.9926
+        }
+      ]
+    },
+    {
+      "start": 9.7,
+      "end": 12.9,
+      "text": "一个性能之类的要做性能优化",
+      "words": [
+        {
+          "word": "一个",
+          "start": 9.7,
+          "end": 10.14,
+          "probability": 0.836
+        },
+        {
+          "word": "性",
+          "start": 10.14,
+          "end": 10.6,
+          "probability": 0.9938
+        },
+        {
+          "word": "能",
+          "start": 10.6,
+          "end": 10.9,
+          "probability": 0.9998
+        },
+        {
+          "word": "之",
+          "start": 10.9,
+          "end": 11.56,
+          "probability": 0.887
+        },
+        {
+          "word": "类",
+          "start": 11.56,
+          "end": 11.68,
+          "probability": 0.9982
+        },
+        {
+          "word": "的",
+          "start": 11.68,
+          "end": 11.82,
+          "probability": 0.9992
+        },
+        {
+          "word": "要",
+          "start": 11.82,
+          "end": 12.02,
+          "probability": 0.9777
+        },
+        {
+          "word": "做",
+          "start": 12.02,
+          "end": 12.16,
+          "probability": 0.9926
+        },
+        {
+          "word": "性",
+          "start": 12.16,
+          "end": 12.34,
+          "probability": 0.9926
+        },
+        {
+          "word": "能",
+          "start": 12.34,
+          "end": 12.48,
+          "probability": 0.9992
+        },
+        {
+          "word": "优",
+          "start": 12.48,
+          "end": 12.62,
+          "probability": 0.9836
+        },
+        {
+          "word": "化",
+          "start": 12.62,
+          "end": 12.9,
+          "probability": 0.9991
+        }
+      ]
+    },
+    {
+      "start": 12.9,
+      "end": 16.06,
+      "text": "因为600个突然图片确实",
+      "words": [
+        {
+          "word": "因为",
+          "start": 12.9,
+          "end": 13.28,
+          "probability": 0.8611
+        },
+        {
+          "word": "600",
+          "start": 13.28,
+          "end": 13.66,
+          "probability": 0.8557
+        },
+        {
+          "word": "个",
+          "start": 13.66,
+          "end": 14.08,
+          "probability": 0.7924
+        },
+        {
+          "word": "突",
+          "start": 14.08,
+          "end": 14.78,
+          "probability": 0.6898
+        },
+        {
+          "word": "然",
+          "start": 14.78,
+          "end": 14.94,
+          "probability": 0.9532
+        },
+        {
+          "word": "图",
+          "start": 14.94,
+          "end": 15.12,
+          "probability": 0.8239
+        },
+        {
+          "word": "片",
+          "start": 15.12,
+          "end": 15.3,
+          "probability": 0.9968
+        },
+        {
+          "word": "确",
+          "start": 15.3,
+          "end": 15.54,
+          "probability": 0.9926
+        },
+        {
+          "word": "实",
+          "start": 15.54,
+          "end": 16.06,
+          "probability": 0.9987
+        }
+      ]
+    },
+    {
+      "start": 16.76,
+      "end": 19.86,
+      "text": "还有就是它的数据怎么产及这些数据怎么来",
+      "words": [
+        {
+          "word": "还有",
+          "start": 16.76,
+          "end": 17.0,
+          "probability": 0.9664
+        },
+        {
+          "word": "就是",
+          "start": 17.0,
+          "end": 17.24,
+          "probability": 0.9596
+        },
+        {
+          "word": "它的",
+          "start": 17.24,
+          "end": 17.46,
+          "probability": 0.42
+        },
+        {
+          "word": "数",
+          "start": 17.46,
+          "end": 17.78,
+          "probability": 0.998
+        },
+        {
+          "word": "据",
+          "start": 17.78,
+          "end": 18.0,
+          "probability": 0.9985
+        },
+        {
+          "word": "怎么",
+          "start": 18.0,
+          "end": 18.24,
+          "probability": 0.9876
+        },
+        {
+          "word": "产",
+          "start": 18.24,
+          "end": 18.48,
+          "probability": 0.8655
+        },
+        {
+          "word": "及",
+          "start": 18.48,
+          "end": 18.72,
+          "probability": 0.3188
+        },
+        {
+          "word": "这",
+          "start": 18.72,
+          "end": 18.92,
+          "probability": 0.5724
+        },
+        {
+          "word": "些",
+          "start": 18.92,
+          "end": 19.08,
+          "probability": 0.7918
+        },
+        {
+          "word": "数",
+          "start": 19.08,
+          "end": 19.16,
+          "probability": 0.9942
+        },
+        {
+          "word": "据",
+          "start": 19.16,
+          "end": 19.3,
+          "probability": 0.9993
+        },
+        {
+          "word": "怎么",
+          "start": 19.3,
+          "end": 19.48,
+          "probability": 0.9867
+        },
+        {
+          "word": "来",
+          "start": 19.48,
+          "end": 19.86,
+          "probability": 0.8488
+        }
+      ]
+    },
+    {
+      "start": 20.68,
+      "end": 22.24,
+      "text": "这些都是问题",
+      "words": [
+        {
+          "word": "这",
+          "start": 20.68,
+          "end": 21.16,
+          "probability": 0.9512
+        },
+        {
+          "word": "些",
+          "start": 21.16,
+          "end": 21.64,
+          "probability": 0.9309
+        },
+        {
+          "word": "都是",
+          "start": 21.64,
+          "end": 21.78,
+          "probability": 0.9803
+        },
+        {
+          "word": "问题",
+          "start": 21.78,
+          "end": 22.24,
+          "probability": 0.9986
+        }
+      ]
+    },
+    {
+      "start": 22.24,
+      "end": 25.42,
+      "text": "然后一点点有AI沟通",
+      "words": [
+        {
+          "word": "然后",
+          "start": 22.24,
+          "end": 22.86,
+          "probability": 0.9457
+        },
+        {
+          "word": "一点",
+          "start": 22.86,
+          "end": 23.74,
+          "probability": 0.8698
+        },
+        {
+          "word": "点",
+          "start": 23.74,
+          "end": 23.98,
+          "probability": 0.9399
+        },
+        {
+          "word": "有",
+          "start": 23.98,
+          "end": 24.32,
+          "probability": 0.0651
+        },
+        {
+          "word": "AI",
+          "start": 24.32,
+          "end": 25.02,
+          "probability": 0.5466
+        },
+        {
+          "word": "沟",
+          "start": 25.02,
+          "end": 25.26,
+          "probability": 0.9328
+        },
+        {
+          "word": "通",
+          "start": 25.26,
+          "end": 25.42,
+          "probability": 0.9998
+        }
+      ]
+    },
+    {
+      "start": 25.42,
+      "end": 27.28,
+      "text": "然后也就把问题解决了",
+      "words": [
+        {
+          "word": "然后",
+          "start": 25.42,
+          "end": 25.88,
+          "probability": 0.283
+        },
+        {
+          "word": "也",
+          "start": 25.88,
+          "end": 26.18,
+          "probability": 0.9615
+        },
+        {
+          "word": "就",
+          "start": 26.18,
+          "end": 26.36,
+          "probability": 0.9827
+        },
+        {
+          "word": "把",
+          "start": 26.36,
+          "end": 26.58,
+          "probability": 0.9957
+        },
+        {
+          "word": "问题",
+          "start": 26.58,
+          "end": 26.76,
+          "probability": 0.9987
+        },
+        {
+          "word": "解",
+          "start": 26.76,
+          "end": 26.98,
+          "probability": 0.9979
+        },
+        {
+          "word": "决",
+          "start": 26.98,
+          "end": 27.08,
+          "probability": 0.9989
+        },
+        {
+          "word": "了",
+          "start": 27.08,
+          "end": 27.28,
+          "probability": 0.9961
+        }
+      ]
+    }
+  ]
+}

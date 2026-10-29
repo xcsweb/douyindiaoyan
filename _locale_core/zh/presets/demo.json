@@ -1,0 +1,133 @@
+{
+  "media": {
+    "talk": "assets/template01-demo-talk.mp4",
+    "captions": "assets/template01-demo-captions.json"
+  },
+  "brief": {
+    "schema": "adu-auto-brief/1",
+    "brand": "MotionGit · AI静态示意",
+    "layout": "landscape",
+    "narrationDuration": 7.5,
+    "allowedStyles": [
+      "01-D"
+    ],
+    "fontPolicy": "preferred",
+    "repairPolicy": {
+      "mode": "off"
+    },
+    "contentEvidence": {
+      "schema": "adu-content-evidence/1",
+      "text": "模板零一\n现代图文口播\n先看原片节奏\n标题进入方法容器\n",
+      "textSha256": "1f4844dea2294454761c4a4226e63fc120ea31714a9303e18a190a64f387881c",
+      "sourceKind": "approved-existing-narration-first-7.5s",
+      "units": [
+        {
+          "start": 0,
+          "end": 5,
+          "cueId": "p1-c1",
+          "time": {
+            "clock": "unedited-authorized-narration",
+            "start": 0.0,
+            "end": 0.74
+          },
+          "id": "1f4844dea2294454:0:5",
+          "text": "模板零一\n"
+        },
+        {
+          "start": 5,
+          "end": 12,
+          "cueId": "p1-c2",
+          "time": {
+            "clock": "unedited-authorized-narration",
+            "start": 1.98,
+            "end": 3.32
+          },
+          "id": "1f4844dea2294454:5:12",
+          "text": "现代图文口播\n"
+        },
+        {
+          "start": 12,
+          "end": 19,
+          "cueId": "p1-c3",
+          "time": {
+            "clock": "unedited-authorized-narration",
+            "start": 4.0,
+            "end": 5.22
+          },
+          "id": "1f4844dea2294454:12:19",
+          "text": "先看原片节奏\n"
+        },
+        {
+          "start": 19,
+          "end": 28,
+          "cueId": "p1-c4",
+          "time": {
+            "clock": "unedited-authorized-narration",
+            "start": 5.92,
+            "end": 7.44
+          },
+          "id": "1f4844dea2294454:19:28",
+          "text": "标题进入方法容器\n"
+        }
+      ],
+      "assets": [
+        {
+          "id": "measured-bilingual-captions",
+          "path": "assets/template01-demo-captions.json",
+          "sha256": "852057c9e26d77603b5fb5471037f213479d0e083d7effc3d150b21a231a50e5"
+        }
+      ]
+    },
+    "segments": [
+      {
+        "id": "template01-introduction",
+        "text": "模板零一\n现代图文口播\n先看原片节奏\n标题进入方法容器",
+        "intent": "basic-keyword",
+        "phases": [
+          "entry",
+          "reading"
+        ],
+        "counts": {
+          "items": 1
+        },
+        "durationFrames": 450,
+        "anchors": {
+          "entry": {
+            "at": 0
+          },
+          "reading": {
+            "at": 1.4
+          }
+        },
+        "ownershipRefs": [
+          "1f4844dea2294454:0:5",
+          "1f4844dea2294454:5:12",
+          "1f4844dea2294454:12:19",
+          "1f4844dea2294454:19:28"
+        ],
+        "supportingRefs": {
+          "heading": [
+            "1f4844dea2294454:0:5"
+          ],
+          "items.0": [
+            "1f4844dea2294454:5:12"
+          ]
+        },
+        "preferredScenes": [
+          "01-D:basic-keyword"
+        ],
+        "candidates": {
+          "01-D:basic-keyword": {
+            "inputs": {
+              "heading": "模板零一",
+              "items": [
+                "现代图文口播"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "presenterLabel": "AI静态示意"
+  }
+}

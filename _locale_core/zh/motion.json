@@ -1,0 +1,337 @@
+{
+  "format": "motiongit-template",
+  "specVersion": "0.1.0-draft.1",
+  "template": {
+    "id": "template-01-integrated",
+    "version": "2.7.18-alpha.3",
+    "name": "现代图文 · 口播讲解",
+    "description": "A–E 五种原生动作与恢复组整合；完整编舞，文案以用户材料为主"
+  },
+  "runtime": {
+    "profile": "adu-authored-unit/1",
+    "engine": "adu-motion-video",
+    "engineVersion": "3.14.0-rc.1",
+    "entry": "adapter/duration_entry.py",
+    "pack": "src/packs",
+    "sourceManifest": "src/packs/manifest.json",
+    "dependencyLock": "motion.lock.json",
+    "adapterEntry": "adapter/duration_entry.py",
+    "fontProfile": "adapter/font-profile.json",
+    "hostProfile": "native-python-node/1",
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "platformValidation": {
+      "macos": "Native group/preview/adapter checks recorded in VALIDATION.md; owner artistic acceptance pending",
+      "windows": "portable entry; native OS untested",
+      "linux": "portable entry; native OS untested"
+    },
+    "nativePacks": [
+      {
+        "style": "01-A",
+        "selection": "classic-performance@1.1.0-candidate"
+      },
+      {
+        "style": "01-B",
+        "selection": "continuous-performance@1.1.0-candidate"
+      },
+      {
+        "style": "01-C",
+        "selection": "stage-performance@1.1.0-candidate"
+      },
+      {
+        "style": "01-D",
+        "selection": "editorial-performance@1.2.0-candidate"
+      },
+      {
+        "style": "01-E",
+        "selection": "kinetic-performance@1.2.0-candidate"
+      },
+      {
+        "style": "01-B-legacy",
+        "selection": "continuous-performance@0.2.1-integrated.1-candidate"
+      }
+    ],
+    "sourceIdentity": "Per-pack original manifests and file hashes in source-preservation.json; no single inherited template-04 commit is attributed to template-01",
+    "splitRoot": {
+      "schema": "motiongit-split-root/1",
+      "instanceArgument": "--instance",
+      "coreLifetime": "operation",
+      "inputVault": "inputs"
+    }
+  },
+  "parameters": {
+    "schema": "params.schema.json",
+    "mapping": "adapter/parameter-map.json",
+    "defaultPreset": "presets/component-layout.json",
+    "presetPurpose": "Self-contained, no-narration component layout example only. Not native source reproduction or a voiced narration example."
+  },
+  "assets": {
+    "manifest": "asset-manifest.json"
+  },
+  "output": {
+    "width": 1920,
+    "height": 1080,
+    "fps": {
+      "num": 60,
+      "den": 1
+    },
+    "durationPolicy": "fit-voiceover",
+    "layouts": {
+      "landscape": {
+        "width": 1920,
+        "height": 1080
+      },
+      "portrait": {
+        "width": 1080,
+        "height": 1920
+      }
+    },
+    "defaultLayout": "landscape"
+  },
+  "preview": {
+    "cover": "previews/cover.jpg",
+    "preset": "presets/demo.json",
+    "scope": "Seven complete native groups /117.4667s per layout; zh primary narration/captions; all26 complete groups in silent both-layout interactive catalog",
+    "portraitCover": "previews/cover-portrait.jpg"
+  },
+  "license": {
+    "id": "MIT",
+    "file": "licenses/TEMPLATE-LICENSE.txt"
+  },
+  "permissions": {
+    "network": false,
+    "read": [
+      "package",
+      "instance-inputs"
+    ],
+    "write": [
+      "instance-output",
+      "runtime-cache"
+    ],
+    "enforcement": "Default production is offline. Optional network actions require explicit host authorization; setup never implies registration or paid asset use.",
+    "optionalNetwork": {
+      "default": "disabled",
+      "dependencyInstallation": "explicit setup only",
+      "motiongit": "explicit opt-in metadata / authorized asset commands",
+      "offlineRendering": true
+    }
+  },
+  "ai": {
+    "entry": "guide.json",
+    "guide": "guide.json",
+    "defaultMode": "user-media",
+    "demoPolicy": "explicit-request-only",
+    "authoring": {
+      "tool": "claude",
+      "source": "Creation with Claude confirmed by the owner on 2026-10-11; existing completed templates repackaged without changing animation sources."
+    }
+  },
+  "integrity": "integrity.json",
+  "motiongit": {
+    "template_url": "https://motiongit.com/@adunext/template-01-integrated",
+    "publication": "upload-candidate",
+    "legacy_template_ids": [],
+    "capabilities": [],
+    "registration": {
+      "enabled": true,
+      "optional": true,
+      "endpoint": "https://motiongit.com/api/v1/productions",
+      "server_status": "live",
+      "package_sha256_definition": "sha256 of raw integrity.json bytes",
+      "stages": [
+        "plan",
+        "done"
+      ],
+      "privacy": "Only template/version, integrity fingerprint, host, layout, duration and material role names; never scripts, media, file paths or user names."
+    },
+    "brand": {
+      "video": "brand/motiongit-circle-lighter.webm",
+      "gif": "brand/motiongit-circle-lighter.gif",
+      "sizeRatio": 0.05185185185185185,
+      "opacity": 0.45,
+      "first_s": 8,
+      "interval_s": 30,
+      "duration_s": 5.5,
+      "fade_in_s": 0.4,
+      "fade_out_s": 0.4,
+      "lightVariantVideo": "brand/motiongit-circle-path.webm",
+      "backgroundTone": "auto",
+      "darkBackgroundVideo": "brand/motiongit-circle-lighter.webm",
+      "lightBackgroundVideo": "brand/motiongit-circle-path.webm",
+      "portrait": {
+        "shape": "circle",
+        "cornerPolicy": "right",
+        "x": 938,
+        "y": 76,
+        "sizePxAt1080": 56,
+        "clockCrossfade": true,
+        "darkBackgroundVideo": "brand/motiongit-circle-lighter.webm",
+        "lightBackgroundVideo": "brand/motiongit-circle-path.webm",
+        "gif": "brand/motiongit-circle-lighter.gif"
+      },
+      "shape": "circle",
+      "cornerPolicy": "right"
+    },
+    "publication_note": "Private candidate; publication requires owner approval"
+  },
+  "localization": {
+    "language": "zh",
+    "source": "Accepted template01 0.1.0 candidate; original source trees unchanged",
+    "captions": "Primary language selected; both references retained"
+  },
+  "extensions": {
+    "motiongit.com:delivery": {
+      "profile": "personal-download-v1",
+      "specVersion": "1.0.0-rc.1",
+      "personalization": "website-download",
+      "credentialOwner": "downloader",
+      "existingTemplateId": 605,
+      "language": "zh"
+    },
+    "motiongit.com:website-preview": {
+      "websiteVideo": "https://media.openaicut.com/previews/605/draft-zh-99e0d21cfdd9.mp4"
+    },
+    "motiongit.com:packaging": {
+      "tool": "codex",
+      "role": "packaging",
+      "date": "2026-10-11",
+      "ownerConfirmedCreationTool": "claude",
+      "legacyPackagingDeclaration": {
+        "tool": "codex",
+        "client": "codex-desktop",
+        "date": "2026-10-08",
+        "source": "Frozen adu-motion-video authored packs; explicit contract-only catalog views; zero universal scene substitutions"
+      },
+      "animationSourcesChanged": false
+    },
+    "motiongit.com:motion-kit": {
+      "profile": "motiongit-motion-kit-integration/1",
+      "receipt": "kit-integration.json",
+      "workflow": "motion-kit",
+      "version": "0.3.0",
+      "sourceDigest": "0b147314b8a8aa02a2a0f236fd445358c97fcc161560d4e4f21fa2b6bda4448c",
+      "controlCount": 70,
+      "ownerEffectsAcceptance": "upgrade direction approved; style matching required; corrected templates authorized for publication; source QA scope retained",
+      "originalNativeEntry": "adapter/split_root.py"
+    },
+    "motiongit.com:style-profiles": {
+      "profile": "motiongit-template-style-profiles/1",
+      "file": "motion-kit/style-profiles.json",
+      "default": "light",
+      "profiles": [
+        "light",
+        "dark"
+      ],
+      "directionApproved": true,
+      "newControlRecommendations": [
+        "checklist",
+        "compare",
+        "definition",
+        "flow",
+        "iconcards",
+        "kinetic",
+        "number",
+        "qa",
+        "quote",
+        "steps",
+        "timeline",
+        "tip"
+      ]
+    },
+    "motiongit.com:release-readiness": {
+      "status": "incomplete-extraction",
+      "releaseReady": false,
+      "coverageComplete": false,
+      "ownerAccepted": false,
+      "currentStatus": "candidate-status.json",
+      "previousReadinessAppliesToSourceOnly": true
+    },
+    "motiongit.com:release-capacity": {
+      "maxCoreBytes": 402653184,
+      "minHelperVersion": "1.0.0-rc.2"
+    },
+    "motiongit.com:publication": {
+      "status": "unpublished-candidate",
+      "ownerAccepted": false,
+      "currentStatus": "candidate-status.json",
+      "sourceTemplateId": 605,
+      "sourceVersion": "2.4.2"
+    },
+    "motiongit.com:content-boundary": {
+      "profile": "motiongit.content-boundary/1",
+      "status": "candidate-in-progress",
+      "methodCatalog": "methods/catalog.json",
+      "demoArchives": "outside-runtime-core",
+      "newContentAcceptance": "pending"
+    },
+    "motiongit.com:candidate-status": {
+      "file": "candidate-status.json",
+      "revision": "method-upgrade-2026-10-13",
+      "releaseReady": false,
+      "ownerAccepted": false
+    },
+    "motiongit.com:signature": {
+      "profile": "output-clock-circle/1",
+      "corner": "top-right",
+      "previewAndExport": true,
+      "source": "signature-provenance.json",
+      "integrated": true,
+      "designElement": "time-corner-ornament"
+    },
+    "motiongit.com:whole-narration": {
+      "profile": "motiongit.whole-narration/1",
+      "contract": "duration-policy.json",
+      "guide": "DURATION.md",
+      "preserveCompleteSpeech": true,
+      "singleSceneLimitIsFilmLimit": false
+    },
+    "motiongit.com:audio-integrity": {
+      "profile": "motiongit.audio-integrity/1",
+      "guide": "AUDIO.md",
+      "contract": "audio-contract.json",
+      "narrationAlignmentGuide": "NARRATION-MAP.md",
+      "semanticReview": "required separately from technical validation"
+    },
+    "motiongit.com:component-export-caption": {
+      "profile": "motiongit.component-export-caption/1",
+      "guide": "CAPTIONS-EXPORT.md",
+      "parameter": "timeline.captionAlignment",
+      "values": [
+        "frame-center",
+        "content-center"
+      ],
+      "default": "frame-center",
+      "previewEvidence": "captionSamples: actual subtitle bounds and center in output pixels",
+      "export": "preflight output parents, validate encoded media, preserve derived recovery media on failure, verify published bytes"
+    },
+    "motiongit.com:narration-layout": {
+      "profile": "motiongit.narration-layout/1",
+      "guide": "NARRATION-VISUAL.md",
+      "existingProjects": "Original layout remains the default. New production guidance selects the supported layout without additional user steps.",
+      "sourceClockPreserved": true,
+      "sourceVersion": "2.6.0"
+    },
+    "motiongit.com:consumer-entry-recovery": {
+      "profile": "motiongit.consumer-entry-recovery/1",
+      "sourceVersion": "2.7.0",
+      "authorSourceSha256": "b873bf8b93181e8bfaccda2b2df93976c09ac3ed83b60c8109d067570c967d91",
+      "scope": "bounded failed-tool diagnostics, current personal-entry instructions and explicit English demo music choice",
+      "visualSourcesCuesMediaColorAndAudioPolicyUnchanged": true,
+      "newlyClaimedFullExtraction": false,
+      "windowsNativeAcceptance": "not performed"
+    },
+    "motiongit.com:render-runtime-upgrade": {
+      "profile": "motiongit.render-runtime-upgrade/1",
+      "sourceVersion": "2.7.18-alpha.2",
+      "authorSourceSha256": "defa3ec27f18fcad91dfd1ae5389200774729ab8b072c4ad22d7f9bb2ceb6dc6",
+      "components": [
+        "top_title_fix"
+      ],
+      "preserveOriginalPackagesAndProjects": true,
+      "acceptanceEvidence": "Recorded separately for this exact author archive; no platform or assistant acceptance is implied by this metadata."
+    }
+  }
+}

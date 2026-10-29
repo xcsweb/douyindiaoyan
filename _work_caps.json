@@ -1,0 +1,5968 @@
+{
+  "schema": "adu-auto-capabilities/1",
+  "styles": 6,
+  "groups": [
+    {
+      "id": "01-A:claim-into-container",
+      "style": "01-A",
+      "selection": "classic-performance@1.1.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "claim-method-proof-response"
+      ],
+      "phases": [
+        "claim",
+        "method",
+        "distribution",
+        "proof",
+        "response"
+      ],
+      "counts": {
+        "receivers": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "container": "container",
+        "proof": "proof",
+        "response": "response"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "title-impact",
+        "container-reveal",
+        "staggered-distribution",
+        "presenter-reaction"
+      ],
+      "duration": {
+        "sourceSeconds": 15.466,
+        "minFrames": 836,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 0,
+          "end": 4.13
+        },
+        {
+          "id": "action-02",
+          "start": 4.52,
+          "end": 7.23
+        },
+        {
+          "id": "action-03",
+          "start": 8.3,
+          "end": 14.85
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-00",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}"
+        },
+        {
+          "id": "text-01",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line1"
+        },
+        {
+          "id": "text-02",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line2"
+        },
+        {
+          "id": "text-03",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.context"
+        },
+        {
+          "id": "text-04",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.heading"
+        },
+        {
+          "id": "text-05",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.type"
+        },
+        {
+          "id": "text-06",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.name"
+        },
+        {
+          "id": "text-07",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.contents"
+        },
+        {
+          "id": "text-08",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.status"
+        },
+        {
+          "id": "text-09",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "receivers.0"
+        },
+        {
+          "id": "text-10",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "receivers.1"
+        },
+        {
+          "id": "text-11",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "receivers.2"
+        },
+        {
+          "id": "text-12",
+          "type": "text",
+          "maxChars": 13,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.heading"
+        },
+        {
+          "id": "text-13",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.chain"
+        },
+        {
+          "id": "text-14",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.context"
+        },
+        {
+          "id": "text-15",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.setup"
+        },
+        {
+          "id": "text-16",
+          "type": "text",
+          "maxChars": 9,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.impact"
+        },
+        {
+          "id": "text-17",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.resolve"
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "2247915c8a2bf446eeac2f8afdda1620dfa81c4f619e8e2b4006c43d7b327dc3"
+    },
+    {
+      "id": "01-A:evidence-focus",
+      "style": "01-A",
+      "selection": "classic-performance@1.1.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "evidence-result-observations"
+      ],
+      "phases": [
+        "overview",
+        "detail",
+        "result",
+        "observations",
+        "conclusion"
+      ],
+      "counts": {
+        "observations": {
+          "min": 3,
+          "max": 3
+        },
+        "evidence": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "overview": "overview",
+        "result": "result",
+        "focus": "focus"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "video-relay",
+        "sequential-focus",
+        "conclusion-reveal"
+      ],
+      "duration": {
+        "sourceSeconds": 15.700000000000003,
+        "minFrames": 880,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 68.6,
+          "end": 68.94
+        },
+        {
+          "id": "action-02",
+          "start": 69.2,
+          "end": 82.97
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-00",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}"
+        },
+        {
+          "id": "text-01",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "entry"
+        },
+        {
+          "id": "text-02",
+          "type": "text",
+          "maxChars": 15,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim"
+        },
+        {
+          "id": "text-03",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.title"
+        },
+        {
+          "id": "text-04",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.0.after"
+        },
+        {
+          "id": "text-05",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.1.after"
+        },
+        {
+          "id": "text-06",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.2.after"
+        },
+        {
+          "id": "text-07",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.0.before"
+        },
+        {
+          "id": "text-08",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.1.before"
+        },
+        {
+          "id": "text-09",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.2.before"
+        },
+        {
+          "id": "text-10",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "conclusion"
+        },
+        {
+          "id": "text-11",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.resultTitle"
+        },
+        {
+          "id": "overview",
+          "type": "video",
+          "inputPath": "evidence.overview",
+          "aspect": "16:9",
+          "playback": {
+            "start": 69.2,
+            "end": 72.2,
+            "fps": 30,
+            "rate": 1,
+            "terminalHoldSeconds": 0
+          }
+        },
+        {
+          "id": "detail",
+          "type": "video",
+          "inputPath": "evidence.detail",
+          "aspect": "16:9",
+          "playback": {
+            "start": 72.2,
+            "end": 74.966,
+            "fps": 30,
+            "rate": 2.4,
+            "terminalHoldSeconds": 0
+          }
+        },
+        {
+          "id": "result",
+          "type": "video",
+          "inputPath": "evidence.result",
+          "aspect": "16:9",
+          "playback": {
+            "start": 74.966,
+            "end": 84.3,
+            "fps": 30,
+            "rate": 1,
+            "terminalHoldSeconds": 1.34
+          }
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "2247915c8a2bf446eeac2f8afdda1620dfa81c4f619e8e2b4006c43d7b327dc3"
+    },
+    {
+      "id": "01-A:decompose-and-consolidate",
+      "style": "01-A",
+      "selection": "classic-performance@1.1.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "concept-decomposition"
+      ],
+      "phases": [
+        "concept",
+        "parts",
+        "consolidation",
+        "result"
+      ],
+      "counts": {
+        "parts": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "concept": "concept",
+        "decompose": "decompose",
+        "result": "result"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "keyword-impact",
+        "three-part-demo",
+        "card-archive",
+        "container-reveal"
+      ],
+      "duration": {
+        "sourceSeconds": 17.366,
+        "minFrames": 882,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 84.3,
+          "end": 84.84
+        },
+        {
+          "id": "action-02",
+          "start": 86.533,
+          "end": 88.34
+        },
+        {
+          "id": "action-03",
+          "start": 89.8,
+          "end": 101.6
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-00",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}"
+        },
+        {
+          "id": "text-01",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "context"
+        },
+        {
+          "id": "text-02",
+          "type": "text",
+          "maxChars": 13,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "question"
+        },
+        {
+          "id": "text-03",
+          "type": "text",
+          "maxChars": 3,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "concept"
+        },
+        {
+          "id": "text-04",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "explanation"
+        },
+        {
+          "id": "text-05",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "decomposeHeading"
+        },
+        {
+          "id": "text-06",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "consolidateHeading"
+        },
+        {
+          "id": "text-07",
+          "type": "text",
+          "maxChars": 7,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.label"
+        },
+        {
+          "id": "text-08",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.sample"
+        },
+        {
+          "id": "text-09",
+          "type": "text",
+          "maxChars": 7,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.label"
+        },
+        {
+          "id": "text-10",
+          "type": "text",
+          "maxChars": 7,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.label"
+        },
+        {
+          "id": "text-11",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.file"
+        },
+        {
+          "id": "text-12",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.label"
+        },
+        {
+          "id": "text-13",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.contents"
+        },
+        {
+          "id": "text-14",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.record"
+        },
+        {
+          "id": "text-15",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.record"
+        },
+        {
+          "id": "text-16",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.record"
+        },
+        {
+          "id": "text-17",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.conclusion"
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "2247915c8a2bf446eeac2f8afdda1620dfa81c4f619e8e2b4006c43d7b327dc3"
+    },
+    {
+      "id": "01-B:claim-into-container",
+      "style": "01-B",
+      "selection": "continuous-performance@1.1.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "claim-method-proof-response"
+      ],
+      "phases": [
+        "claim",
+        "method",
+        "distribution",
+        "proof",
+        "response"
+      ],
+      "counts": {
+        "parts": {
+          "min": 3,
+          "max": 3
+        },
+        "receivers": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "container": "container",
+        "proof": "proof",
+        "response": "response"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "object-morph",
+        "container-unfold",
+        "object-relay",
+        "presenter-reaction"
+      ],
+      "duration": {
+        "sourceSeconds": 15.466,
+        "minFrames": 835,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 0,
+          "end": 7.95
+        },
+        {
+          "id": "action-02",
+          "start": 8.48,
+          "end": 13.9
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-00",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}"
+        },
+        {
+          "id": "text-01",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line1"
+        },
+        {
+          "id": "text-02",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line2"
+        },
+        {
+          "id": "text-03",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0"
+        },
+        {
+          "id": "text-04",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1"
+        },
+        {
+          "id": "text-05",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2"
+        },
+        {
+          "id": "text-06",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.context"
+        },
+        {
+          "id": "text-07",
+          "type": "text",
+          "maxChars": 28,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "presenterLabel"
+        },
+        {
+          "id": "text-08",
+          "type": "text",
+          "maxChars": 17,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.heading"
+        },
+        {
+          "id": "text-09",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.source"
+        },
+        {
+          "id": "text-10",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.name"
+        },
+        {
+          "id": "text-11",
+          "type": "text",
+          "maxChars": 28,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.contents"
+        },
+        {
+          "id": "text-12",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.mark"
+        },
+        {
+          "id": "text-13",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "receivers.0"
+        },
+        {
+          "id": "text-14",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "receivers.1"
+        },
+        {
+          "id": "text-15",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "receivers.2"
+        },
+        {
+          "id": "text-16",
+          "type": "text",
+          "maxChars": 13,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.heading"
+        },
+        {
+          "id": "text-17",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.context"
+        },
+        {
+          "id": "text-18",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.label"
+        },
+        {
+          "id": "text-19",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.context"
+        },
+        {
+          "id": "text-20",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.setup"
+        },
+        {
+          "id": "text-21",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.impact"
+        },
+        {
+          "id": "text-22",
+          "type": "text",
+          "maxChars": 26,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.resolve"
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "c4834e6a1234b943667ac71334cf4074b68950a5e64ca0edf2ca22fc912c7837"
+    },
+    {
+      "id": "01-B:decompose-and-consolidate",
+      "style": "01-B",
+      "selection": "continuous-performance@1.1.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "concept-decomposition"
+      ],
+      "phases": [
+        "evidence",
+        "concept",
+        "parts",
+        "rules",
+        "consolidation",
+        "result"
+      ],
+      "counts": {
+        "parts": {
+          "min": 3,
+          "max": 3
+        },
+        "evidence": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "cueRoles": {
+        "concept": "concept",
+        "decompose": "decompose",
+        "result": "result"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "video-to-object-morph",
+        "layer-split",
+        "curved-object-relay",
+        "container-fold"
+      ],
+      "duration": {
+        "sourceSeconds": 17.366,
+        "minFrames": 1014,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 84.3,
+          "end": 100.65
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-00",
+          "type": "text",
+          "maxChars": 2,
+          "required": true,
+          "mustChange": false,
+          "renderContext": "html",
+          "inputPath": "chapter"
+        },
+        {
+          "id": "text-01",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "label"
+        },
+        {
+          "id": "text-02",
+          "type": "text",
+          "maxChars": 28,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "context"
+        },
+        {
+          "id": "text-03",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "question"
+        },
+        {
+          "id": "text-04",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "concept"
+        },
+        {
+          "id": "text-05",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "explanation.line1"
+        },
+        {
+          "id": "text-06",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "explanation.line2"
+        },
+        {
+          "id": "text-07",
+          "type": "text",
+          "maxChars": 26,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.title"
+        },
+        {
+          "id": "text-08",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "decomposeHeading.line1"
+        },
+        {
+          "id": "text-09",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "decomposeHeading.line2"
+        },
+        {
+          "id": "text-10",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.label"
+        },
+        {
+          "id": "text-11",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.label"
+        },
+        {
+          "id": "text-12",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.label"
+        },
+        {
+          "id": "text-13",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.detail"
+        },
+        {
+          "id": "text-14",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.detail"
+        },
+        {
+          "id": "text-15",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.detail"
+        },
+        {
+          "id": "text-16",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.sample"
+        },
+        {
+          "id": "text-17",
+          "type": "text",
+          "maxChars": 26,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "ruleHeading"
+        },
+        {
+          "id": "text-18",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.instruction"
+        },
+        {
+          "id": "text-19",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.instruction"
+        },
+        {
+          "id": "text-20",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.instruction"
+        },
+        {
+          "id": "text-21",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "resultHeading.line1"
+        },
+        {
+          "id": "text-22",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "resultHeading.line2"
+        },
+        {
+          "id": "text-23",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result"
+        },
+        {
+          "id": "text-24",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.name"
+        },
+        {
+          "id": "text-25",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.mark"
+        },
+        {
+          "id": "evidence",
+          "type": "video",
+          "inputPath": "evidence.video",
+          "aspect": "16:9",
+          "playback": {
+            "start": 84.3,
+            "end": 90.6,
+            "fps": 30,
+            "rate": 1
+          }
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "c4834e6a1234b943667ac71334cf4074b68950a5e64ca0edf2ca22fc912c7837"
+    },
+    {
+      "id": "01-C:claim-and-response",
+      "style": "01-C",
+      "selection": "stage-performance@1.1.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "claim-method-proof-response"
+      ],
+      "phases": [
+        "claim",
+        "method",
+        "distribution",
+        "proof",
+        "response"
+      ],
+      "counts": {
+        "audience": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "method": "method",
+        "distribution": "distribution",
+        "proof": "proof",
+        "response": "response"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "depth-stage",
+        "foreground-background-relay",
+        "staggered-distribution",
+        "presenter-reaction"
+      ],
+      "duration": {
+        "sourceSeconds": 15.466,
+        "minFrames": 780,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 0,
+          "end": 7.0
+        },
+        {
+          "id": "action-02",
+          "start": 8.45,
+          "end": 10.95
+        },
+        {
+          "id": "action-03",
+          "start": 11.1,
+          "end": 14.4
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-claim-line1",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line1"
+        },
+        {
+          "id": "text-claim-line2",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line2"
+        },
+        {
+          "id": "text-claim-context",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.context"
+        },
+        {
+          "id": "text-method-heading",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.heading"
+        },
+        {
+          "id": "text-proof-heading",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.heading"
+        },
+        {
+          "id": "text-method-kicker",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.kicker"
+        },
+        {
+          "id": "text-method-name",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.name"
+        },
+        {
+          "id": "text-method-contents",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.contents"
+        },
+        {
+          "id": "text-audience-0",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "audience.0"
+        },
+        {
+          "id": "text-audience-1",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "audience.1"
+        },
+        {
+          "id": "text-audience-2",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "audience.2"
+        },
+        {
+          "id": "text-proof-note",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.note"
+        },
+        {
+          "id": "text-response-context",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.context"
+        },
+        {
+          "id": "text-response-heading",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.heading"
+        },
+        {
+          "id": "text-response-conclusion",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.conclusion"
+        },
+        {
+          "id": "text-response-label",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.label"
+        },
+        {
+          "id": "text-chapterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}"
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "ad07e476c8248e7b34718add32b0d08aba433e42445c4db20b3bde17f49cc0bb"
+    },
+    {
+      "id": "01-C:evidence-and-focus",
+      "style": "01-C",
+      "selection": "stage-performance@1.1.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "evidence-result-observations"
+      ],
+      "phases": [
+        "overview",
+        "detail",
+        "result",
+        "observations",
+        "conclusion"
+      ],
+      "counts": {
+        "observations": {
+          "min": 3,
+          "max": 3
+        },
+        "evidence": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "overview": "overview",
+        "detail": "detail",
+        "result": "result",
+        "focus": "focus"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "depth-stage",
+        "video-relay",
+        "three-point-focus",
+        "presenter-reframe"
+      ],
+      "duration": {
+        "sourceSeconds": 15.700000000000003,
+        "minFrames": 715,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 68.6,
+          "end": 70.0
+        },
+        {
+          "id": "action-02",
+          "start": 72.2,
+          "end": 76.5
+        },
+        {
+          "id": "action-03",
+          "start": 78.1,
+          "end": 84.1
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-entry",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "entry"
+        },
+        {
+          "id": "text-claim",
+          "type": "text",
+          "maxChars": 15,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim"
+        },
+        {
+          "id": "text-conclusion",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "conclusion"
+        },
+        {
+          "id": "text-evidence-title",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.title"
+        },
+        {
+          "id": "text-observations-0",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.0"
+        },
+        {
+          "id": "text-observations-1",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.1"
+        },
+        {
+          "id": "text-observations-2",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.2"
+        },
+        {
+          "id": "text-result",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result"
+        },
+        {
+          "id": "text-evidence-resultTitle",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.resultTitle"
+        },
+        {
+          "id": "text-chapterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}"
+        },
+        {
+          "id": "video-overview",
+          "type": "video",
+          "inputPath": "evidence.overview",
+          "aspect": "16:9",
+          "playback": {
+            "start": 69.2,
+            "end": 72.2,
+            "fps": 30,
+            "rate": 1,
+            "terminalHoldSeconds": 0
+          }
+        },
+        {
+          "id": "video-detail",
+          "type": "video",
+          "inputPath": "evidence.detail",
+          "aspect": "16:9",
+          "playback": {
+            "start": 72.2,
+            "end": 74.966,
+            "fps": 30,
+            "rate": 2.4,
+            "terminalHoldSeconds": 0
+          }
+        },
+        {
+          "id": "video-result",
+          "type": "video",
+          "inputPath": "evidence.result",
+          "aspect": "16:9",
+          "playback": {
+            "start": 74.966,
+            "end": 84.3,
+            "fps": 30,
+            "rate": 1,
+            "terminalHoldSeconds": 1.34
+          }
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "ad07e476c8248e7b34718add32b0d08aba433e42445c4db20b3bde17f49cc0bb"
+    },
+    {
+      "id": "01-C:decompose-and-consolidate",
+      "style": "01-C",
+      "selection": "stage-performance@1.1.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "concept-decomposition"
+      ],
+      "phases": [
+        "concept",
+        "parts",
+        "consolidation",
+        "result"
+      ],
+      "counts": {
+        "parts": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "concept": "concept",
+        "decompose": "decompose",
+        "consolidate": "consolidate"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "depth-stage",
+        "three-part-demo",
+        "group-consolidation"
+      ],
+      "duration": {
+        "sourceSeconds": 17.366,
+        "minFrames": 551,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 84.3,
+          "end": 84.85
+        },
+        {
+          "id": "action-02",
+          "start": 86.5,
+          "end": 87.2
+        },
+        {
+          "id": "action-03",
+          "start": 89.48,
+          "end": 94.0
+        },
+        {
+          "id": "action-04",
+          "start": 95.7,
+          "end": 98.9
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-entry",
+          "type": "text",
+          "maxChars": 15,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "entry"
+        },
+        {
+          "id": "text-decomposeHeading",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "decomposeHeading"
+        },
+        {
+          "id": "text-consolidateHeading",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "consolidateHeading"
+        },
+        {
+          "id": "text-concept",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "concept"
+        },
+        {
+          "id": "text-context",
+          "type": "text",
+          "maxChars": 28,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "context"
+        },
+        {
+          "id": "text-parts-0-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.label"
+        },
+        {
+          "id": "text-parts-1-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.label"
+        },
+        {
+          "id": "text-parts-2-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.label"
+        },
+        {
+          "id": "text-partKicker",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "partKicker"
+        },
+        {
+          "id": "text-partNote",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "partNote"
+        },
+        {
+          "id": "text-parts-0-sample",
+          "type": "text",
+          "maxChars": 1,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.sample"
+        },
+        {
+          "id": "text-result-kicker",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.kicker"
+        },
+        {
+          "id": "text-result-label",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.label"
+        },
+        {
+          "id": "text-result-contents",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.contents"
+        },
+        {
+          "id": "text-chapterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}"
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "ad07e476c8248e7b34718add32b0d08aba433e42445c4db20b3bde17f49cc0bb"
+    },
+    {
+      "id": "01-D:claim-and-response",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "claim-method-proof-response"
+      ],
+      "phases": [
+        "claim",
+        "method",
+        "distribution",
+        "proof",
+        "response"
+      ],
+      "counts": {
+        "steps": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "method": "method",
+        "distribution": "distribution",
+        "proof": "proof",
+        "response": "response"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "rule-reveal",
+        "cross-column-relay",
+        "presenter-reaction"
+      ],
+      "duration": {
+        "sourceSeconds": 15.466,
+        "minFrames": 794,
+        "maxHoldFrames": 360,
+        "followingFrames": 39
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 0,
+          "end": 2.85
+        },
+        {
+          "id": "action-02",
+          "start": 3.1,
+          "end": 7.2
+        },
+        {
+          "id": "action-03",
+          "start": 8.45,
+          "end": 10.98
+        },
+        {
+          "id": "action-04",
+          "start": 11.1,
+          "end": 14.65
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-claim-line1",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line1",
+          "label": "主张 · 第一行"
+        },
+        {
+          "id": "text-claim-line2",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line2",
+          "label": "主张 · 第二行"
+        },
+        {
+          "id": "text-claim-context",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.context",
+          "label": "主张 · 背景说明"
+        },
+        {
+          "id": "text-method-heading",
+          "type": "text",
+          "maxChars": 7,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.heading",
+          "label": "方法 · 标题"
+        },
+        {
+          "id": "text-method-name",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.name",
+          "label": "方法 · 名称"
+        },
+        {
+          "id": "text-steps-0",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "steps.0",
+          "label": "步骤 · 1"
+        },
+        {
+          "id": "text-steps-1",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "steps.1",
+          "label": "步骤 · 2"
+        },
+        {
+          "id": "text-steps-2",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "steps.2",
+          "label": "步骤 · 3"
+        },
+        {
+          "id": "text-audience",
+          "type": "text",
+          "maxChars": 28,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "audience",
+          "label": "受众"
+        },
+        {
+          "id": "text-proof-line1",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.line1",
+          "label": "证据 · 第一行"
+        },
+        {
+          "id": "text-proof-line2",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.line2",
+          "label": "证据 · 第二行"
+        },
+        {
+          "id": "text-proof-note",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.note",
+          "label": "证据 · 说明"
+        },
+        {
+          "id": "text-response-context",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.context",
+          "label": "回应 · 背景说明"
+        },
+        {
+          "id": "text-response-line1",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.line1",
+          "label": "回应 · 第一行"
+        },
+        {
+          "id": "text-response-line2",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.line2",
+          "label": "回应 · 第二行"
+        },
+        {
+          "id": "text-response-conclusion",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.conclusion",
+          "label": "回应 · 结论"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "presenterLabel",
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterCount",
+          "type": "text",
+          "maxChars": 3,
+          "required": true,
+          "mustChange": false,
+          "renderContext": "html",
+          "inputPath": "chapterCount",
+          "label": "章节总数"
+        },
+        {
+          "id": "text-label",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "label",
+          "label": "名称"
+        },
+        {
+          "id": "text-chapter",
+          "type": "text",
+          "maxChars": 3,
+          "required": true,
+          "mustChange": false,
+          "inputPath": "chapter",
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:evidence-and-focus",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "evidence-result-observations"
+      ],
+      "phases": [
+        "overview",
+        "detail",
+        "result",
+        "observations",
+        "conclusion"
+      ],
+      "counts": {
+        "observations": {
+          "min": 3,
+          "max": 3
+        },
+        "evidence": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "overview": "overview",
+        "detail": "detail",
+        "result": "result",
+        "focus": "focus"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "video-relay",
+        "margin-annotation",
+        "conclusion-reveal"
+      ],
+      "duration": {
+        "sourceSeconds": 15.700000000000003,
+        "minFrames": 595,
+        "maxHoldFrames": 360,
+        "followingFrames": 39
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 68.6,
+          "end": 70.0
+        },
+        {
+          "id": "action-02",
+          "start": 72.2,
+          "end": 75.6
+        },
+        {
+          "id": "action-03",
+          "start": 77.84,
+          "end": 81.4
+        },
+        {
+          "id": "action-04",
+          "start": 82.65,
+          "end": 84.0
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-claim",
+          "type": "text",
+          "maxChars": 15,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim",
+          "label": "主张"
+        },
+        {
+          "id": "text-evidence-title",
+          "type": "text",
+          "maxChars": 25,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.title",
+          "label": "证据 · 标题"
+        },
+        {
+          "id": "text-evidence-overviewNote",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.overviewNote",
+          "label": "证据 · 概览说明"
+        },
+        {
+          "id": "text-observations-0",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.0",
+          "label": "观察项 · 1"
+        },
+        {
+          "id": "text-observations-1",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.1",
+          "label": "观察项 · 2"
+        },
+        {
+          "id": "text-observations-2",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.2",
+          "label": "观察项 · 3"
+        },
+        {
+          "id": "text-conclusion",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "conclusion",
+          "label": "结论"
+        },
+        {
+          "id": "text-result",
+          "type": "text",
+          "maxChars": 28,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result",
+          "label": "结果"
+        },
+        {
+          "id": "text-evidence-overviewTitle",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.overviewTitle",
+          "label": "证据 · 概览标题"
+        },
+        {
+          "id": "text-evidence-detailTitle",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.detailTitle",
+          "label": "证据 · 细节标题"
+        },
+        {
+          "id": "text-evidence-detailNote",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.detailNote",
+          "label": "证据 · 细节说明"
+        },
+        {
+          "id": "text-evidence-resultTitle",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.resultTitle",
+          "label": "证据 · 结果标题"
+        },
+        {
+          "id": "text-evidence-resultNote",
+          "type": "text",
+          "maxChars": 28,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.resultNote",
+          "label": "证据 · 结果说明"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "presenterLabel",
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterCount",
+          "type": "text",
+          "maxChars": 3,
+          "required": true,
+          "mustChange": false,
+          "renderContext": "html",
+          "inputPath": "chapterCount",
+          "label": "章节总数"
+        },
+        {
+          "id": "text-label",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "label",
+          "label": "名称"
+        },
+        {
+          "id": "text-chapter",
+          "type": "text",
+          "maxChars": 3,
+          "required": true,
+          "mustChange": false,
+          "inputPath": "chapter",
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "video-overview",
+          "type": "video",
+          "inputPath": "evidence.overview",
+          "aspect": "16:9",
+          "playback": {
+            "start": 69.2,
+            "end": 72.2,
+            "fps": 30,
+            "rate": 1,
+            "terminalHoldSeconds": 0
+          },
+          "label": "证据 · 概览"
+        },
+        {
+          "id": "video-detail",
+          "type": "video",
+          "inputPath": "evidence.detail",
+          "aspect": "16:9",
+          "playback": {
+            "start": 72.2,
+            "end": 74.966,
+            "fps": 30,
+            "rate": 2.4,
+            "terminalHoldSeconds": 0
+          },
+          "label": "证据 · 细节"
+        },
+        {
+          "id": "video-result",
+          "type": "video",
+          "inputPath": "evidence.result",
+          "aspect": "16:9",
+          "playback": {
+            "start": 74.966,
+            "end": 84.3,
+            "fps": 30,
+            "rate": 1,
+            "terminalHoldSeconds": 1.34
+          },
+          "label": "证据 · 结果"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:decompose-and-consolidate",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "concept-decomposition"
+      ],
+      "phases": [
+        "concept",
+        "parts",
+        "consolidation",
+        "result"
+      ],
+      "counts": {
+        "parts": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "concept": "concept",
+        "decompose": "decompose",
+        "consolidate": "consolidate"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "three-part-demo",
+        "page-consolidation"
+      ],
+      "duration": {
+        "sourceSeconds": 17.366,
+        "minFrames": 604,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 84.3,
+          "end": 84.95
+        },
+        {
+          "id": "action-02",
+          "start": 86.5,
+          "end": 87.2
+        },
+        {
+          "id": "action-03",
+          "start": 89.8,
+          "end": 93.2
+        },
+        {
+          "id": "action-04",
+          "start": 94.8,
+          "end": 99.9
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-entry",
+          "type": "text",
+          "maxChars": 7,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "entry",
+          "label": "开场"
+        },
+        {
+          "id": "text-concept",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "concept",
+          "label": "概念"
+        },
+        {
+          "id": "text-context",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "context",
+          "label": "背景说明"
+        },
+        {
+          "id": "text-decomposeHeading",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "decomposeHeading",
+          "label": "拆解标题"
+        },
+        {
+          "id": "text-parts-0-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.label",
+          "label": "拆解项 · 1 · 名称"
+        },
+        {
+          "id": "text-parts-1-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.label",
+          "label": "拆解项 · 2 · 名称"
+        },
+        {
+          "id": "text-parts-2-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.label",
+          "label": "拆解项 · 3 · 名称"
+        },
+        {
+          "id": "text-parts-0-sample",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.sample",
+          "label": "拆解项 · 1 · 示例"
+        },
+        {
+          "id": "text-consolidateHeading",
+          "type": "text",
+          "maxChars": 14,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "consolidateHeading",
+          "label": "聚合标题"
+        },
+        {
+          "id": "text-result-file",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.file",
+          "label": "结果 · 文件"
+        },
+        {
+          "id": "text-result-contents",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.contents",
+          "label": "结果 · 目录内容"
+        },
+        {
+          "id": "text-result-conclusion",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.conclusion",
+          "label": "结果 · 结论"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "presenterLabel",
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterCount",
+          "type": "text",
+          "maxChars": 3,
+          "required": true,
+          "mustChange": false,
+          "renderContext": "html",
+          "inputPath": "chapterCount",
+          "label": "章节总数"
+        },
+        {
+          "id": "text-label",
+          "type": "text",
+          "maxChars": 18,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "label",
+          "label": "名称"
+        },
+        {
+          "id": "text-chapter",
+          "type": "text",
+          "maxChars": 3,
+          "required": true,
+          "mustChange": false,
+          "inputPath": "chapter",
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:recap-to-evidence-to-incident",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "recap-to-evidence-to-incident"
+      ],
+      "phases": [
+        "recap",
+        "wall",
+        "incident",
+        "result",
+        "cost",
+        "response"
+      ],
+      "counts": {
+        "wallUniqueWorks": {
+          "min": 27,
+          "max": 27
+        }
+      },
+      "cueRoles": {
+        "recap": "recap",
+        "wall": "wall",
+        "incident": "incident",
+        "result": "result",
+        "cost": "cost",
+        "response": "response"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "recap-to-evidence-to-incident-causal-relay"
+      ],
+      "duration": {
+        "sourceSeconds": 17.6,
+        "minFrames": 1056,
+        "maxHoldFrames": 0,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "complete-causal-performance",
+          "start": 15.466,
+          "end": 33.066
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-recap-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "recap.heading",
+          "maxChars": 14,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "前情 · 标题"
+        },
+        {
+          "id": "text-recap-tool",
+          "type": "text",
+          "required": true,
+          "inputPath": "recap.tool",
+          "maxChars": 20,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "前情 · 工具"
+        },
+        {
+          "id": "text-recap-mediaTitle",
+          "type": "text",
+          "required": true,
+          "inputPath": "recap.mediaTitle",
+          "maxChars": 24,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "前情 · 视频标题"
+        },
+        {
+          "id": "text-recap-observation",
+          "type": "text",
+          "required": true,
+          "inputPath": "recap.observation",
+          "maxChars": 26,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "前情 · 观察"
+        },
+        {
+          "id": "text-wall-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "wall.heading",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "作品墙 · 标题"
+        },
+        {
+          "id": "text-wall-attribution",
+          "type": "text",
+          "required": true,
+          "inputPath": "wall.attribution",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "作品墙 · 来源说明"
+        },
+        {
+          "id": "text-incident-context",
+          "type": "text",
+          "required": true,
+          "inputPath": "incident.context",
+          "maxChars": 26,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "事件 · 背景说明"
+        },
+        {
+          "id": "text-incident-before",
+          "type": "text",
+          "required": true,
+          "inputPath": "incident.before",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "事件 · 变化前"
+        },
+        {
+          "id": "text-incident-result",
+          "type": "text",
+          "required": true,
+          "inputPath": "incident.result",
+          "maxChars": 8,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "事件 · 结果"
+        },
+        {
+          "id": "text-incident-cost",
+          "type": "text",
+          "required": true,
+          "inputPath": "incident.cost",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "事件 · 代价"
+        },
+        {
+          "id": "text-response",
+          "type": "text",
+          "required": true,
+          "inputPath": "response",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "回应"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "presenterLabel",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "required": true,
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterTitle",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterTitle",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "章节标题"
+        },
+        {
+          "id": "chapter",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapter",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "chapterCount",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterCount",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节总数"
+        },
+        {
+          "id": "video-previous-work",
+          "type": "video",
+          "required": true,
+          "aspect": "16:9",
+          "role": "recap.media",
+          "playback": {
+            "start": 17.83,
+            "end": 19.72,
+            "fps": 30,
+            "rate": 1
+          },
+          "inputPath": "recap.media",
+          "label": "前情 · 媒体素材"
+        },
+        {
+          "id": "wall",
+          "type": "wall-sprites",
+          "required": true,
+          "inputPath": "wall.media",
+          "role": "real attributed works; sprite sheets not unique works",
+          "minFiles": 389,
+          "minUniqueWorks": 27,
+          "label": "作品墙 · 媒体素材"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:transfer-and-consequence",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "transfer-and-consequence"
+      ],
+      "phases": [
+        "transfer",
+        "receive",
+        "consequence",
+        "impact",
+        "positive",
+        "negative"
+      ],
+      "counts": {},
+      "cueRoles": {
+        "transfer": "transfer",
+        "receive": "receive",
+        "consequence": "consequence",
+        "impact": "impact",
+        "positive": "positive",
+        "negative": "negative"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "transfer-and-consequence-causal-relay"
+      ],
+      "duration": {
+        "sourceSeconds": 15.166999999999994,
+        "minFrames": 910,
+        "maxHoldFrames": 0,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "complete-causal-performance",
+          "start": 33.066,
+          "end": 48.233
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-transfer-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "transfer.heading",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "交接 · 标题"
+        },
+        {
+          "id": "text-consequence-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "consequence.heading",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "后果 · 标题"
+        },
+        {
+          "id": "text-contrast-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "contrast.heading",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "对照 · 标题"
+        },
+        {
+          "id": "text-transfer-objectLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "transfer.objectLabel",
+          "maxChars": 4,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "交接 · 物件名称"
+        },
+        {
+          "id": "text-transfer-receiver",
+          "type": "text",
+          "required": true,
+          "inputPath": "transfer.receiver",
+          "maxChars": 4,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "交接 · 接收方"
+        },
+        {
+          "id": "text-consequence-objectLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "consequence.objectLabel",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "后果 · 物件名称"
+        },
+        {
+          "id": "text-consequence-impactLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "consequence.impactLabel",
+          "maxChars": 2,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "后果 · 冲击说明"
+        },
+        {
+          "id": "text-contrast-positive",
+          "type": "text",
+          "required": true,
+          "inputPath": "contrast.positive",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "对照 · 积极感受"
+        },
+        {
+          "id": "text-contrast-negative",
+          "type": "text",
+          "required": true,
+          "inputPath": "contrast.negative",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "对照 · 消极感受"
+        },
+        {
+          "id": "text-disclaimer",
+          "type": "text",
+          "required": true,
+          "inputPath": "disclaimer",
+          "maxChars": 30,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "性质说明"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "presenterLabel",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "required": true,
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterTitle",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterTitle",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "章节标题"
+        },
+        {
+          "id": "chapter",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapter",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "chapterCount",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterCount",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节总数"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:claim-to-evolving-timeline",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "claim-to-evolving-timeline"
+      ],
+      "phases": [
+        "claim",
+        "permanence",
+        "cross",
+        "timeline",
+        "growth",
+        "ceiling",
+        "continue"
+      ],
+      "counts": {
+        "stages": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "claim": "claim",
+        "permanence": "permanence",
+        "cross": "cross",
+        "timeline": "timeline",
+        "growth": "growth",
+        "ceiling": "ceiling",
+        "continue": "continue"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "claim-to-evolving-timeline-causal-relay"
+      ],
+      "duration": {
+        "sourceSeconds": 20.366999999999997,
+        "minFrames": 1222,
+        "maxHoldFrames": 0,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "complete-causal-performance",
+          "start": 48.233,
+          "end": 68.6
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-claim",
+          "type": "text",
+          "required": true,
+          "inputPath": "claim",
+          "maxChars": 7,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "主张"
+        },
+        {
+          "id": "text-permanence",
+          "type": "text",
+          "required": true,
+          "inputPath": "permanence",
+          "maxChars": 7,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "持续性"
+        },
+        {
+          "id": "text-disclaimer",
+          "type": "text",
+          "required": true,
+          "inputPath": "disclaimer",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "性质说明"
+        },
+        {
+          "id": "text-progression-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "progression.heading",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "进展 · 标题"
+        },
+        {
+          "id": "text-change-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "change.heading",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "变化 · 标题"
+        },
+        {
+          "id": "text-conclusion",
+          "type": "text",
+          "required": true,
+          "inputPath": "conclusion",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "结论"
+        },
+        {
+          "id": "text-stages-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "stages.0",
+          "maxChars": 5,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "阶段 · 1"
+        },
+        {
+          "id": "text-stages-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "stages.1",
+          "maxChars": 5,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "阶段 · 2"
+        },
+        {
+          "id": "text-stages-2",
+          "type": "text",
+          "required": true,
+          "inputPath": "stages.2",
+          "maxChars": 5,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "阶段 · 3"
+        },
+        {
+          "id": "text-ceiling",
+          "type": "text",
+          "required": true,
+          "inputPath": "ceiling",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "上界说明"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "presenterLabel",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "required": true,
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterTitle",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterTitle",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "章节标题"
+        },
+        {
+          "id": "chapter",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapter",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "chapterCount",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterCount",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节总数"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:simplify-and-interrupt",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "simplify-and-interrupt"
+      ],
+      "phases": [
+        "draft",
+        "strike",
+        "goal",
+        "plan",
+        "interrupt",
+        "result"
+      ],
+      "counts": {
+        "drafts": {
+          "min": 4,
+          "max": 4
+        },
+        "planSteps": {
+          "min": 4,
+          "max": 4
+        },
+        "interruptions": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "draft": "draft",
+        "strike": "strike",
+        "goal": "goal",
+        "plan": "plan",
+        "interrupt": "interrupt",
+        "result": "result"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "simplify-and-interrupt-causal-relay"
+      ],
+      "duration": {
+        "sourceSeconds": 16.534000000000006,
+        "minFrames": 992,
+        "maxHoldFrames": 0,
+        "followingFrames": 15
+      },
+      "motionWindows": [
+        {
+          "id": "complete-causal-performance",
+          "start": 101.666,
+          "end": 118.2
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-simplify-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "simplify.heading",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "精简 · 标题"
+        },
+        {
+          "id": "text-disclaimer",
+          "type": "text",
+          "required": true,
+          "inputPath": "disclaimer",
+          "maxChars": 34,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "性质说明"
+        },
+        {
+          "id": "text-draft-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "draft.0",
+          "maxChars": 24,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "草案 · 1"
+        },
+        {
+          "id": "text-draft-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "draft.1",
+          "maxChars": 24,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "草案 · 2"
+        },
+        {
+          "id": "text-draft-2",
+          "type": "text",
+          "required": true,
+          "inputPath": "draft.2",
+          "maxChars": 24,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "草案 · 3"
+        },
+        {
+          "id": "text-draft-3",
+          "type": "text",
+          "required": true,
+          "inputPath": "draft.3",
+          "maxChars": 24,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "草案 · 4"
+        },
+        {
+          "id": "text-goal",
+          "type": "text",
+          "required": true,
+          "inputPath": "goal",
+          "maxChars": 36,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "目标"
+        },
+        {
+          "id": "text-goalLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "goalLabel",
+          "maxChars": 16,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "目标说明"
+        },
+        {
+          "id": "text-plan-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "plan.heading",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "计划 · 标题"
+        },
+        {
+          "id": "text-plan-steps-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "plan.steps.0",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "计划 · 步骤 · 1"
+        },
+        {
+          "id": "text-plan-steps-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "plan.steps.1",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "计划 · 步骤 · 2"
+        },
+        {
+          "id": "text-plan-steps-2",
+          "type": "text",
+          "required": true,
+          "inputPath": "plan.steps.2",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "计划 · 步骤 · 3"
+        },
+        {
+          "id": "text-plan-steps-3",
+          "type": "text",
+          "required": true,
+          "inputPath": "plan.steps.3",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "计划 · 步骤 · 4"
+        },
+        {
+          "id": "text-interruptions-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "interruptions.0",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "干扰项 · 1"
+        },
+        {
+          "id": "text-interruptions-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "interruptions.1",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "干扰项 · 2"
+        },
+        {
+          "id": "text-interruptions-2",
+          "type": "text",
+          "required": true,
+          "inputPath": "interruptions.2",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "干扰项 · 3"
+        },
+        {
+          "id": "text-result",
+          "type": "text",
+          "required": true,
+          "inputPath": "result",
+          "maxChars": 20,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "结果"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "presenterLabel",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "required": true,
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterTitle",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterTitle",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "章节标题"
+        },
+        {
+          "id": "chapter",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapter",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "chapterCount",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterCount",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节总数"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:evidence-to-handbook",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "evidence-to-handbook"
+      ],
+      "phases": [
+        "folder",
+        "shrink",
+        "evidence",
+        "code",
+        "observe",
+        "collect",
+        "handbook",
+        "reuse"
+      ],
+      "counts": {
+        "parts": {
+          "min": 3,
+          "max": 3
+        },
+        "recordings": {
+          "min": 2,
+          "max": 2
+        }
+      },
+      "cueRoles": {
+        "folder": "folder",
+        "shrink": "shrink",
+        "evidence": "evidence",
+        "code": "code",
+        "observe": "observe",
+        "collect": "collect",
+        "handbook": "handbook",
+        "reuse": "reuse"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "evidence-to-handbook-causal-relay"
+      ],
+      "duration": {
+        "sourceSeconds": 24.200000000000003,
+        "minFrames": 1452,
+        "maxHoldFrames": 0,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "complete-causal-performance",
+          "start": 118.2,
+          "end": 142.4
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-entry-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "entry.heading",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "开场 · 标题"
+        },
+        {
+          "id": "text-entry-note",
+          "type": "text",
+          "required": true,
+          "inputPath": "entry.note",
+          "maxChars": 28,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "开场 · 说明"
+        },
+        {
+          "id": "text-folder-label",
+          "type": "text",
+          "required": true,
+          "inputPath": "folder.label",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "工程文件夹 · 名称"
+        },
+        {
+          "id": "text-evidence-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "evidence.heading",
+          "maxChars": 24,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "证据 · 标题"
+        },
+        {
+          "id": "text-evidence-title",
+          "type": "text",
+          "required": true,
+          "inputPath": "evidence.title",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "证据 · 标题"
+        },
+        {
+          "id": "text-evidence-attribution",
+          "type": "text",
+          "required": true,
+          "inputPath": "evidence.attribution",
+          "maxChars": 28,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "证据 · 来源说明"
+        },
+        {
+          "id": "text-observations-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "observations.0",
+          "maxChars": 8,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "观察项 · 1"
+        },
+        {
+          "id": "text-observations-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "observations.1",
+          "maxChars": 8,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "观察项 · 2"
+        },
+        {
+          "id": "text-handbook-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "handbook.heading",
+          "maxChars": 20,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "手册 · 标题"
+        },
+        {
+          "id": "text-handbook-file",
+          "type": "text",
+          "required": true,
+          "inputPath": "handbook.file",
+          "maxChars": 24,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "手册 · 文件"
+        },
+        {
+          "id": "text-handbook-contents",
+          "type": "text",
+          "required": true,
+          "inputPath": "handbook.contents",
+          "maxChars": 28,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "手册 · 目录内容"
+        },
+        {
+          "id": "text-parts-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "parts.0",
+          "maxChars": 8,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "拆解项 · 1"
+        },
+        {
+          "id": "text-parts-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "parts.1",
+          "maxChars": 8,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "拆解项 · 2"
+        },
+        {
+          "id": "text-parts-2",
+          "type": "text",
+          "required": true,
+          "inputPath": "parts.2",
+          "maxChars": 8,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "拆解项 · 3"
+        },
+        {
+          "id": "text-handbook-audience",
+          "type": "text",
+          "required": true,
+          "inputPath": "handbook.audience",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "手册 · 受众"
+        },
+        {
+          "id": "text-conclusion",
+          "type": "text",
+          "required": true,
+          "inputPath": "conclusion",
+          "maxChars": 24,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "结论"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "presenterLabel",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "required": true,
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterTitle",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterTitle",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "章节标题"
+        },
+        {
+          "id": "chapter",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapter",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "chapterCount",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterCount",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节总数"
+        },
+        {
+          "id": "video-intro",
+          "type": "video",
+          "required": true,
+          "aspect": "16:9",
+          "role": "evidence.intro",
+          "playback": {
+            "start": 122,
+            "end": 126.7,
+            "fps": 30,
+            "rate": 1
+          },
+          "inputPath": "evidence.intro",
+          "label": "证据 · 介绍"
+        },
+        {
+          "id": "video-code",
+          "type": "video",
+          "required": true,
+          "aspect": "16:9",
+          "role": "evidence.code",
+          "playback": {
+            "start": 126.7,
+            "end": 136.1,
+            "fps": 30,
+            "rate": 1
+          },
+          "inputPath": "evidence.code",
+          "label": "证据 · 代码内容"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:animated-contents",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "animated-contents"
+      ],
+      "phases": [
+        "tiles",
+        "keyword",
+        "camera",
+        "evidence",
+        "transition",
+        "signature"
+      ],
+      "counts": {
+        "categories": {
+          "min": 6,
+          "max": 6
+        }
+      },
+      "cueRoles": {
+        "tiles": "tiles",
+        "keyword": "keyword",
+        "camera": "camera",
+        "evidence": "evidence",
+        "transition": "transition",
+        "signature": "signature"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "animated-contents-causal-relay"
+      ],
+      "duration": {
+        "sourceSeconds": 7.0,
+        "minFrames": 420,
+        "maxHoldFrames": 0,
+        "followingFrames": 24
+      },
+      "motionWindows": [
+        {
+          "id": "complete-causal-performance",
+          "start": 142.4,
+          "end": 149.4
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "heading",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "标题"
+        },
+        {
+          "id": "text-disclaimer",
+          "type": "text",
+          "required": true,
+          "inputPath": "disclaimer",
+          "maxChars": 38,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "性质说明"
+        },
+        {
+          "id": "text-categories-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "categories.0",
+          "maxChars": 7,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "分类 · 1"
+        },
+        {
+          "id": "text-categories-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "categories.1",
+          "maxChars": 7,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "分类 · 2"
+        },
+        {
+          "id": "text-categories-2",
+          "type": "text",
+          "required": true,
+          "inputPath": "categories.2",
+          "maxChars": 7,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "分类 · 3"
+        },
+        {
+          "id": "text-categories-3",
+          "type": "text",
+          "required": true,
+          "inputPath": "categories.3",
+          "maxChars": 7,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "分类 · 4"
+        },
+        {
+          "id": "text-categories-4",
+          "type": "text",
+          "required": true,
+          "inputPath": "categories.4",
+          "maxChars": 7,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "分类 · 5"
+        },
+        {
+          "id": "text-categories-5",
+          "type": "text",
+          "required": true,
+          "inputPath": "categories.5",
+          "maxChars": 7,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "分类 · 6"
+        },
+        {
+          "id": "text-keyword",
+          "type": "text",
+          "required": true,
+          "inputPath": "keyword",
+          "maxChars": 4,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "关键词"
+        },
+        {
+          "id": "text-evidence-title",
+          "type": "text",
+          "required": true,
+          "inputPath": "evidence.title",
+          "maxChars": 14,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "证据 · 标题"
+        },
+        {
+          "id": "text-brandSample",
+          "type": "text",
+          "required": true,
+          "inputPath": "brandSample",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "品牌样例"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "presenterLabel",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "required": true,
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterTitle",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterTitle",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "章节标题"
+        },
+        {
+          "id": "chapter",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapter",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "chapterCount",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterCount",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节总数"
+        },
+        {
+          "id": "video-example",
+          "type": "video",
+          "required": true,
+          "aspect": "16:9",
+          "role": "evidence.media",
+          "playback": {
+            "start": 144.05,
+            "end": 149.4,
+            "fps": 30,
+            "rate": 1
+          },
+          "inputPath": "evidence.media",
+          "label": "证据 · 媒体素材"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:closing-with-invitation",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "closing-with-invitation"
+      ],
+      "phases": [
+        "project",
+        "invitation",
+        "first",
+        "second",
+        "third",
+        "withdraw",
+        "signoff",
+        "bye"
+      ],
+      "counts": {
+        "invitationSteps": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "project": "project",
+        "invitation": "invitation",
+        "first": "first",
+        "second": "second",
+        "third": "third",
+        "withdraw": "withdraw",
+        "signoff": "signoff",
+        "bye": "bye"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-split",
+        "closing-with-invitation-causal-relay"
+      ],
+      "duration": {
+        "sourceSeconds": 13.833333333333314,
+        "minFrames": 830,
+        "maxHoldFrames": 0,
+        "followingFrames": 28
+      },
+      "motionWindows": [
+        {
+          "id": "complete-causal-performance",
+          "start": 149.4,
+          "end": 163.23333333333332
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-project-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "project.heading",
+          "maxChars": 20,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "项目 · 标题"
+        },
+        {
+          "id": "text-project-label",
+          "type": "text",
+          "required": true,
+          "inputPath": "project.label",
+          "maxChars": 14,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "项目 · 名称"
+        },
+        {
+          "id": "text-project-url",
+          "type": "text",
+          "required": true,
+          "inputPath": "project.url",
+          "maxChars": 60,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "项目 · 链接"
+        },
+        {
+          "id": "text-invitation-steps-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "invitation.steps.0",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "邀请 · 步骤 · 1"
+        },
+        {
+          "id": "text-invitation-steps-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "invitation.steps.1",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "邀请 · 步骤 · 2"
+        },
+        {
+          "id": "text-invitation-steps-2",
+          "type": "text",
+          "required": true,
+          "inputPath": "invitation.steps.2",
+          "maxChars": 10,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "邀请 · 步骤 · 3"
+        },
+        {
+          "id": "text-invitation-heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "invitation.heading",
+          "maxChars": 30,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "邀请 · 标题"
+        },
+        {
+          "id": "text-signoff-identity",
+          "type": "text",
+          "required": true,
+          "inputPath": "signoff.identity",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "结束语 · 身份"
+        },
+        {
+          "id": "text-signoff-brand",
+          "type": "text",
+          "required": true,
+          "inputPath": "signoff.brand",
+          "maxChars": 6,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "结束语 · 本期品牌"
+        },
+        {
+          "id": "text-signoff-message",
+          "type": "text",
+          "required": true,
+          "inputPath": "signoff.message",
+          "maxChars": 16,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "结束语 · 消息"
+        },
+        {
+          "id": "text-presenterLabel",
+          "type": "text",
+          "required": true,
+          "inputPath": "presenterLabel",
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "主讲人标签"
+        },
+        {
+          "id": "text-brandLabel",
+          "type": "text",
+          "required": true,
+          "maxChars": 32,
+          "renderContext": "html",
+          "mustChange": true,
+          "inputTemplate": "{brand}　／　",
+          "label": "文字 · 品牌标签"
+        },
+        {
+          "id": "text-chapterTitle",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterTitle",
+          "maxChars": 18,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "章节标题"
+        },
+        {
+          "id": "chapter",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapter",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节"
+        },
+        {
+          "id": "chapterCount",
+          "type": "text",
+          "required": true,
+          "inputPath": "chapterCount",
+          "maxChars": 3,
+          "renderContext": "html",
+          "label": "章节总数"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:basic-keyword",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "basic-keyword"
+      ],
+      "phases": [
+        "entry",
+        "reading"
+      ],
+      "counts": {
+        "items": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "cueRoles": {
+        "entry": "entry",
+        "reading": "reading"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-rule-reveal",
+        "bounded-reading"
+      ],
+      "duration": {
+        "sourceSeconds": 6,
+        "minFrames": 360,
+        "maxHoldFrames": 1200,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "entry",
+          "start": 0,
+          "end": 1.4
+        },
+        {
+          "id": "exit",
+          "start": 5.5,
+          "end": 6
+        }
+      ],
+      "fields": [
+        {
+          "id": "heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "heading",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "标题"
+        },
+        {
+          "id": "body-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "items.0",
+          "maxChars": 72,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "条目 · 1"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:basic-points",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "basic-points"
+      ],
+      "phases": [
+        "entry",
+        "reading"
+      ],
+      "counts": {
+        "items": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "entry": "entry",
+        "reading": "reading"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-rule-reveal",
+        "bounded-reading"
+      ],
+      "duration": {
+        "sourceSeconds": 6,
+        "minFrames": 360,
+        "maxHoldFrames": 1200,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "entry",
+          "start": 0,
+          "end": 1.4
+        },
+        {
+          "id": "exit",
+          "start": 5.5,
+          "end": 6
+        }
+      ],
+      "fields": [
+        {
+          "id": "heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "heading",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "标题"
+        },
+        {
+          "id": "body-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "items.0",
+          "maxChars": 36,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "条目 · 1"
+        },
+        {
+          "id": "body-1",
+          "type": "text",
+          "required": true,
+          "inputPath": "items.1",
+          "maxChars": 36,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "条目 · 2"
+        },
+        {
+          "id": "body-2",
+          "type": "text",
+          "required": true,
+          "inputPath": "items.2",
+          "maxChars": 36,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "条目 · 3"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-D:basic-summary",
+      "style": "01-D",
+      "selection": "editorial-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "basic-summary"
+      ],
+      "phases": [
+        "entry",
+        "reading"
+      ],
+      "counts": {
+        "items": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "cueRoles": {
+        "entry": "entry",
+        "reading": "reading"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "editorial-rule-reveal",
+        "bounded-reading"
+      ],
+      "duration": {
+        "sourceSeconds": 6,
+        "minFrames": 360,
+        "maxHoldFrames": 1200,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "entry",
+          "start": 0,
+          "end": 1.4
+        },
+        {
+          "id": "exit",
+          "start": 5.5,
+          "end": 6
+        }
+      ],
+      "fields": [
+        {
+          "id": "heading",
+          "type": "text",
+          "required": true,
+          "inputPath": "heading",
+          "maxChars": 12,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "标题"
+        },
+        {
+          "id": "body-0",
+          "type": "text",
+          "required": true,
+          "inputPath": "items.0",
+          "maxChars": 84,
+          "renderContext": "html",
+          "mustChange": true,
+          "label": "条目 · 1"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "1d17d9016149ef1aed3bf8fd8118f1ee69a47c2d4debf859c53d06b887bb112b"
+    },
+    {
+      "id": "01-E:claim-and-response",
+      "style": "01-E",
+      "selection": "kinetic-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "claim-method-proof-response"
+      ],
+      "phases": [
+        "claim",
+        "method",
+        "distribution",
+        "proof",
+        "response"
+      ],
+      "counts": {
+        "audience": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "method": "method",
+        "distribution": "distribution",
+        "proof": "proof",
+        "response": "response"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "whole-word-impact",
+        "staggered-distribution",
+        "entity-response"
+      ],
+      "duration": {
+        "sourceSeconds": 15.466,
+        "minFrames": 751,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 0,
+          "end": 2.2
+        },
+        {
+          "id": "action-02",
+          "start": 3.15,
+          "end": 7.18
+        },
+        {
+          "id": "action-03",
+          "start": 8.55,
+          "end": 10.98
+        },
+        {
+          "id": "action-04",
+          "start": 11.1,
+          "end": 14.75
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-claim-line1",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line1",
+          "label": "主张 · 第一行"
+        },
+        {
+          "id": "text-claim-line2",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.line2",
+          "label": "主张 · 第二行"
+        },
+        {
+          "id": "text-claim-context",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "claim.context",
+          "label": "主张 · 背景说明"
+        },
+        {
+          "id": "text-method-line1",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.line1",
+          "label": "方法 · 第一行"
+        },
+        {
+          "id": "text-method-line2",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.line2",
+          "label": "方法 · 第二行"
+        },
+        {
+          "id": "text-method-name",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.name",
+          "label": "方法 · 名称"
+        },
+        {
+          "id": "text-method-contents",
+          "type": "text",
+          "maxChars": 28,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "method.contents",
+          "label": "方法 · 目录内容"
+        },
+        {
+          "id": "text-audience-0",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "audience.0",
+          "label": "受众 · 1"
+        },
+        {
+          "id": "text-audience-1",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "audience.1",
+          "label": "受众 · 2"
+        },
+        {
+          "id": "text-audience-2",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "audience.2",
+          "label": "受众 · 3"
+        },
+        {
+          "id": "text-proof-heading",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.heading",
+          "label": "证据 · 标题"
+        },
+        {
+          "id": "text-proof-note",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "proof.note",
+          "label": "证据 · 说明"
+        },
+        {
+          "id": "text-response-label",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.label",
+          "label": "回应 · 名称"
+        },
+        {
+          "id": "text-response-context",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.context",
+          "label": "回应 · 背景说明"
+        },
+        {
+          "id": "text-response-conclusion",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "response.conclusion",
+          "label": "回应 · 结论"
+        },
+        {
+          "id": "text-chapterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}",
+          "label": "文字 · 章节标签"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "a8ac18c50d09b1536121c6eca6829dd47f23148d8106a2f1abf08b6653238a5b"
+    },
+    {
+      "id": "01-E:evidence-and-focus",
+      "style": "01-E",
+      "selection": "kinetic-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "evidence-result-observations"
+      ],
+      "phases": [
+        "overview",
+        "detail",
+        "result",
+        "observations",
+        "conclusion"
+      ],
+      "counts": {
+        "observations": {
+          "min": 3,
+          "max": 3
+        },
+        "evidence": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "overview": "overview",
+        "detail": "detail",
+        "result": "result",
+        "focus": "focus"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "video-relay",
+        "whole-word-impact",
+        "three-point-focus"
+      ],
+      "duration": {
+        "sourceSeconds": 15.700000000000003,
+        "minFrames": 702,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 68.6,
+          "end": 70.0
+        },
+        {
+          "id": "action-02",
+          "start": 72.2,
+          "end": 75.9
+        },
+        {
+          "id": "action-03",
+          "start": 77.7,
+          "end": 84.1
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-entry",
+          "type": "text",
+          "maxChars": 6,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "entry",
+          "label": "开场"
+        },
+        {
+          "id": "text-context",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "context",
+          "label": "背景说明"
+        },
+        {
+          "id": "text-evidence-title",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.title",
+          "label": "证据 · 标题"
+        },
+        {
+          "id": "text-evidence-resultTitle",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "evidence.resultTitle",
+          "label": "证据 · 结果标题"
+        },
+        {
+          "id": "text-observations-0",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.0",
+          "label": "观察项 · 1"
+        },
+        {
+          "id": "text-observations-1",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.1",
+          "label": "观察项 · 2"
+        },
+        {
+          "id": "text-observations-2",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "observations.2",
+          "label": "观察项 · 3"
+        },
+        {
+          "id": "text-result",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result",
+          "label": "结果"
+        },
+        {
+          "id": "text-conclusion",
+          "type": "text",
+          "maxChars": 7,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "conclusion",
+          "label": "结论"
+        },
+        {
+          "id": "text-chapterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}",
+          "label": "文字 · 章节标签"
+        },
+        {
+          "id": "video-overview",
+          "type": "video",
+          "inputPath": "evidence.overview",
+          "aspect": "16:9",
+          "playback": {
+            "start": 69.2,
+            "end": 72.2,
+            "fps": 30,
+            "rate": 1,
+            "terminalHoldSeconds": 0
+          },
+          "label": "证据 · 概览"
+        },
+        {
+          "id": "video-detail",
+          "type": "video",
+          "inputPath": "evidence.detail",
+          "aspect": "16:9",
+          "playback": {
+            "start": 72.2,
+            "end": 74.966,
+            "fps": 30,
+            "rate": 2.4,
+            "terminalHoldSeconds": 0
+          },
+          "label": "证据 · 细节"
+        },
+        {
+          "id": "video-result",
+          "type": "video",
+          "inputPath": "evidence.result",
+          "aspect": "16:9",
+          "playback": {
+            "start": 74.966,
+            "end": 84.3,
+            "fps": 30,
+            "rate": 1,
+            "terminalHoldSeconds": 1.34
+          },
+          "label": "证据 · 结果"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "a8ac18c50d09b1536121c6eca6829dd47f23148d8106a2f1abf08b6653238a5b"
+    },
+    {
+      "id": "01-E:decompose-and-consolidate",
+      "style": "01-E",
+      "selection": "kinetic-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "concept-decomposition"
+      ],
+      "phases": [
+        "concept",
+        "parts",
+        "consolidation",
+        "result"
+      ],
+      "counts": {
+        "parts": {
+          "min": 4,
+          "max": 4
+        }
+      },
+      "cueRoles": {
+        "concept": "concept",
+        "decompose": "decompose",
+        "consolidate": "consolidate"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "whole-word-impact",
+        "four-part-demo",
+        "entity-consolidation"
+      ],
+      "duration": {
+        "sourceSeconds": 17.366,
+        "minFrames": 558,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 84.3,
+          "end": 84.85
+        },
+        {
+          "id": "action-02",
+          "start": 86.5,
+          "end": 87.1
+        },
+        {
+          "id": "action-03",
+          "start": 89.45,
+          "end": 92.0
+        },
+        {
+          "id": "action-04",
+          "start": 94.466,
+          "end": 99.85
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-entry",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "entry",
+          "label": "开场"
+        },
+        {
+          "id": "text-concept",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "concept",
+          "label": "概念"
+        },
+        {
+          "id": "text-context",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "context",
+          "label": "背景说明"
+        },
+        {
+          "id": "text-parts-0-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.label",
+          "label": "拆解项 · 1 · 名称"
+        },
+        {
+          "id": "text-parts-1-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.label",
+          "label": "拆解项 · 2 · 名称"
+        },
+        {
+          "id": "text-parts-2-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.label",
+          "label": "拆解项 · 3 · 名称"
+        },
+        {
+          "id": "text-parts-3-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.3.label",
+          "label": "拆解项 · 4 · 名称"
+        },
+        {
+          "id": "text-result-label",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.label",
+          "label": "结果 · 名称"
+        },
+        {
+          "id": "text-result-contents",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.contents",
+          "label": "结果 · 目录内容"
+        },
+        {
+          "id": "text-consolidateHeading",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "consolidateHeading",
+          "label": "聚合标题"
+        },
+        {
+          "id": "text-conclusion",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "conclusion",
+          "label": "结论"
+        },
+        {
+          "id": "text-chapterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}",
+          "label": "文字 · 章节标签"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "a8ac18c50d09b1536121c6eca6829dd47f23148d8106a2f1abf08b6653238a5b"
+    },
+    {
+      "id": "01-E:three-items-consolidate",
+      "style": "01-E",
+      "selection": "kinetic-performance@1.2.0-candidate",
+      "status": "candidate",
+      "intents": [
+        "concept-decomposition"
+      ],
+      "phases": [
+        "concept",
+        "parts",
+        "consolidation",
+        "result"
+      ],
+      "counts": {
+        "parts": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "concept": "concept",
+        "decompose": "decompose",
+        "consolidate": "consolidate"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "whole-word-impact",
+        "entity-consolidation",
+        "three-item-rhythmic-aggregation"
+      ],
+      "duration": {
+        "sourceSeconds": 17.366,
+        "minFrames": 558,
+        "maxHoldFrames": 360,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 84.3,
+          "end": 84.85
+        },
+        {
+          "id": "action-02",
+          "start": 86.5,
+          "end": 87.1
+        },
+        {
+          "id": "action-03",
+          "start": 89.45,
+          "end": 92.0
+        },
+        {
+          "id": "action-04",
+          "start": 94.466,
+          "end": 99.85
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-entry",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "entry",
+          "label": "开场"
+        },
+        {
+          "id": "text-concept",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "concept",
+          "label": "概念"
+        },
+        {
+          "id": "text-context",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "context",
+          "label": "背景说明"
+        },
+        {
+          "id": "text-parts-0-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.0.label",
+          "label": "拆解项 · 1 · 名称"
+        },
+        {
+          "id": "text-parts-1-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.1.label",
+          "label": "拆解项 · 2 · 名称"
+        },
+        {
+          "id": "text-parts-2-label",
+          "type": "text",
+          "maxChars": 4,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "parts.2.label",
+          "label": "拆解项 · 3 · 名称"
+        },
+        {
+          "id": "text-result-label",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.label",
+          "label": "结果 · 名称"
+        },
+        {
+          "id": "text-result-contents",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "result.contents",
+          "label": "结果 · 目录内容"
+        },
+        {
+          "id": "text-consolidateHeading",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "consolidateHeading",
+          "label": "聚合标题"
+        },
+        {
+          "id": "text-conclusion",
+          "type": "text",
+          "maxChars": 10,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "conclusion",
+          "label": "结论"
+        },
+        {
+          "id": "text-chapterLabel",
+          "type": "text",
+          "maxChars": 32,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputTemplate": "// {chapter} — {label}",
+          "label": "文字 · 章节标签"
+        },
+        {
+          "id": "presenter",
+          "type": "talk",
+          "label": "本期口播 · 本期口播"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "a8ac18c50d09b1536121c6eca6829dd47f23148d8106a2f1abf08b6653238a5b"
+    },
+    {
+      "id": "01-B-legacy:simplify-plan-disrupt",
+      "style": "01-B-legacy",
+      "selection": "continuous-performance@0.2.1-integrated.1-candidate",
+      "status": "candidate",
+      "intents": [
+        "simplify-plan-disrupt"
+      ],
+      "phases": [
+        "many",
+        "goal",
+        "plan",
+        "disruption",
+        "consequence",
+        "collect"
+      ],
+      "counts": {
+        "many": {
+          "min": 4,
+          "max": 4
+        },
+        "steps": {
+          "min": 4,
+          "max": 4
+        },
+        "interruptions": {
+          "min": 3,
+          "max": 3
+        },
+        "containerParts": {
+          "min": 3,
+          "max": 3
+        }
+      },
+      "cueRoles": {
+        "goal": "goal",
+        "plan": "plan",
+        "disruption": "disruption"
+      },
+      "entry": {
+        "mode": "independent"
+      },
+      "exit": {},
+      "effects": [
+        "persistent-container",
+        "many-to-one-compression",
+        "goal-to-four-steps",
+        "three-interruptions",
+        "container-recollection"
+      ],
+      "duration": {
+        "sourceSeconds": 16.534000000000006,
+        "minFrames": 947,
+        "maxHoldFrames": 504,
+        "followingFrames": 0
+      },
+      "motionWindows": [
+        {
+          "id": "action-01",
+          "start": 101.666,
+          "end": 104.68
+        },
+        {
+          "id": "action-02",
+          "start": 104.95,
+          "end": 106.95
+        },
+        {
+          "id": "action-03",
+          "start": 107.98,
+          "end": 118.2
+        }
+      ],
+      "fields": [
+        {
+          "id": "text-00",
+          "type": "text",
+          "maxChars": 2,
+          "required": true,
+          "mustChange": false,
+          "renderContext": "html",
+          "inputPath": "chapter"
+        },
+        {
+          "id": "text-01",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "label"
+        },
+        {
+          "id": "text-02",
+          "type": "text",
+          "maxChars": 30,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "context"
+        },
+        {
+          "id": "text-03",
+          "type": "text",
+          "maxChars": 16,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "question"
+        },
+        {
+          "id": "text-04",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "comparison.left"
+        },
+        {
+          "id": "text-05",
+          "type": "text",
+          "maxChars": 8,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "comparison.right"
+        },
+        {
+          "id": "text-06",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "planHeading.line1"
+        },
+        {
+          "id": "text-07",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "planHeading.line2"
+        },
+        {
+          "id": "text-08",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "manyLabel"
+        },
+        {
+          "id": "text-09",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "many.0"
+        },
+        {
+          "id": "text-10",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "many.1"
+        },
+        {
+          "id": "text-11",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "many.2"
+        },
+        {
+          "id": "text-12",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "many.3"
+        },
+        {
+          "id": "text-13",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "goalLabel"
+        },
+        {
+          "id": "text-14",
+          "type": "text",
+          "maxChars": 22,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "goal"
+        },
+        {
+          "id": "text-15",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "steps.0"
+        },
+        {
+          "id": "text-16",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "steps.1"
+        },
+        {
+          "id": "text-17",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "steps.2"
+        },
+        {
+          "id": "text-18",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "steps.3"
+        },
+        {
+          "id": "text-19",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "interruptions.0"
+        },
+        {
+          "id": "text-20",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "interruptions.1"
+        },
+        {
+          "id": "text-21",
+          "type": "text",
+          "maxChars": 11,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "interruptions.2"
+        },
+        {
+          "id": "text-22",
+          "type": "text",
+          "maxChars": 24,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "consequence"
+        },
+        {
+          "id": "text-23",
+          "type": "text",
+          "maxChars": 20,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.name"
+        },
+        {
+          "id": "text-24",
+          "type": "text",
+          "maxChars": 12,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.mark"
+        },
+        {
+          "id": "text-25",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.parts.0"
+        },
+        {
+          "id": "text-26",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.parts.1"
+        },
+        {
+          "id": "text-27",
+          "type": "text",
+          "maxChars": 5,
+          "required": true,
+          "mustChange": true,
+          "renderContext": "html",
+          "inputPath": "container.parts.2"
+        },
+        {
+          "id": "presenter",
+          "type": "talk"
+        }
+      ],
+      "externalFonts": [],
+      "fontPolicy": "preferred by default; exact only when explicitly requested",
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "manifestDigest": "3a03ed6e38a8f40fb1329eac82a3dd779abfc8d62418e9a40132fb4c3783b457"
+    }
+  ],
+  "layout": "landscape",
+  "catalogStyles": 6,
+  "catalogGroups": 26,
+  "availableStyles": 6,
+  "availableGroups": 26,
+  "semanticAuthor": "current-assistant; must inspect whole narration and real timestamps",
+  "selection": "hard constraints before style coherence and variety",
+  "status": "experimental; source candidates retain their maturity"
+}

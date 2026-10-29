@@ -1,0 +1,111 @@
+/* motion-kit · showcase.css：素材展示类控件外观（颜色全部取主题变量） */
+
+/* 共用：素材块、中性占位、扫光、标题、手写字 */
+.mk-sc-pic{position:absolute;left:0;top:0;overflow:hidden;background:#0b0c10}
+.mk-sc-pic.full{position:absolute;inset:0;width:100%;height:100%}
+.mk-sc-pic>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
+.mk-sc-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.28);will-change:transform}
+.mk-sc-ph.k0{background:linear-gradient(135deg,rgba(var(--a-rgb),.32),rgba(var(--a2-rgb),.12) 60%,#0d0f15)}
+.mk-sc-ph.k1{background:linear-gradient(200deg,rgba(var(--a2-rgb),.34),rgba(var(--a-rgb),.1) 55%,#0d0f15)}
+.mk-sc-ph.k2{background:linear-gradient(160deg,rgba(var(--w-rgb),.26),rgba(var(--a2-rgb),.12) 60%,#0d0f15)}
+.mk-sc-gl{position:absolute;inset:0;pointer-events:none;--sh:130%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%) var(--sh) 0/260% 100% no-repeat;mix-blend-mode:screen}
+.mk-sc-head{font:700 56px/1.2 var(--fz);color:var(--tx);white-space:nowrap}
+.mk-sc-hand{font-family:'Kaiti SC','STKaiti','Kai','Noteworthy','Bradley Hand',var(--fz);font-weight:700;color:#23252b;white-space:nowrap;text-align:center}
+
+/* gallery */
+.mk-gal .card{will-change:transform}
+.mk-gal .card .mk-sc-pic{border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08)}
+.mk-gal .card.on .mk-sc-pic{box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 2px var(--a),0 0 40px rgba(var(--a-rgb),.4)}
+.mk-gal .cap{font:500 26px/1.3 var(--fz);color:var(--dim);white-space:nowrap;text-align:center}
+.mk-gal .card.on .cap{color:var(--tx)}
+.mk-gal .gcap{font:600 42px/1.3 var(--fz);color:var(--tx);white-space:nowrap}
+.mk-gal .mk-sc-pic.print{border-radius:6px;border:10px solid #f3f1ec;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+
+/* beforeafter */
+.mk-ba .fr,.mk-ba .face,.mk-ba .pan{border-radius:18px;overflow:hidden;box-shadow:0 34px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08)}
+.mk-ba .flipc{overflow:visible}
+.mk-ba .face{backface-visibility:hidden}
+.mk-ba .div{background:#fff;box-shadow:0 0 18px rgba(var(--a-rgb),.9),0 0 3px #fff}
+.mk-ba .knob{width:64px;height:64px;border-radius:50%;background:#fff;color:#0b0c10;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(var(--a-rgb),.35),0 10px 30px rgba(0,0,0,.5)}
+.mk-ba .tag{left:22px;top:22px;padding:8px 20px;border-radius:12px;background:rgba(6,7,10,.72);border:1px solid rgba(255,255,255,.16);font:600 26px/1.3 var(--fz);color:var(--tx);white-space:nowrap;letter-spacing:1px}
+.mk-ba .tag.r{left:auto;right:22px}
+.mk-ba .tag.hl{background:var(--a);color:#05060A;border-color:transparent}
+.mk-ba .pan.on{box-shadow:0 40px 100px rgba(0,0,0,.65),0 0 0 2px var(--a),0 0 50px rgba(var(--a-rgb),.35)}
+.mk-ba .arr{width:84px;height:84px;border-radius:50%;background:var(--a);color:#05060A;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(var(--a-rgb),.6)}
+
+/* kenburns */
+.mk-kb .fr{overflow:hidden;background:#000;box-shadow:0 40px 100px rgba(0,0,0,.6)}
+.mk-kb .ly{overflow:hidden}
+.mk-kb .mk-sc-pic.back{filter:blur(18px) brightness(.55) saturate(1.2)}
+.mk-kb .win{border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.18)}
+.mk-kb .leak{background:radial-gradient(closest-side,rgba(var(--w-rgb),.55),rgba(var(--w-rgb),.18) 55%,transparent);mix-blend-mode:screen;filter:blur(30px)}
+.mk-kb .fl{background:#fff;opacity:0;mix-blend-mode:screen}
+.mk-kb .scrim{background:linear-gradient(180deg,transparent,rgba(0,0,0,.72))}
+.mk-kb .bar{background:#000}
+.mk-kb .seg{height:4px;border-radius:2px;background:rgba(255,255,255,.22);overflow:hidden}
+.mk-kb .seg i{display:block;height:100%;width:0;background:var(--w);box-shadow:0 0 8px var(--w)}
+.mk-kb .kick{display:flex;align-items:center;gap:12px;font:500 22px var(--fm);letter-spacing:4px;color:rgba(255,255,255,.85);text-transform:uppercase;white-space:nowrap}
+.mk-kb .kick i{width:10px;height:10px;border-radius:50%;background:var(--bad);display:block;flex:none}
+.mk-kb .cnt{font:500 22px var(--fm);letter-spacing:3px;color:rgba(255,255,255,.8);white-space:nowrap}
+.mk-kb .cap{font:600 46px/1.3 var(--fz);color:#fff;white-space:nowrap;text-shadow:0 2px 14px rgba(0,0,0,.8)}
+
+/* polaroid */
+.mk-pol .pol{background:#f4f2ec;border-radius:4px;box-shadow:0 26px 60px rgba(0,0,0,.6),0 2px 0 rgba(0,0,0,.15);will-change:transform}
+.mk-pol .ph{overflow:hidden;background:#111}
+.mk-pol .tape{background:rgba(var(--w-rgb),.42);box-shadow:0 2px 6px rgba(0,0,0,.2);backdrop-filter:blur(1px)}
+.mk-pol .board{border-radius:20px;background:radial-gradient(rgba(0,0,0,.18) 1.4px,transparent 1.6px) 0 0/14px 14px,radial-gradient(rgba(255,255,255,.08) 1px,transparent 1.2px) 7px 7px/14px 14px,linear-gradient(160deg,#6b4a2c,#4a3220);box-shadow:inset 0 0 0 14px #3a2818,inset 0 0 60px rgba(0,0,0,.5),0 30px 80px rgba(0,0,0,.55)}
+.mk-pol .pin{border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0,var(--bad) 30%,rgba(var(--bad-rgb),.7) 100%);box-shadow:3px 6px 8px rgba(0,0,0,.45);z-index:50}
+.mk-pol svg{z-index:40}
+.mk-pol svg path{fill:none;stroke:var(--bad);stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 3px 3px rgba(0,0,0,.4))}
+.mk-pol .strip{background:#0a0a0c;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,.6);--band:30px}
+.mk-pol .strip::before,.mk-pol .strip::after{content:'';position:absolute;left:0;right:0;height:calc(var(--band) * .42);top:calc(var(--band) * .29);background:repeating-linear-gradient(90deg,transparent 0 14px,rgba(244,242,236,.85) 14px 34px,transparent 34px 48px);border-radius:3px}
+.mk-pol .strip::after{top:auto;bottom:calc(var(--band) * .29)}
+.mk-pol .fc{overflow:hidden;border-radius:4px;background:#15161a}
+.mk-pol .fcap{color:var(--tx);text-align:center}
+
+/* device */
+.mk-dev .dev{background:linear-gradient(145deg,#2a2e37,#121419 60%,#1d2027);box-shadow:0 40px 100px rgba(0,0,0,.65),inset 0 0 0 2px rgba(255,255,255,.12),inset 0 0 0 5px #0a0b0e;will-change:transform}
+.mk-dev .dev.monitor{border-radius:14px}
+.mk-dev .scr{overflow:hidden;background:#000}
+.mk-dev .scr .off{position:absolute;inset:0;background:#030405}
+.mk-dev .scr .pl{background:#fff;box-shadow:0 0 30px rgba(var(--a-rgb),.9);transform-origin:50% 50%}
+.mk-dev .refl{background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.22) 47%,rgba(255,255,255,.06) 53%,transparent 60%) var(--sh) 0/260% 100% no-repeat}
+.mk-dev .isl{background:#000;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.mk-dev .cam{border-radius:50%;background:#05060a;box-shadow:inset 0 0 0 2px rgba(255,255,255,.1)}
+.mk-dev .neck{background:linear-gradient(90deg,#1a1d23,#2b2f38,#1a1d23)}
+.mk-dev .base{background:linear-gradient(180deg,#2b2f38,#121419);box-shadow:0 14px 30px rgba(0,0,0,.6)}
+.mk-dev .tt .acc{width:84px;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--a),var(--a2));margin-bottom:24px;box-shadow:0 0 16px rgba(var(--a-rgb),.6)}
+.mk-dev .tt .ttl{font:700 66px/1.2 var(--fz);color:var(--tx);text-wrap:balance}
+.mk-dev .tt .sub{margin-top:18px;font:500 36px/1.4 var(--fz);color:var(--dim);text-wrap:balance}
+
+/* collage */
+.mk-col .stage,.mk-col .wst{overflow:hidden;border-radius:18px}
+.mk-col .stage{-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
+.mk-col .wst{-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mk-col .tl{border-radius:12px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07)}
+.mk-col .tl .mk-sc-pic{border-radius:12px}
+.mk-col .wst .tl.on{box-shadow:0 26px 60px rgba(0,0,0,.6),0 0 0 2px var(--a),0 0 40px rgba(var(--a-rgb),.45)}
+.mk-col .fr{overflow:visible}
+.mk-col .fr .src{width:2px;height:2px;opacity:0}
+.mk-col .sh{background-repeat:no-repeat;will-change:transform}
+.mk-col .sh.ph{background:linear-gradient(135deg,rgba(var(--a-rgb),.34),rgba(var(--a2-rgb),.14) 60%,#0d0f15) !important;background-size:auto !important}
+.mk-col .fr .phi{inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3)}
+.mk-col .fr .mk-sc-gl{border-radius:4px}
+.mk-col .ttl{font:700 54px/1.25 var(--fz);color:var(--tx);white-space:nowrap;text-align:center}
+.mk-col .ttl.plate{padding:14px 44px;border-radius:20px;background:rgba(6,7,10,.86);box-shadow:0 0 0 2px rgba(var(--a-rgb),.5),0 30px 80px rgba(0,0,0,.7)}
+
+/* spotlight */
+.mk-spot .fr{overflow:hidden;border-radius:18px;box-shadow:0 34px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08)}
+.mk-spot .dark{inset:0;width:100%;height:100%}
+.mk-spot .ring{border-radius:50%;border:3px solid var(--w);box-shadow:0 0 30px rgba(var(--w-rgb),.6),inset 0 0 30px rgba(var(--w-rgb),.25)}
+.mk-spot .ring.dash{border:2.5px dashed rgba(255,255,255,.85);box-shadow:none}
+.mk-spot .mk-sc-pic.blurl{filter:blur(14px) brightness(.5) saturate(.7);transform:scale(1.04)}
+.mk-spot .lens{border-radius:50%;overflow:visible;z-index:5}
+.mk-spot .lens .glass{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#0b0c10;box-shadow:0 0 0 8px #e9ebef,0 0 0 11px rgba(0,0,0,.3),0 30px 70px rgba(0,0,0,.65),inset 0 0 40px rgba(0,0,0,.4)}
+.mk-spot .lens .glass .mk-sc-pic{transform-origin:0 0}
+.mk-spot .lens .hdl{position:absolute;left:84%;top:84%;width:26px;height:46%;border-radius:13px;background:linear-gradient(90deg,#c9ccd2,#f1f2f4,#a5a9b1);transform:rotate(-45deg);transform-origin:50% 0;box-shadow:0 10px 24px rgba(0,0,0,.5)}
+.mk-spot .mk{width:36px;height:36px;border-radius:50%;background:var(--w);color:#14110A;font:700 20px/36px var(--fm);text-align:center;box-shadow:0 0 16px rgba(var(--w-rgb),.7)}
+.mk-spot .chip{display:inline-flex;align-items:center;gap:12px;padding:10px 22px 10px 10px;border-radius:16px;background:rgba(6,7,10,.86);border:1px solid rgba(var(--w-rgb),.5);color:var(--tx);white-space:nowrap;z-index:6;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.mk-spot .chip.only{padding:10px}
+.mk-spot .chip b{flex:none;width:40px;height:40px;border-radius:50%;background:var(--w);color:#14110A;font:700 22px/40px var(--fm);text-align:center}
+.mk-spot .chip span{font:600 30px/1.3 var(--fz);white-space:nowrap}

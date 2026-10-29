@@ -1,0 +1,55 @@
+{
+  "schema": "adu-template-catalog/1",
+  "updated": "2026-10-08",
+  "numbering": "template-style",
+  "templates": [
+    {
+      "id": "01",
+      "title": "现代图文口播 · 原生整合",
+      "styles": [
+        {
+          "id": "01-A",
+          "title": "原片节奏",
+          "status": "candidate",
+          "selection": "classic-performance@1.1.0-candidate",
+          "portraitSelection": "classic-performance@1.1.0-candidate"
+        },
+        {
+          "id": "01-B",
+          "title": "连续形变",
+          "status": "candidate",
+          "selection": "continuous-performance@1.1.0-candidate",
+          "portraitSelection": "continuous-performance@1.1.0-candidate"
+        },
+        {
+          "id": "01-C",
+          "title": "纵深舞台",
+          "status": "candidate",
+          "selection": "stage-performance@1.1.0-candidate",
+          "portraitSelection": "stage-performance@1.1.0-candidate"
+        },
+        {
+          "id": "01-D",
+          "title": "杂志分屏",
+          "status": "candidate",
+          "selection": "editorial-performance@1.2.0-candidate",
+          "portraitSelection": "editorial-performance@1.2.0-candidate"
+        },
+        {
+          "id": "01-E",
+          "title": "节拍字效",
+          "status": "candidate",
+          "selection": "kinetic-performance@1.2.0-candidate",
+          "portraitSelection": "kinetic-performance@1.2.0-candidate"
+        },
+        {
+          "id": "01-B-legacy",
+          "title": "连续形变 · 目标与干扰（恢复组）",
+          "status": "candidate",
+          "selection": "continuous-performance@0.2.1-integrated.1-candidate",
+          "portraitSelection": "continuous-performance@0.2.1-integrated.1-candidate"
+        }
+      ]
+    }
+  ]
+}

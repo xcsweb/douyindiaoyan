@@ -1,0 +1,34 @@
+{
+  "workflow": "motion-kit",
+  "timeline": {
+    "layout": "landscape",
+    "duration": 8,
+    "voiceover": "",
+    "music": "",
+    "captions": [],
+    "hud": false,
+    "header": {
+      "shortTitle": "组件排版示例",
+      "source": {
+        "kind": "assistant-summary",
+        "field": "segments.0.chapter"
+      }
+    },
+    "segments": [
+      {
+        "control": "keyword",
+        "variant": "slam",
+        "t0": 0,
+        "t1": 8,
+        "chapter": "组件排版示例",
+        "props": {
+          "word": "围绕内容",
+          "sub": [
+            "保留完整意思",
+            "让动作服务表达"
+          ]
+        }
+      }
+    ]
+  }
+}

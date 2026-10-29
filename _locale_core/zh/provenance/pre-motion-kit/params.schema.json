@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "required": [
+    "media",
+    "brief"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "media": {
+      "type": "object",
+      "required": [
+        "talk",
+        "captions"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "talk": {
+          "type": "string"
+        },
+        "captions": {
+          "type": "string",
+          "description": "Paired bilingual timed JSON; measured highlight intervals"
+        }
+      }
+    },
+    "brief": {
+      "type": "object",
+      "required": [
+        "schema",
+        "brand",
+        "layout",
+        "segments",
+        "narrationDuration"
+      ],
+      "properties": {
+        "schema": {
+          "const": "adu-auto-brief/1"
+        },
+        "brand": {
+          "type": "string",
+          "minLength": 1
+        },
+        "layout": {
+          "enum": [
+            "landscape",
+            "portrait"
+          ]
+        },
+        "segments": {
+          "type": "array",
+          "minItems": 1
+        },
+        "allowedStyles": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "01-A",
+              "01-B",
+              "01-C",
+              "01-D",
+              "01-E",
+              "01-B-legacy"
+            ]
+          }
+        },
+        "narrationDuration": {
+          "type": "number",
+          "minimum": 6,
+          "maximum": 600
+        }
+      }
+    }
+  }
+}

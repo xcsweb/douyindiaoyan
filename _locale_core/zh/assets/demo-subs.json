@@ -1,0 +1,26 @@
+[
+  {
+    "t0": 0.18,
+    "t1": 3.72,
+    "zh": "两种输入汇聚，形成一个明确结果。",
+    "en": "Two inputs. One result."
+  },
+  {
+    "t0": 4.08,
+    "t1": 12.786667,
+    "zh": "提供方法与素材，再执行六项检查。",
+    "en": "Submit. Choose an input. Run six checks."
+  },
+  {
+    "t0": 13.146667,
+    "t1": 24.253333,
+    "zh": "三方遵循同一手册，七步完成交付。",
+    "en": "One manual. Three roles. Seven steps."
+  },
+  {
+    "t0": 24.613333,
+    "t1": 38.72,
+    "zh": "保留同一交付物，让结果自然收束。",
+    "en": "Keep the delivered object. Let it settle."
+  }
+]

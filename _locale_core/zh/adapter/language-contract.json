@@ -1,0 +1,13 @@
+{
+  "schema": "motiongit-caption-language/1",
+  "default": "zh",
+  "supported": [
+    "zh",
+    "en",
+    "bilingual"
+  ],
+  "selection": "CONFIG.subtitleLanguage; default is this release language",
+  "highlight": "Actual ASR/verified word intervals of highlight.language only; translations never reuse another language clock",
+  "font": "Selected primary language retains the same readable primary subtitle size",
+  "referenceText": "Both translations retained; display selection does not alter source text or intervals"
+}

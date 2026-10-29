@@ -1,0 +1,15 @@
+{
+  "schema": "motiongit-original-score/1",
+  "compositionId": "motiongit-default-score-20261006-v1",
+  "license": "CC0-1.0",
+  "generatorLicense": "MIT",
+  "seconds": 180,
+  "source": "Original oscillator score, 36 arranged harmonic cells with melodic variation; no runtime loop or external samples",
+  "levels": {
+    "peakDbfs": -4.0001,
+    "rmsDbfs": -16.84,
+    "compositionId": "motiongit-default-score-20261006-v1"
+  },
+  "sha256": "02dcb5ecfa826ad629d74255168bbf988e68fb65119426bdc795a59c2dcba73c",
+  "bytes": 1462077
+}

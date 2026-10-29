@@ -1,0 +1,32 @@
+# 受保护模板与运行时（不进仓库）
+横屏口播/模板/
+*.motion
+*.zip
+横屏口播/_work/tools/
+横屏口播/_work/tools-a3/
+横屏口播/_work/instance/
+横屏口播/_work/cache/
+横屏口播/_work/runtime/
+
+# 中间产物与派生素材（用 LFS 会占用免费配额，保留本地）
+横屏口播/_work/master/master_raw.mp4
+横屏口播/_work/master/master_v1.mp4
+横屏口播/_work/master/master_v3.mp4
+横屏口播/_work/master/*.wav
+横屏口播/_work/audio/
+横屏口播/03-成片/发布包/*.jpg
+
+# 媒体素材：只在本地保存，不进仓库（LFS 免费流量会被公开 clone 吃光）
+横屏口播/01-口播素材/
+横屏口播/02-录屏素材/
+横屏口播/03-成片/**/*.mp4
+横屏口播/_work/clips/
+横屏口播/_work/master/*.mp4
+
+# 通用忽略
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
